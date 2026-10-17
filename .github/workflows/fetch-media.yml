@@ -1,0 +1,88 @@
+# Jednorázově stáhne fotky a video z původního WordPressu do assets/images/.
+name: Fetch media from WordPress
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/fetch-media.yml"]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download files
+        run: |
+          getent hosts radekrosastrong.cz || echo "DNS lookup failed for radekrosastrong.cz"
+          getent hosts www.radekrosastrong.cz || echo "DNS lookup failed for www.radekrosastrong.cz"
+          ok=0; fail=0
+          while read -r path; do
+            [ -z "$path" ] && continue
+            name=$(basename "$path")
+            got=no
+            for base in https://radekrosastrong.cz http://radekrosastrong.cz https://www.radekrosastrong.cz; do
+              if curl -fsSL --retry 3 --max-time 300 -A "Mozilla/5.0" -o "assets/images/$name" "$base/wp-content/uploads/$path"; then got=yes; break; fi
+            done
+            if [ "$got" = yes ]; then ok=$((ok+1)); echo "OK   $name ($(stat -c%s "assets/images/$name") B)"; else fail=$((fail+1)); rm -f "assets/images/$name"; echo "FAIL $path"; fi
+          done <<'LIST'
+          2024/03/7DE072D3-F686-4AF7-97A2-636A359C5991_4_5005_c-e1711030706673.jpeg
+          2022/09/AS_00979.jpg-scaled.jpeg
+          2022/09/AS_01043.jpg-scaled.jpeg
+          2022/09/AS_01097.jpg-1-scaled-e1662233355852.jpeg
+          2022/09/AS_01144.jpg-scaled.jpeg
+          2022/09/AS_03746-scaled.jpg
+          2022/09/AS_03810-scaled.jpg
+          2022/09/AS_03811-scaled.jpg
+          2022/09/AS_03839-scaled.jpg
+          2022/09/AS_03875-scaled.jpg
+          2022/09/AS_03995-scaled.jpg
+          2022/09/AS_04005-scaled.jpg
+          2022/09/AS_06962.jpg-scaled.jpeg
+          2022/09/AS_06977.jpg-scaled.jpeg
+          2022/09/AS_07027.jpg-scaled.jpeg
+          2022/09/AS_07062.jpg-scaled.jpeg
+          2024/02/BRIDGING-THE-GAP-IN-SPEED-AND-AGILITY-DEVELOPMENT-1.png
+          2025/05/BRIDGING-THE-GAP-IN-SPEED-AND-AGILITY-DEVELOPMENT-10.png
+          2025/06/BRIDGING-THE-GAP-IN-SPEED-AND-AGILITY-DEVELOPMENT-11.png
+          2024/11/BRIDGING-THE-GAP-IN-SPEED-AND-AGILITY-DEVELOPMENT-4.png
+          2025/05/BRIDGING-THE-GAP-IN-SPEED-AND-AGILITY-DEVELOPMENT-9.png
+          2025/05/Brno.mp4
+          2022/09/DSC02196-scaled.jpg
+          2022/09/DSC02227-scaled.jpg
+          2022/09/DSC02241-scaled.jpg
+          2022/09/DSC02297-scaled.jpg
+          2022/09/DSC02350-1-scaled-e1662233091660.jpg
+          2022/09/DSC04155-scaled.jpg
+          2022/09/DSC04180-scaled.jpg
+          2022/09/DSC04216-scaled.jpg
+          2022/09/DSC04316-scaled.jpg
+          2022/09/DSC04338-scaled.jpg
+          2022/09/DSC04342-scaled.jpg
+          2022/09/DSC04352-scaled-e1662403248369.jpg
+          2022/09/DSC06585-scaled-e1662233321778.jpg
+          2025/05/Pridat-podnadpis-1-scaled.png
+          2023/12/RADEK-KURZ-34-scaled.jpg
+          2026/01/WEB-UVODNI-FOTKA-SEKCI-3.png
+          2026/01/WEB-UVODNI-FOTKA-SEKCI-5.png
+          2022/09/cropped-LOGO.png
+          2022/09/cropped-rrlogo.png
+          2026/10/sk-co-ziskas.jpg
+          2026/10/sk-galerie-1-skupina.jpg
+          2026/10/sk-galerie-2-praxe-shyb.jpg
+          2026/10/sk-galerie-3-praxe-vystup.jpg
+          2026/10/sk-galerie-4-radek-praxe.jpg
+          2026/10/sk-galerie-5-ucastnice.jpg
+          2026/10/sk-lektor-radek.jpg
+          2026/10/sk-program-level1.jpg
+          2026/10/sk-program-level2.jpg
+          2026/10/sk-video-poster.jpg
+          LIST
+          echo "Downloaded $ok, failed $fail"
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add assets/images
+          git diff --cached --quiet && echo "Nothing downloaded" && exit 0
+          git commit -m "Add media files downloaded from the WordPress site"
+          git push
