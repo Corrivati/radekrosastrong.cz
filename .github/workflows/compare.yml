@@ -20,6 +20,7 @@ jobs:
       - name: Serve new site
         run: (python3 serve.py 8000 >/dev/null 2>&1 &) && sleep 2
       - name: Save live HTML and CSS
+        if: false
         run: |
           mkdir -p .compare/live-src
           for p in "" edukace onlinecoaching strangetraining strangetraining-old svalove-kontrakce kontrakce2 workshop-slachy webinar-zdarma gdpr obchodni-podminky; do
@@ -46,7 +47,7 @@ jobs:
                     await p.goto(base + pg + (pg ? "/" : ""), { waitUntil: "networkidle", timeout: 60000 });
                   } catch (e) { console.log("goto", site, pg, e.message); }
                   await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 120)); } window.scrollTo(0, 0); await new Promise(r => setTimeout(r, 800)); });
-                  const name = `.compare/${tag}/${pg || "home"}-${site}`;
+                  const name = `${process.env.GITHUB_WORKSPACE}/.compare/${tag}/${pg || "home"}-${site}`;
                   await p.screenshot({ path: name + "-top.jpg", type: "jpeg", quality: 70 });
                   await p.screenshot({ path: name + ".jpg", type: "jpeg", quality: 60, fullPage: true });
                 }
