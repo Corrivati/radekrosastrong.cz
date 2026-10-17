@@ -165,6 +165,8 @@ svg{fill:currentColor}
 
 .gallery{position:relative;overflow:hidden;padding:104px 0 160px;background:var(--dark);border-top:1px solid #eae5e4}
 .gallery h2{position:relative;font-size:160px;color:var(--white);margin-bottom:20px}
+.gallery-head{position:relative}
+.gallery .ghost{right:0;bottom:-34px}
 .ghost{position:absolute;right:56px;bottom:160px;margin:0;font:500 400px/.8 var(--head);text-transform:uppercase;color:rgba(255,255,255,.04);pointer-events:none;user-select:none}
 .carousel{position:relative}
 .carousel-track{display:flex;align-items:flex-start;gap:11px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
@@ -261,6 +263,20 @@ svg{fill:currentColor}
   .contact-icons a{width:48px;height:48px}
   .contact-icons svg{width:14px;height:14px}
 }
+
+/* Instagram (stejných 12 příspěvků jako na původním webu) */
+.contact .ig{display:block;padding:0 0 100px}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 10px}
+.ig-item{position:relative;display:block;aspect-ratio:1;overflow:hidden;background:#111}
+.ig-item img{width:100%;height:100%;object-fit:cover;transition:opacity .2s}
+.ig-item:hover img{opacity:.8}
+.ig-video::after{content:"";position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M7 4v16l13-8z'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 6px rgba(0,0,0,.4))}
+.ig-carousel::after{content:"";position:absolute;top:10px;right:10px;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Crect x='7' y='7' width='14' height='14' rx='2'/%3E%3Cpath d='M17 3H5a2 2 0 0 0-2 2v12'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 4px rgba(0,0,0,.5))}
+.ig-actions{margin:16px 0 0;text-align:center}
+.ig-follow{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:4px;background:#d0021b;color:#fff;font-size:13px}
+.ig-follow:hover{background:#b00218;color:#fff}
+.ig-follow svg{width:14px;height:14px}
+@media(max-width:767px){.contact .ig{padding-bottom:10px}.ig-grid{grid-template-columns:1fr;padding:0}}
 
 /* ---------- Podstránky (tmavé pozadí, text s bannerem) ---------- */
 .page-dark{background:var(--page-dark);color:var(--white)}

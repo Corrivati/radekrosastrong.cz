@@ -53,10 +53,13 @@ Pak otevřete http://localhost:8000.
 - Skryté prvky: tlačítko „Klikni pro strong blog“ (bylo skryté na všech zařízeních), prázdný nadpis v sekci O mně, neviditelný bílý nápis „Video“ na bílém pozadí.
 - Prázdný článek `/strong-blog/` („Nic tu zatím není :)“) a nepoužívané stránky WooCommerce (`/obchod/`, `/kosik/`, `/pokladna/`, `/muj-ucet/`). Nyní vrací 404.
 - Koncepty (Privacy Policy, Reklamace) a nepoužité šablony Elementoru.
-- Instagram feed pod kontaktem (plugin vyžadoval napojení na Instagram API), cookie lišta (web už nepoužívá cookies; YouTube se načítá z `youtube-nocookie.com` až po kliknutí).
+- Cookie lišta (web už nepoužívá cookies; YouTube se načítá z `youtube-nocookie.com` až po kliknutí).
 - Všechny pluginy, jQuery, Font Awesome, Elementor CSS/JS. Ikony jsou vložené přímo jako SVG.
 
 ## Co bylo upraveno
+
+- Instagram feed pod kontaktem je statický: stejných 12 příspěvků, které ukazoval WordPress (jeho napojení na Instagram přestalo fungovat v srpnu 2023). Obrázky jsou v `assets/images/ig/`, odkazy vedou na příspěvky na Instagramu.
+- Styly a skript mají v odkazu číslo verze (`style.css?v=3`). Po změně CSS ho zvyšte, aby se nová verze hned načetla.
 
 - Na mobilu se zobrazí celý seznam certifikací (dřív polovina skrytá s poznámkou „Více certifikací se zobrazí na PC“).
 - Text podstránek měl na mobilu velikost 7 px. Nyní 16 px.
