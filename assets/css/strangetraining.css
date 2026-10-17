@@ -1,0 +1,157 @@
+/* Landing page Svalové kontrakce – Strange Training (/strangetraining/). Styly platí jen uvnitř #sk-page. */
+#sk-page{--sk-red:#BF2932;--sk-red-l:#E8565E;--sk-bg:#363535;--sk-bg2:#2E2D2D;--sk-card:#2B2A2A;--sk-ph:#242323;--sk-line:#4A4848;--sk-text:#FAFAFA;--sk-mut:#D8D3D1;--sk-mut2:#C9C4C2;--sk-mut3:#B5B0AE;
+  background:var(--sk-bg);color:var(--sk-text);font-family:Ubuntu,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+#sk-page *,#sk-page *::before,#sk-page *::after{box-sizing:border-box}
+#sk-page .sk-hero-copy,#sk-page .sk-hero-video,#sk-page .sk-split-img,#sk-page .sk-split-copy,#sk-page .sk-level,#sk-page .sk-review,#sk-page .sk-lector-copy,#sk-page .sk-stat{min-width:0}
+#sk-page h1,#sk-page h2,#sk-page h3,#sk-page p,#sk-page ul,#sk-page figure,#sk-page blockquote{margin:0;padding:0}
+#sk-page h1,#sk-page h2,#sk-page h3{font-family:Teko,sans-serif;color:var(--sk-text);text-transform:uppercase;font-weight:500;letter-spacing:.01em}
+#sk-page a{color:var(--sk-text);text-decoration:underline;text-underline-offset:3px}
+#sk-page a:hover{color:var(--sk-red-l)}
+#sk-page img{display:block;width:100%;height:100%;object-fit:cover;border:0;border-radius:0;max-width:none}
+#sk-page .sk-wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+#sk-page .sk-narrow{max-width:860px}
+#sk-page section{padding:96px 0}
+#sk-page .sk-alt{background:transparent}
+#sk-page .sk-eyebrow{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--sk-red-l);margin-bottom:8px}
+#sk-page h2{font-size:64px;line-height:.95}
+#sk-page .sk-head{margin-bottom:40px}
+#sk-page .sk-btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 32px;background:var(--sk-red);color:#fff;font-family:Teko,sans-serif;font-size:26px;line-height:1;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;transition:background .15s}
+#sk-page .sk-btn:hover{background:#A3222A;color:#fff}
+#sk-page .sk-btn-dark{background:#1F1E1E}
+#sk-page .sk-btn-dark:hover{background:#000}
+#sk-page .sk-ico{flex-shrink:0;stroke:var(--sk-red-l)}
+
+/* HERO (horní odsazení kvůli průhledné hlavičce Astra, 109 px) */
+#sk-page .sk-hero{padding:170px 0 64px}
+#sk-page .sk-hero .sk-wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+#sk-page .sk-hero-copy{flex:1 1 460px;display:flex;flex-direction:column;gap:24px}
+#sk-page .sk-tags{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+#sk-page .sk-tag{padding:8px 14px;border:1px solid #5E5B5B;color:var(--sk-mut)}
+#sk-page .sk-tag-red{background:var(--sk-red);border-color:var(--sk-red);color:#fff}
+#sk-page h1{font-size:clamp(64px,7.5vw,104px);line-height:.86;font-weight:600}
+#sk-page .sk-sub{font-family:Teko,sans-serif;font-size:34px;line-height:1;color:var(--sk-red-l);text-transform:uppercase;letter-spacing:.04em}
+#sk-page .sk-lead{max-width:520px;font-size:18px;line-height:1.6;color:var(--sk-mut)}
+#sk-page .sk-dates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px}
+#sk-page .sk-date{padding:16px 18px;background:var(--sk-card);border:1px solid var(--sk-line)}
+#sk-page .sk-date small{display:block;font-size:13px;color:var(--sk-mut3);text-transform:uppercase;letter-spacing:.06em}
+#sk-page .sk-date strong{display:block;font-family:Teko,sans-serif;font-weight:400;font-size:30px;line-height:1.1}
+#sk-page .sk-date span{font-size:14px;color:var(--sk-mut)}
+#sk-page .sk-place{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--sk-mut)}
+#sk-page .sk-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding-top:8px}
+#sk-page .sk-cta-note{font-size:14px;line-height:1.5;color:var(--sk-mut3)}
+#sk-page .sk-hero-video{flex:1 1 480px;display:flex;flex-direction:column;gap:12px}
+#sk-page .sk-hero-video video{display:block;width:100%;aspect-ratio:16/10;background:#0E0E0E;border:1px solid var(--sk-line);object-fit:cover}
+#sk-page .sk-hero-video p{font-size:14px;color:var(--sk-mut3)}
+
+/* TRUST BAR */
+#sk-page .sk-trust{padding:0}
+#sk-page .sk-trust .sk-inner{padding:32px;background:var(--sk-bg2);border:1px solid var(--sk-line);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+
+#sk-page .sk-stat{flex:1 1 200px}
+#sk-page .sk-stat b{display:block;font-family:Teko,sans-serif;font-weight:400;font-size:52px;line-height:1}
+#sk-page .sk-stat b.sk-hl{color:var(--sk-red-l)}
+#sk-page .sk-stat span{font-size:15px;color:var(--sk-mut)}
+
+/* PRO KOHO */
+#sk-page .sk-grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#sk-page .sk-card{padding:28px 24px;background:var(--sk-card);border:1px solid var(--sk-line);display:flex;flex-direction:column;gap:12px}
+#sk-page .sk-num{font-family:Teko,sans-serif;font-size:40px;line-height:1;color:#858180}
+#sk-page .sk-card h3{font-size:28px;line-height:1.05;text-transform:none}
+#sk-page .sk-card p{font-size:15px;line-height:1.55;color:var(--sk-mut2)}
+
+/* PROGRAM */
+#sk-page .sk-prog{padding-top:0}
+#sk-page .sk-row{display:flex;flex-wrap:wrap;gap:16px}
+#sk-page .sk-level{flex:1 1 420px;background:var(--sk-card);border:1px solid var(--sk-line)}
+#sk-page .sk-level-img{aspect-ratio:3/2;background:var(--sk-ph)}
+#sk-page .sk-level-body{padding:28px;display:flex;flex-direction:column;gap:14px}
+#sk-page .sk-level-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#sk-page .sk-level h3{font-size:40px;line-height:1}
+#sk-page .sk-level-top span{font-size:15px;color:var(--sk-mut)}
+#sk-page .sk-level ul{padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:16px;line-height:1.5;color:var(--sk-mut)}
+
+/* CO ZÍSKÁŠ */
+#sk-page .sk-split{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+#sk-page .sk-split-img{flex:1 1 420px;aspect-ratio:4/5;background:var(--sk-ph)}
+#sk-page .sk-split-copy{flex:1 1 460px}
+#sk-page .sk-benefit{display:flex;gap:20px;padding:20px 0;border-top:1px solid var(--sk-line)}
+#sk-page .sk-benefit:last-child{border-bottom:1px solid var(--sk-line)}
+#sk-page .sk-benefit b{display:block;font-family:Teko,sans-serif;font-weight:400;font-size:28px;line-height:1.1}
+#sk-page .sk-benefit span{font-size:15px;line-height:1.55;color:var(--sk-mut2)}
+
+/* GALERIE */
+#sk-page .sk-head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:40px}
+#sk-page .sk-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+#sk-page .sk-gallery div{background:var(--sk-ph);aspect-ratio:4/5}
+#sk-page .sk-gallery .sk-big{grid-column:1 / -1;aspect-ratio:2/1}
+
+/* RECENZE */
+#sk-page .sk-reviews-sec{padding-top:0}
+#sk-page .sk-rating{display:flex;align-items:center;gap:10px}
+#sk-page .sk-rating b{font-family:Teko,sans-serif;font-weight:400;font-size:36px;line-height:1}
+#sk-page .sk-stars{color:#F2B33D;letter-spacing:2px;font-size:18px}
+#sk-page .sk-review{flex:1 1 460px;padding:32px;background:var(--sk-card);border:1px solid var(--sk-line);display:flex;flex-direction:column;gap:20px}
+#sk-page .sk-review blockquote{flex-grow:1;font-size:17px;line-height:1.6;color:#E6E1DF;border:0;font-style:normal}
+#sk-page .sk-review figcaption{display:flex;align-items:center;gap:14px;padding-top:16px;border-top:1px solid var(--sk-line)}
+#sk-page .sk-avatar{width:44px;height:44px;border-radius:50%;background:var(--sk-ph);display:flex;align-items:center;justify-content:center;font-family:Teko,sans-serif;font-size:22px;color:var(--sk-red-l);flex-shrink:0}
+#sk-page .sk-review figcaption span:last-child{font-family:Teko,sans-serif;font-size:24px;line-height:1}
+
+/* LEKTOR */
+#sk-page .sk-lector-sec{padding-top:0}
+#sk-page .sk-lector{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:48px;background:var(--sk-card);border:1px solid var(--sk-line)}
+#sk-page .sk-lector-img{flex:0 1 300px;aspect-ratio:4/5;background:var(--sk-ph)}
+#sk-page .sk-lector-copy{flex:1 1 420px;display:flex;flex-direction:column;gap:16px}
+#sk-page .sk-lector h2{font-size:56px}
+#sk-page .sk-lector p{font-size:17px;line-height:1.6;color:var(--sk-mut)}
+
+/* CENA */
+#sk-page .sk-price-sec .sk-wrap{display:flex;flex-direction:column;gap:32px;align-items:center;text-align:center}
+#sk-page .sk-price{width:100%;padding:40px;background:var(--sk-bg2);border:2px solid var(--sk-red);display:flex;flex-direction:column;gap:20px;align-items:center}
+#sk-page .sk-price-meta{font-size:15px;color:var(--sk-mut)}
+#sk-page .sk-price-main{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;justify-content:center}
+#sk-page .sk-price-main b{font-family:Teko,sans-serif;font-weight:600;font-size:96px;line-height:.9}
+#sk-page .sk-price-main s{font-size:18px;color:var(--sk-mut3)}
+#sk-page .sk-save{padding:8px 14px;background:var(--sk-ph);font-size:14px}
+#sk-page .sk-price .sk-btn{min-height:60px;padding:0 44px;font-size:28px}
+#sk-page .sk-perks{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;font-size:14px;color:var(--sk-mut2)}
+#sk-page .sk-price-note{font-size:15px;line-height:1.6;color:var(--sk-mut2)}
+
+/* FAQ */
+#sk-page .sk-faq h2{font-size:56px;margin-bottom:32px}
+#sk-page details{border-top:1px solid var(--sk-line);padding:20px 0}
+#sk-page details:last-child{border-bottom:1px solid var(--sk-line)}
+#sk-page summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:Teko,sans-serif;font-size:28px;line-height:1.1;color:var(--sk-text)}
+#sk-page summary::-webkit-details-marker{display:none}
+#sk-page summary::after{content:"+";font-size:36px;color:var(--sk-red-l);transition:transform .2s}
+#sk-page details[open] summary::after{transform:rotate(45deg)}
+#sk-page details p{margin-top:12px;font-size:16px;line-height:1.6;color:var(--sk-mut2)}
+
+/* ZÁVĚREČNÉ CTA */
+#sk-page .sk-final{padding:0 0 96px}
+#sk-page .sk-final .sk-inner{padding:56px 48px;background:var(--sk-red);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
+#sk-page .sk-final h2{font-weight:600;color:#fff}
+#sk-page .sk-final p{margin-top:8px;font-size:17px;color:#fff}
+
+/* MOBIL */
+@media (max-width:1024px){
+  #sk-page .sk-grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  #sk-page section{padding:64px 0}
+  #sk-page .sk-hero{padding:130px 0 48px}
+  #sk-page .sk-hero .sk-wrap,#sk-page .sk-split{gap:32px}
+  #sk-page .sk-hero-copy,#sk-page .sk-hero-video,#sk-page .sk-split-img,#sk-page .sk-split-copy,#sk-page .sk-level,#sk-page .sk-review,#sk-page .sk-lector-copy{flex-basis:100%}
+  #sk-page h1{font-size:60px}
+  #sk-page h2,#sk-page .sk-final h2{font-size:44px}
+  #sk-page .sk-lector h2,#sk-page .sk-faq h2{font-size:40px}
+  #sk-page .sk-sub{font-size:26px}
+  #sk-page .sk-grid4{grid-template-columns:minmax(0,1fr)}
+  #sk-page .sk-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  #sk-page .sk-gallery .sk-big{aspect-ratio:3/2}
+  #sk-page .sk-lector,#sk-page .sk-price,#sk-page .sk-review,#sk-page .sk-trust .sk-inner,#sk-page .sk-final .sk-inner{padding:24px}
+  #sk-page .sk-final{padding-bottom:64px}
+  #sk-page .sk-lector-img{flex-basis:100%}
+  #sk-page .sk-price-main b{font-size:72px}
+  #sk-page .sk-btn{width:100%;padding:0 20px;font-size:24px}
+  #sk-page summary{font-size:24px}
+}

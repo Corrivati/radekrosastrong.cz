@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://radekrosastrong.cz/sitemap.xml
