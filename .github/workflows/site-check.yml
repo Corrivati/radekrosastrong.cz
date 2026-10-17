@@ -1,0 +1,51 @@
+# Dočasné: kontrola ostrého webu (stránky, soubory, přesměrování).
+name: Live site check
+on:
+  push:
+    paths: [".github/workflows/site-check.yml"]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Redirects
+        run: |
+          for u in http://radekrosastrong.cz/ http://www.radekrosastrong.cz/ https://www.radekrosastrong.cz/ https://www.radekrosastrong.cz/edukace/ https://radekrosastrong.cz/edukace https://radekrosastrong.cz/strong-blog/ https://radekrosastrong.cz/neexistuje/; do
+            printf "%-45s %s\n" "$u" "$(curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}' "$u")"
+          done
+          echo "== certificate"; echo | openssl s_client -connect radekrosastrong.cz:443 -servername radekrosastrong.cz 2>/dev/null | openssl x509 -noout -subject -issuer -dates
+      - name: Crawl
+        run: |
+          python3 - <<'PY'
+          import re, urllib.request, urllib.parse
+          base="https://radekrosastrong.cz/"
+          pages=["","edukace/","onlinecoaching/","strangetraining/","strangetraining-old/","svalove-kontrakce/","kontrakce2/","workshop-slachy/","webinar-zdarma/","gdpr/","obchodni-podminky/","sitemap.xml","robots.txt"]
+          seen={}; bad=[]
+          def get(u):
+              if u in seen: return seen[u]
+              try:
+                  r=urllib.request.urlopen(urllib.request.Request(u,method="GET",headers={"User-Agent":"Mozilla/5.0"}),timeout=30)
+                  seen[u]=(r.status,r.read()); 
+              except urllib.error.HTTPError as e: seen[u]=(e.code,b"")
+              except Exception as e: seen[u]=(str(e),b"")
+              return seen[u]
+          for p in pages:
+              u=base+p; st,body=get(u); print(st,u)
+              if st!=200: bad.append((u,st)); continue
+              if not p or p.endswith("/"):
+                  html=body.decode("utf8","replace")
+                  css=[]
+                  for ref in re.findall(r'(?:href|src|poster)="([^"#]+)',html):
+                      if ref.startswith(("mailto:","tel:","data:")): continue
+                      full=urllib.parse.urljoin(u,ref)
+                      if urllib.parse.urlparse(full).netloc!="radekrosastrong.cz": continue
+                      s,b=get(full)
+                      if s!=200: bad.append((full,s,"in "+u))
+                      if full.split("?")[0].endswith(".css"): css.append((full,b))
+                  for cu,b in css:
+                      for ref in re.findall(r'url\(([^)"\']+)\)',b.decode("utf8","replace")):
+                          if ref.startswith("data:"): continue
+                          full=urllib.parse.urljoin(cu,ref); s,_=get(full)
+                          if s!=200: bad.append((full,s,"in "+cu))
+          print("checked",len(seen),"URLs")
+          print("BROKEN:" if bad else "ALL OK"); [print(" ",*b) for b in bad]
+          PY
