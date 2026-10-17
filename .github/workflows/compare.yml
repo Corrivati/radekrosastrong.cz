@@ -44,12 +44,14 @@ jobs:
               for (const [site, base] of Object.entries(sites)) {
                 for (const pg of pages) {
                   try {
-                    await p.goto(base + pg + (pg ? "/" : ""), { waitUntil: "networkidle", timeout: 60000 });
-                  } catch (e) { console.log("goto", site, pg, e.message); }
-                  await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 120)); } window.scrollTo(0, 0); await new Promise(r => setTimeout(r, 800)); });
-                  const name = `${process.env.GITHUB_WORKSPACE}/.compare/${tag}/${pg || "home"}-${site}`;
-                  await p.screenshot({ path: name + "-top.jpg", type: "jpeg", quality: 70 });
-                  await p.screenshot({ path: name + ".jpg", type: "jpeg", quality: 60, fullPage: true });
+                    try { await p.goto(base + pg + (pg ? "/" : ""), { waitUntil: "load", timeout: 45000 }); } catch (e) { console.log("goto", site, pg, e.message.split("\n")[0]); }
+                    await p.waitForTimeout(2500);
+                    await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 120)); } window.scrollTo(0, 0); await new Promise(r => setTimeout(r, 800)); });
+                    const name = `${process.env.GITHUB_WORKSPACE}/.compare/${tag}/${pg || "home"}-${site}`;
+                    await p.screenshot({ path: name + "-top.jpg", type: "jpeg", quality: 70 });
+                    await p.screenshot({ path: name + ".jpg", type: "jpeg", quality: 60, fullPage: true });
+                    console.log("ok", tag, site, pg);
+                  } catch (e) { console.log("fail", tag, site, pg, e.message.split("\n")[0]); }
                 }
               }
               await ctx.close();
@@ -61,6 +63,7 @@ jobs:
           cd /tmp/pw && node shot.js
           ls -la $GITHUB_WORKSPACE/.compare/desktop | head
       - name: Commit
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898+github-actions[bot]@users.noreply.github.com"
