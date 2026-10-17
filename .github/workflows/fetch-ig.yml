@@ -1,0 +1,44 @@
+# Jednorázově stáhne obrázky Instagram feedu z původního WordPressu.
+name: Fetch Instagram images
+on:
+  push:
+    paths: [".github/workflows/fetch-ig.yml"]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p assets/images/ig
+          while read -r n media cdn; do
+            [ -z "$n" ] && continue
+            got=no
+            for u in "https://radekrosastrong.cz/wp-content/uploads/sb-instagram-feed-images/${media}full.jpg" "https://radekrosastrong.cz/wp-content/uploads/sb-instagram-feed-images/${media}low.jpg" "$cdn"; do
+              if curl -fsSL --max-time 60 -A "Mozilla/5.0" -o "assets/images/ig/$n.jpg" "$u"; then got=yes; echo "OK $n $u"; break; fi
+            done
+            [ $got = yes ] || echo "FAIL $n"
+          done <<'LIST'
+          01 346107469_1236124717036459_2995997854580225710_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/346107469_1236124717036459_2995997854580225710_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=SyXaNKoC3MYAX80ICkV&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDpUfk_8Lq4hd-1-bvPuQyb7EyMZBsdo_CnHKdgEtmPxw&oe=64727727
+          02 341330518_567924131830673_4855243841878083697_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/341328977_590481019713200_2373875068492830152_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=YdtTnK1uSCkAX8cS-yT&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBiz1vHNMb-D0yQtU0sgySEtbGyr7O-dmhHjWB_L4JDbw&oe=6473A5B4
+          03 339164431_697458115467649_4678366222416771499_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/339505070_582788673817801_5331388204785959155_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=SDJs6eFDTg0AX-YxkMX&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAjRreKOUItO8jsKKjOTuOptJ_7hIgqIHbMA_5XtRuxGA&oe=64725D43
+          04 338931347_993481964964269_6716923983841592051_n https://scontent-prg1-1.cdninstagram.com/v/t51.29350-15/338931347_993481964964269_6716923983841592051_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=8oTgRS1QCZMAX93KiOD&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAX51YDRQXK6hfuzxuQASoQoIEGqzz8DQ7FDJjCi_WYbQ&oe=64740D0E
+          05 328330217_734508434920787_3514865147914451682_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/337731790_2107357942802283_43452545778254792_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=Ch2dKoJBFaEAX8xSnGt&_nc_oc=AQntnNdt24dLqHGI3dtH3xg26zCKI95q-byEln27GEdOv6b2fZVP1seu-INt7nxlkcc&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAVTtkw8km-URqKev_3gtt5oYYMV8q73GZrFijv6YWGYw&oe=6473F99E
+          06 335495647_947933736361294_7155560364160873668_n https://scontent-prg1-1.cdninstagram.com/v/t51.29350-15/335495647_947933736361294_7155560364160873668_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=_jY8qTgFyKoAX-ik_4v&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCUS6p8lj7U1CCan2Ih_wi_JganMk3eERlenPb7ckiOmQ&oe=6472778E
+          07 334406987_909713580166183_3431521781654890526_n https://scontent-prg1-1.cdninstagram.com/v/t51.29350-15/334406987_909713580166183_3431521781654890526_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=Sy61NQuYqeEAX9LAbdf&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDshCTScbgzp7KHr7tATblfRYlPGMOWGbJJy8-Oh_iSYg&oe=64727B3D
+          08 334047460_533703252086248_2816939058091452841_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/334540836_6204587312935178_9014667242580909881_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=t-oIYYnvH1cAX96SL7P&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDD_2BUqu5X6vSZeaavhrZDqDpP_RZQ-AncNdLzM-xBBw&oe=6473824E
+          09 333048174_1061408591915321_7359404053738897792_n https://scontent-prg1-1.cdninstagram.com/v/t51.29350-15/333048174_1061408591915321_7359404053738897792_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=n9RmowRoiWQAX_tMrZv&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCEmSVKGpke5XHuPowHyOVyO3qzf5bLcDDu7nBhi8FKZg&oe=647256F4
+          10 332386657_967287337593525_7442649734994927464_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/331987885_942134586787894_3971474796254754377_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=ZtzKJSl1Kv4AX8XiLMr&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCKrs_rzsyUShRt---lHDKNbXKlfHcv2hYAHOCQFyh_LA&oe=647285DB
+          11 331095845_3382712271973408_1698016081841439323_n https://scontent-prg1-1.cdninstagram.com/v/t51.29350-15/331095845_3382712271973408_1698016081841439323_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=SzyyNl8otTAAX_SZTFA&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfC78O9znwmX0uRrmV1X5KeYrsXVrns8nIrOeB-y3F_3xQ&oe=6472E131
+          12 331311909_574293341267035_2035340051928117416_n https://scontent-prg1-1.cdninstagram.com/v/t51.36329-15/331808065_754509309571614_3308497780753590396_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=lYzUXeF4ibgAX--c7XI&_nc_ht=scontent-prg1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCKCrIgbRl_2y8NVho6V4EIBQmSxxcAXpP5yWPQheHSqw&oe=64723E01
+          LIST
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/ig
+          git diff --cached --quiet && exit 0
+          git commit -m "Add Instagram feed images downloaded from the WordPress site"
+          git push
