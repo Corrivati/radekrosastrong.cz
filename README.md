@@ -21,7 +21,7 @@ assets/css/style.css                vzhled celého webu
 assets/css/strangetraining.css      vzhled landing page /strangetraining/
 assets/js/main.js                   menu na mobilu, galerie, videa, formulář
 assets/fonts/                       písma Teko a Ubuntu (bez Google Fonts)
-assets/images/                      fotky, loga a video (seznam v assets/images/README.md)
+assets/images/                      fotky (WebP), logo, favicon a video
 serve.py                            lokální náhled
 ```
 

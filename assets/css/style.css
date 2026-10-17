@@ -103,7 +103,7 @@ svg{fill:currentColor}
 .to-top svg{width:18px;height:18px}
 
 /* ---------- Úvodní stránka ---------- */
-.hero{position:relative;overflow:hidden;padding:280px 0;background:#111 url(../images/AS_01043.jpg-scaled.jpeg) center/cover no-repeat fixed;color:var(--white)}
+.hero{position:relative;overflow:hidden;padding:280px 0;background:#111 url(../images/hero.webp) center/cover no-repeat fixed;color:var(--white)}
 .hero-video{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .hero-video iframe{position:absolute;top:50%;left:50%;width:max(100%,177.78vh);height:max(100%,56.25vw);transform:translate(-50%,-50%);opacity:0;transition:opacity 1s}
 .hero-video iframe.ready{opacity:1}
@@ -279,7 +279,8 @@ svg{fill:currentColor}
 .prose .red{color:#ff0000}
 .prose .buy{color:#ffff00;font-weight:700}
 .page-media{max-width:var(--wrap);margin:0 auto;padding:10px 10px 60px}
-.page-media video,.page-media img{width:100%}
+.page-media img{width:100%}
+.page-media video{display:block;height:min(85vh,1280px);width:auto;max-width:100%;aspect-ratio:9/16;margin:0 auto;background:#000}
 @media(max-width:1024px){.article h1{padding-left:21px}.article{padding:150px 30px 48px}}
 @media(max-width:767px){.article{padding:130px 20px 20px}.article h1{padding-left:0;font-size:26px}.prose{font-size:16px}}
 
