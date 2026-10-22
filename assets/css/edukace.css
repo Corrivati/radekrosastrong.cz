@@ -65,3 +65,5 @@
 #sk-page .edu-secondary{grid-column:1/-1}
 #sk-page .edu-event-image{position:relative}
 #sk-page .edu-event-image img{position:absolute;inset:0}
+
+#sk-page .edu-hero-photo img{object-position:62% center}
