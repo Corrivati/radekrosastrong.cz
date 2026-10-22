@@ -61,3 +61,7 @@
  #sk-page .edu-online-facts b{font-size:80px}
 }
 #sk-page .sk-btn span[aria-hidden]{font-family:Ubuntu,sans-serif;font-size:20px;margin-left:8px}
+
+#sk-page .edu-secondary{grid-column:1/-1}
+#sk-page .edu-event-image{position:relative}
+#sk-page .edu-event-image img{position:absolute;inset:0}
