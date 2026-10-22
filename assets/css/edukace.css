@@ -66,4 +66,6 @@
 #sk-page .edu-event-image{position:relative}
 #sk-page .edu-event-image img{position:absolute;inset:0}
 
-#sk-page .edu-hero-photo img{object-position:62% center}
+#sk-page .edu-hero-photo img{aspect-ratio:3/2;object-position:center}
+#sk-page .edu-secondary{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+@media(max-width:767px){#sk-page .edu-secondary{grid-template-columns:minmax(0,1fr)}}
