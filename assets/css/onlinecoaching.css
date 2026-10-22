@@ -1,0 +1,33 @@
+/* Online coaching shares the workshop palette, typography, components and breakpoints. */
+#sk-page.oc-page .sk-hero .sk-wrap{gap:48px}
+#sk-page .oc-hero-photo{flex:1 1 420px;min-width:0;position:relative;max-width:480px}
+#sk-page .oc-hero-photo img{aspect-ratio:4/5;object-position:center 35%}
+#sk-page .oc-hero-photo figcaption{position:absolute;bottom:0;left:0;right:0;padding:56px 24px 24px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:15px}
+#sk-page .oc-note,#sk-page .oc-contact-note{font-size:14px;line-height:1.6;color:var(--sk-mut3)}
+#sk-page .oc-note{max-width:450px}
+#sk-page .oc-text-link{font-size:15px}
+#sk-page .oc-detail{padding-top:0}
+#sk-page .oc-training-photo{flex:1 1 420px;max-width:480px;min-width:0}
+#sk-page .oc-training-photo img{aspect-ratio:4/5;object-position:center 30%}
+#sk-page .oc-detail h2{margin-bottom:24px}
+#sk-page .oc-testimonial{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:0;border:1px solid var(--sk-line);background:var(--sk-card)}
+#sk-page .oc-athlete-photo{position:relative;min-height:460px}
+#sk-page .oc-athlete-photo img{position:absolute;inset:0;object-position:center 25%}
+#sk-page .oc-testimonial .sk-review{border:0;padding:48px;justify-content:center}
+#sk-page .oc-testimonial blockquote{flex-grow:0;font-size:22px;line-height:1.7}
+#sk-page .oc-quote-mark{font-family:Teko,sans-serif;font-size:100px;line-height:.6;color:var(--sk-red-l)}
+#sk-page .oc-testimonial figcaption{margin-top:12px}
+#sk-page .oc-testimonial figcaption small{display:block;margin-top:8px;font-family:Ubuntu,sans-serif;font-size:13px;line-height:1.6;color:var(--sk-mut3)}
+#sk-page .oc-contact-note{text-align:center;margin-top:24px}
+#sk-page.oc-page [id]{scroll-margin-top:100px}
+#sk-page.oc-page a:focus-visible,#sk-page.oc-page summary:focus-visible{outline:3px solid white;outline-offset:5px}
+#sk-page.oc-page .sk-faq{padding-top:0}
+@media(max-width:767px){
+ #sk-page .oc-hero-photo,#sk-page .oc-training-photo{flex-basis:100%;max-width:none}
+ #sk-page.oc-page .sk-hero .sk-wrap{gap:32px}
+ #sk-page .oc-testimonial{grid-template-columns:minmax(0,1fr)}
+ #sk-page .oc-athlete-photo{min-height:0;aspect-ratio:4/5}
+ #sk-page .oc-testimonial .sk-review{padding:28px 24px}
+ #sk-page .oc-testimonial blockquote{font-size:18px}
+ #sk-page .oc-hero-photo img{aspect-ratio:4/5}
+}
