@@ -1,0 +1,10 @@
+.certs-more{margin-top:24px}
+.certs-more summary{display:inline-flex;align-items:center;gap:18px;padding:14px 24px;background:var(--red);color:#fff;cursor:pointer;list-style:none;font-family:var(--head);font-size:25px;line-height:1.2;text-transform:uppercase}
+.certs-more summary::-webkit-details-marker{display:none}
+.certs-more summary::after{content:'+';font-family:Arial,sans-serif;font-size:24px}
+.certs-more[open] summary::after{content:'−'}
+.certs-more .certs-hide,.certs-more[open] .certs-show{display:none}
+.certs-more[open] .certs-hide{display:inline}
+.certs-more summary:hover{background:#a3222a}
+.certs-more summary:focus-visible{outline:3px solid #222;outline-offset:4px}
+.certs-more .cert-lists{margin-top:24px}
