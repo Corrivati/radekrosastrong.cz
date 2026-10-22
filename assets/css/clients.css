@@ -1,0 +1,24 @@
+/* Compact client gallery; retain the homepage colors and typography. */
+#clients{padding:64px 0 72px}
+#clients .wrap{display:block;min-width:0}
+#clients .clients-heading-row{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:28px}
+#clients .clients-head{margin:0}
+#clients .clients-head h2{font-size:68px;line-height:1;margin:0}
+#clients .clients-head .divider{margin:16px 0 0}
+#clients .clients-controls{display:flex;gap:10px}
+#clients .clients-controls[hidden]{display:none}
+#clients .clients-controls button{width:48px;height:48px;border:1px solid #ccc;background:transparent;color:#bf2932;font:26px Arial,sans-serif;cursor:pointer;transition:background .2s,color .2s}
+#clients .clients-controls button:hover:not(:disabled){background:#bf2932;color:white;border-color:#bf2932}
+#clients .clients-controls button:disabled{opacity:.3;cursor:default}
+#clients .clients-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#bf2932 #eee;padding:0 0 18px}
+#clients .client{margin:0;min-width:0;scroll-snap-align:start;text-align:left;overflow:hidden;background:#f4f3f3}
+#clients .client img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;margin:0;transition:filter .25s}
+#clients .client figcaption{padding:18px 20px;min-height:94px}
+#clients .client h3{font-size:27px;line-height:1.1;margin:0 0 6px}
+#clients .client p{font-size:14px;line-height:1.5;margin:0;color:#635e5e}
+#clients .clients-hint{margin:12px 0 0;color:#635e5e;font-size:14px}
+#clients button:focus-visible,#clients .clients-track:focus-visible{outline:3px solid #bf2932;outline-offset:4px}
+@media(hover:hover){#clients .client:hover img{filter:brightness(1.06)}}
+@media(max-width:1024px){#clients{padding:56px 24px}#clients .clients-track{grid-auto-columns:calc((100% - 20px)/2)}}
+@media(max-width:600px){#clients{padding:48px 20px}#clients .clients-head h2{font-size:52px}#clients .clients-heading-row{gap:12px}#clients .clients-controls button{width:40px;height:40px}#clients .clients-track{grid-auto-columns:85%;gap:16px}#clients .client h3{font-size:26px}}
+@media(prefers-reduced-motion:reduce){#clients .client img,#clients .clients-controls button{transition:none}}

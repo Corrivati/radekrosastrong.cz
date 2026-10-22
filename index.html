@@ -18,6 +18,7 @@
 <link rel="preload" href="assets/fonts/teko-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/ubuntu-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/clients.css?v=1">
 </head>
 <body id="top">
 <a class="skip" href="#main">Přeskočit na obsah</a>
@@ -103,21 +104,26 @@
   <button class="lb-close" type="button" aria-label="Zavřít"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 3.9 12 10.6l6.7-6.7 1.4 1.4-6.7 6.7 6.7 6.7-1.4 1.4-6.7-6.7-6.7 6.7-1.4-1.4 6.7-6.7-6.7-6.7z"/></svg></button>
 </dialog>
 
-<section class="clients" id="clients">
+<section class="clients" id="clients" aria-labelledby="clients-heading">
   <div class="wrap">
-    <div class="clients-head">
-      <h2>Moji klienti</h2>
-      <hr class="divider">
+    <div class="clients-heading-row"><div class="clients-head"><h2 id="clients-heading">Moji klienti</h2><hr class="divider"></div>
+      <div class="clients-controls" hidden><button type="button" class="clients-prev" aria-label="Předchozí klienti" aria-controls="clients-track">←</button><button type="button" class="clients-next" aria-label="Další klienti" aria-controls="clients-track">→</button></div>
     </div>
-    <div class="clients-col">
-      <figure class="client"><img width="800" height="800" src="assets/images/klient-filip-macek.webp" alt="Radek Rosa a Filip Macek" loading="lazy"><figcaption><h3>Filip macek</h3><p>Zápasník Oktagon MMA</p></figcaption></figure>
+    <div class="clients-track" id="clients-track" tabindex="0" role="region" aria-label="Fotografie klientů – posouvejte šipkami nebo tažením">
+      <figure class="client"><img width="800" height="800" src="assets/images/klient-filip-macek.webp" alt="Radek Rosa a Filip Macek" loading="lazy"><figcaption><h3>Filip Macek</h3><p>Zápasník Oktagon MMA</p></figcaption></figure>
       <figure class="client"><img width="800" height="800" src="assets/images/klient-petra-castkova.webp" alt="Monika Rychtářová, Radek Rosa a Petra Částková" loading="lazy"><figcaption><h3>Petra Částková (vpravo)</h3><p>Zápasnice Bellator MMA</p></figcaption></figure>
-      <figure class="client"><img width="337" height="344" src="assets/images/klient-milos-petrasek.webp" alt="Radek Rosa a Miloš Petrášek" loading="lazy"><figcaption><h3>Miloš "meloun" petrášek</h3><p>Zápasník Oktagon MMA</p></figcaption></figure>
-    </div>
-    <div class="clients-col">
       <figure class="client"><img width="800" height="800" src="assets/images/klient-jakub-dohnal.webp" alt="Radek Rosa a Jakub Dohnal" loading="lazy"><figcaption><h3>Jakub Dohnal</h3><p>Zápasník Oktagon MMA</p></figcaption></figure>
       <figure class="client"><img width="800" height="800" src="assets/images/klient-kelvin-soquessa.webp" alt="Radek Rosa a Kelvin Soquessa" loading="lazy"><figcaption><h3>Kelvin Soquessa</h3><p>Čtyřnásobný Mistr ČR v olympijském boxu</p></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-andre-reinders-novy.webp" width="490" height="626" alt="Andre Reinders" loading="lazy"><figcaption><h3>Andre Reinders</h3></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-david-zoula-novy.webp" width="547" height="365" alt="David Zoula" loading="lazy"><figcaption><h3>David Zoula</h3></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-denisa-novak-valova-novy.webp" width="447" height="447" alt="Denisa Novák Válová" loading="lazy"><figcaption><h3>Denisa Novák Válová</h3></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-josef-stranik-novy.webp" width="1000" height="667" alt="Josef Stráník" loading="lazy"><figcaption><h3>Josef Stráník</h3></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-julie-pribylova-novy.webp" width="590" height="885" alt="Julie Přibylová" loading="lazy"><figcaption><h3>Julie Přibylová</h3></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-milos-petrasek-novy.webp" width="399" height="501" alt="Miloš Petrášek" loading="lazy"><figcaption><h3>Miloš „Meloun“ Petrášek</h3><p>Zápasník Oktagon MMA</p></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-patrik-kutil-novy.webp" width="760" height="868" alt="Patrik Kutil" loading="lazy"><figcaption><h3>Patrik Kutil</h3></figcaption></figure>
+      <figure class="client"><img src="assets/images/klient-pavel-polakovic-novy.webp" width="932" height="699" alt="Pavel Polakovič" loading="lazy"><figcaption><h3>Pavel Polakovič</h3></figcaption></figure>
     </div>
+    <p class="clients-hint">Další klienty zobrazíš posunutím galerie <span aria-hidden="true">→</span></p>
   </div>
 </section>
 
@@ -168,5 +174,6 @@
 </footer>
 <a class="to-top" href="#top" aria-label="Zpět nahoru"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2l105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></a>
 <script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/clients.js?v=1" defer></script>
 </body>
 </html>
