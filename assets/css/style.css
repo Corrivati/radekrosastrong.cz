@@ -319,3 +319,13 @@ svg{fill:currentColor}
 @media(max-width:767px){.notfound h1{font-size:72px}}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Podrobné představení se rozbaluje přímo v sekci O mně. */
+.about-details summary{list-style:none;cursor:pointer;color:var(--red)}
+.about-details summary::-webkit-details-marker{display:none}
+.about-details summary::after{content:'+';font:20px/1 Arial,sans-serif;text-decoration:none}
+.about-details[open] summary::after{content:'−'}
+.about-collapse,.about-details[open] .about-expand{display:none}
+.about-details[open] .about-collapse{display:inline}
+.about-bio{padding-top:24px;font-size:16px;line-height:1.8}
+.about-bio p:last-child{margin-bottom:0}
