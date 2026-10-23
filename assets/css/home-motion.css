@@ -1,0 +1,18 @@
+/* Scoped homepage hover effects; reveals are progressive enhancements in JS. */
+#clients .client{transition:transform 225ms ease,box-shadow 225ms ease}
+#clients .clients-track{padding-top:4px}
+.about-photos img{transition:transform 225ms ease}
+.hero-cta{transition:background-color 225ms ease,border-color 225ms ease,transform 225ms ease}
+@media(hover:hover){
+ #clients .client:hover{transform:translateY(-3px);box-shadow:0 2px 0 #cbb5b7,0 6px 12px rgba(26,26,26,.06)}
+ .about-photo-frame:hover .about-photo-coach{transform:scale(1.28125)}
+ .about-photo-frame:hover .about-photo-educator{transform:scale(1.025)}
+ .hero-cta:hover{transform:translateY(-3px)}
+}
+@media(prefers-reduced-motion:reduce){
+ #clients .client,.about-photos img,.hero-cta{transition:none}
+ #clients .client:hover,.hero-cta:hover{transform:none}
+ .about-photo-frame:hover .about-photo-coach{transform:scale(1.25)}
+ .about-photo-frame:hover .about-photo-educator{transform:none}
+}
+@media print{#main *{opacity:1!important;translate:none!important}}
