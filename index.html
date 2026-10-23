@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="assets/images/favicon.png">
 <link rel="preload" href="assets/fonts/teko-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/ubuntu-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 <link rel="stylesheet" href="assets/css/clients.css?v=1">
 <link rel="stylesheet" href="assets/css/certifications.css?v=1">
 </head>
@@ -46,27 +46,30 @@
   </nav>
 </div>
 <main id="main">
-<section class="hero" id="home">
-  <div class="hero-video" data-id="cAc32A9zK2M" data-start="4" data-end="50"></div>
+<section class="hero" id="home" aria-labelledby="hero-title">
   <div class="wrap">
-    <h1>Radek Rosa</h1>
-    <a class="hero-arrow" href="#about" aria-label="Posunout na sekci O mně"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M137.4 502.6c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v370.7l-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96z"/></svg></a>
-    <p class="hero-sub">Silový a kondiční trenér</p>
+    <p class="hero-eyebrow">Silový a kondiční trenér</p>
+    <h1 id="hero-title">Síla. Výkon.<br>Systematický přístup.</h1>
+    <p class="hero-lead">Individuální příprava sportovců, online coaching a odborné vzdělávání trenérů.</p>
+    <div class="hero-actions">
+      <a class="hero-cta" href="onlinecoaching/">Online coaching</a>
+      <a class="hero-cta hero-cta-secondary" href="edukace/">Kurzy a workshopy</a>
+    </div>
   </div>
 </section>
 
-<section class="about" id="about">
+<section class="about" id="about" aria-labelledby="about-title">
   <div class="wrap">
     <div class="about-text">
-      <h2>o mně</h2>
-      <hr class="divider">
-      <p>Jsem silový a kondiční trenér, který se věnuje profesionálním sportovcům i běžné populaci. Pomáhám zlepšovat sportovní výkon, snižovat tělesnou hmotnost, zbavovat bolesti, učit správné pohybové a dechové vzory a poskytovat pooperační rehabilitační péči. Nabízím také individuální online coaching, který umožňuje spolupráci na míru bez ohledu na vzdálenost.</p>
-      <p>K silovému tréninku mě poprvé přivedla příprava v rugby klubu Slavia Praha v roce 2005. Později jsem absolvoval několik zápasů podle pravidel MMA a olympijského boxu. Dnes se naplno věnuji trénování klientů, psaní edukačních publikací a pořádání vzdělávacích kurzů pro trenéry. Mými kurzy prošlo už 700+ absolventů z Česka a Slovenska. Příležitostně přednáším na fakultě tělesné výchovy a sportu Univerzity Karlovy.</p>
-      <p>Jsem členem projektu TopAtlet a působím jako silový a kondiční trenér v klubu Reinders MMA. Ve snaze neustále rozšiřovat své znalosti jsem měl příležitost osobně se učit od špičkových odborníků z celého světa, jako jsou Cal Dietz, Alex Natera, Pat Davidson, Tim Gabbett a další.</p>
+      <h2 id="about-title">Radek Rosa</h2>
+      <p class="about-role">Silový a kondiční trenér | Edukátor</p>
+      <p>Věnuji se silové a kondiční přípravě profesionálních sportovců i běžné populace. Ve své práci propojuji vědecké poznatky s praktickými zkušenostmi ze sportovního prostředí. Vedle individuálního tréninku se věnuji také vzdělávání trenérů a fyzioterapeutů prostřednictvím odborných workshopů.</p>
+      <a class="about-more" href="#certifications">Více o mně <span aria-hidden="true">→</span></a>
     </div>
     <div class="about-photos">
-      <img width="1000" height="1500" src="assets/images/o-mne-1.webp" alt="Radek Rosa přednáší na kurzu pro trenéry" loading="lazy">
-      <img width="1000" height="1500" src="assets/images/o-mne-2.webp" alt="Radek Rosa při tréninku" loading="lazy">
+      <!-- Fotografie lze vyměnit úpravou src, rozměrů a alt; ořez řídí třídy trenér / lektor. -->
+      <img class="about-photo-coach" width="1000" height="1500" src="assets/images/o-mne-2.webp" alt="Radek Rosa vede klientku při stabilizačním cvičení" loading="lazy" decoding="async">
+      <img class="about-photo-educator" width="1000" height="1500" src="assets/images/o-mne-1.webp" alt="Radek Rosa přednáší účastníkům odborného kurzu" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -185,7 +188,7 @@
   </div>
 </footer>
 <a class="to-top" href="#top" aria-label="Zpět nahoru"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2l105.4 105.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></a>
-<script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 <script src="assets/js/clients.js?v=1" defer></script>
 </body>
 </html>

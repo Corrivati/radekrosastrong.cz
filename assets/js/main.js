@@ -48,23 +48,6 @@
     }, { once: true });
   });
 
-  // Video na pozadí úvodní sekce (jen na počítači, stejně jako původně)
-  var bg = document.querySelector(".hero-video");
-  if (bg && window.matchMedia("(min-width:1025px) and (prefers-reduced-motion:no-preference)").matches) {
-    window.addEventListener("load", function () {
-      var id = bg.dataset.id;
-      var f = document.createElement("iframe");
-      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&mute=1&controls=0&loop=1&playlist=" + id +
-        "&start=" + bg.dataset.start + "&end=" + bg.dataset.end + "&playsinline=1&modestbranding=1&rel=0&disablekb=1";
-      f.title = "Video na pozadí";
-      f.tabIndex = -1;
-      f.setAttribute("aria-hidden", "true");
-      f.allow = "autoplay; encrypted-media";
-      f.addEventListener("load", function () { setTimeout(function () { f.classList.add("ready"); }, 1200); });
-      bg.appendChild(f);
-    });
-  }
-
   // Galerie: posuvník se šipkami, automatický posun a zvětšení po kliknutí
   document.querySelectorAll(".carousel").forEach(function (c) {
     var track = c.querySelector(".carousel-track");
