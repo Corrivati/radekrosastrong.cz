@@ -121,7 +121,7 @@ svg{fill:currentColor}
 .about-text h2{font-size:clamp(56px,5vw,76px);margin:0 0 12px}
 .about-role{color:var(--red);font-weight:500;line-height:1.6;margin-bottom:24px}
 .about-text>p:not(.about-role){font-size:17px;line-height:1.8;margin-bottom:24px}
-.about-more{display:inline-flex;gap:16px;align-items:center;font-size:15px;font-weight:500;text-decoration:underline;text-underline-offset:6px}
+.about-more{display:inline-flex;align-items:center;gap:18px;padding:14px 24px;background:var(--red);color:#fff;font-family:var(--head);font-size:25px;font-weight:400;line-height:1.2;text-transform:uppercase;text-decoration:none}
 .about-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-bottom:40px;min-width:0}
 .about-photos img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
 .about-photo-coach{object-position:center 60%}
@@ -321,9 +321,11 @@ svg{fill:currentColor}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* Podrobné představení se rozbaluje přímo v sekci O mně. */
-.about-details summary{list-style:none;cursor:pointer;color:var(--red)}
+.about-details summary{list-style:none;cursor:pointer;color:#fff}
+.about-details summary:hover{background:#a3222a}
+.about-details summary:focus-visible{outline:3px solid #222;outline-offset:4px}
 .about-details summary::-webkit-details-marker{display:none}
-.about-details summary::after{content:'+';font:20px/1 Arial,sans-serif;text-decoration:none}
+.about-details summary::after{content:'+';font:24px/1 Arial,sans-serif;text-decoration:none}
 .about-details[open] summary::after{content:'−'}
 .about-collapse,.about-details[open] .about-expand{display:none}
 .about-details[open] .about-collapse{display:inline}
