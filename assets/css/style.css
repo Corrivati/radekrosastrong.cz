@@ -124,8 +124,8 @@ svg{fill:currentColor}
 .about-more{display:inline-flex;gap:16px;align-items:center;font-size:15px;font-weight:500;text-decoration:underline;text-underline-offset:6px}
 .about-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-bottom:40px;min-width:0}
 .about-photos img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-.about-photo-coach{object-position:55% center}
-.about-photo-educator{object-position:55% 35%;margin-top:40px}
+.about-photo-coach{object-position:center 60%}
+.about-photo-educator{object-position:center 45%;margin-top:40px}
 @media(max-width:1024px){
  .hero{padding:120px 32px 48px}
  .hero h1{font-size:72px}
@@ -329,3 +329,5 @@ svg{fill:currentColor}
 .about-details[open] .about-collapse{display:inline}
 .about-bio{padding-top:24px;font-size:16px;line-height:1.8}
 .about-bio p:last-child{margin-bottom:0}
+
+@media(max-width:767px){.about-photo-educator{display:none}}
