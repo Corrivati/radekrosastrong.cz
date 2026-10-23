@@ -4,14 +4,14 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (reduced.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
   var active = new Set();
-  var selector = '#main > section:not(.hero) h2, .about-photo-frame, #clients .client, .testimonials .quote';
+  var selector = '.hero h1, .hero-lead, #main > section:not(.hero) h2, .about-photo-frame, #clients .client, .testimonials .quote';
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       observer.unobserve(entry.target);
       if (reduced.matches) return;
       var element = entry.target;
-      var delay = 0;
+      var delay = element.matches('.hero-lead') ? 70 : 0;
       if (element.matches('.client, .quote')) {
         delay = Array.prototype.indexOf.call(element.parentElement.children, element) % 3 * 35;
       }
