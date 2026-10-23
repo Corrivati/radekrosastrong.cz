@@ -123,9 +123,11 @@ svg{fill:currentColor}
 .about-text>p:not(.about-role){font-size:17px;line-height:1.8;margin-bottom:24px}
 .about-more{display:inline-flex;align-items:center;gap:18px;padding:14px 24px;background:var(--red);color:#fff;font-family:var(--head);font-size:25px;font-weight:400;line-height:1.2;text-transform:uppercase;text-decoration:none}
 .about-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-bottom:40px;min-width:0}
-.about-photos img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-.about-photo-coach{object-position:center 60%}
-.about-photo-educator{object-position:center 45%;margin-top:40px}
+.about-photo-frame{aspect-ratio:3/4;overflow:hidden;border-radius:8px;box-shadow:0 0 0 1px #e3e0e0;transition:transform .2s ease,box-shadow .2s ease}
+.about-photos img{width:100%;height:100%;object-fit:cover}
+.about-photo-coach{object-position:center 60%;transform:scale(1.25);transform-origin:50% 60%}
+.about-photo-educator{object-position:center 45%}
+.about-frame-educator{margin-top:40px}
 @media(max-width:1024px){
  .hero{padding:120px 32px 48px}
  .hero h1{font-size:72px}
@@ -144,7 +146,7 @@ svg{fill:currentColor}
  .about .wrap{grid-template-columns:minmax(0,1fr);gap:32px}
  .about-text h2{font-size:56px}
  .about-photos{grid-template-columns:minmax(0,1fr);gap:24px;padding:0}
- .about-photo-educator{margin:0}
+ .about-frame-educator{margin:0}
 }
 
 .certs{padding:72px 0 80px;background:var(--light)}
@@ -227,7 +229,7 @@ svg{fill:currentColor}
 @media(max-width:1024px){.videos{padding:60px 20px 57px}.videos h2{font-size:85px}.videos .ghost{display:none}}
 @media(max-width:767px){.videos h2{font-size:39px}.video-grid{grid-template-columns:1fr}.video-wide{width:100%}}
 
-.testimonials{padding:72px 32px 88px;background:var(--white);border-top:1px solid #e3e0e0}
+.testimonials{padding:72px 32px 88px;background:var(--light);border-top:1px solid #e3e0e0}
 .testimonials h2{font-size:clamp(44px,5vw,72px);line-height:1.05;margin:0}
 .testimonials .divider{margin:24px 0 36px}
 .testimonials .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
@@ -336,4 +338,7 @@ svg{fill:currentColor}
 .about-bio{padding-top:24px;font-size:16px;line-height:1.8}
 .about-bio p:last-child{margin-bottom:0}
 
-@media(max-width:767px){.about-photo-educator{display:none}}
+@media(max-width:767px){.about-frame-educator{display:none}}
+
+@media(hover:hover){.about-photo-frame:hover{transform:translateY(-3px);box-shadow:0 0 0 1px #cbb5b7,0 8px 20px rgba(26,26,26,.06)}}
+@media(prefers-reduced-motion:reduce){.about-photo-frame{transition:none}.about-photo-frame:hover{transform:none}}
