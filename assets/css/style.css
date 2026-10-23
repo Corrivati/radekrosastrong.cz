@@ -227,15 +227,19 @@ svg{fill:currentColor}
 @media(max-width:1024px){.videos{padding:60px 20px 57px}.videos h2{font-size:85px}.videos .ghost{display:none}}
 @media(max-width:767px){.videos h2{font-size:39px}.video-grid{grid-template-columns:1fr}.video-wide{width:100%}}
 
-.testimonials{padding:80px 0 100px}
-.testimonials h2{font-size:75px;margin-bottom:-2px}
-.testimonials .divider{margin-top:22px}
-.quotes{display:flex;flex-wrap:wrap;justify-content:space-between}
-.quote{width:32%;margin:40px 0 0;padding:10px}
-.quote blockquote{margin:0 0 15px;font-size:16px}
-.quote figcaption{font-weight:700;color:var(--dark)}
-@media(max-width:1024px){.testimonials{padding:80px 25px}.testimonials h2{font-size:64px}.quote{width:50%}}
-@media(max-width:767px){.testimonials{padding:0 20px 80px}.testimonials h2{font-size:54px}.quote{width:100%;margin-top:30px;padding:0}}
+.testimonials{padding:72px 32px 88px;background:var(--light)}
+.testimonials h2{font-size:clamp(44px,5vw,72px);line-height:1.05;margin:0}
+.testimonials .divider{margin:24px 0 36px}
+.testimonials .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.testimonials .quote{display:flex;flex-direction:column;min-width:0;margin:0;padding:28px;border:1px solid #e3e0e0;border-radius:8px;background:var(--white);box-shadow:0 2px 10px rgba(26,26,26,.025);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.testimonials .quote::before{content:'“';font-family:var(--head);font-size:56px;line-height:.8;color:var(--red);margin-bottom:16px}
+.testimonials .quote blockquote{margin:0 0 24px;font-size:16px;line-height:1.75;overflow-wrap:anywhere}
+.testimonials .quote figcaption{margin-top:auto;padding-top:20px;border-top:1px solid #eeeaea;font-weight:700;font-size:15px;line-height:1.5;color:var(--dark)}
+@media(hover:hover){.testimonials .quote:hover{transform:translateY(-3px);border-color:#cbb5b7;box-shadow:0 8px 20px rgba(26,26,26,.06)}}
+@media(max-width:1024px){.testimonials{padding:64px 24px 72px}.testimonials .quotes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){.testimonials{padding:56px 24px 64px}.testimonials .quotes{grid-template-columns:minmax(0,1fr);gap:20px}.testimonials .quote{padding:24px}}
+@media(prefers-reduced-motion:reduce){.testimonials .quote{transition:none}.testimonials .quote:hover{transform:none}}
+
 
 .contact{background:#000}
 .contact .wrap{display:flex;align-items:center}
