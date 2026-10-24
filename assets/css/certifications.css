@@ -29,3 +29,7 @@
 .certificate-preview img{width:100%;height:auto;display:block}
 .certificate-preview:focus-visible{outline:3px solid var(--red);outline-offset:5px}
 @media(max-width:1024px){.certifications-heading{align-items:flex-start;flex-direction:column;gap:16px}.certificate-preview{flex-basis:auto;width:150px}}
+
+.certificate-preview{transition:transform 225ms ease,box-shadow 225ms ease,border-color 225ms ease}
+@media(hover:hover){.certificate-preview:hover{transform:translateY(-3px);border-color:#cbb5b7;box-shadow:0 7px 16px rgba(26,26,26,.08)}}
+@media(prefers-reduced-motion:reduce){.certificate-preview{transition:none}.certificate-preview:hover{transform:none}}
