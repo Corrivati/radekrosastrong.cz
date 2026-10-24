@@ -342,3 +342,13 @@ svg{fill:currentColor}
 
 @media(hover:hover){.about-photo-frame:hover{transform:translateY(-3px);box-shadow:0 0 0 1px #cbb5b7,0 8px 20px rgba(26,26,26,.06)}}
 @media(prefers-reduced-motion:reduce){.about-photo-frame{transition:none}.about-photo-frame:hover{transform:none}}
+
+/* A white closing panel within the testimonials section. */
+.reviews-cta{margin-top:48px;padding:48px 32px;text-align:center;background:var(--white);border-radius:8px}
+.reviews-cta h3{max-width:820px;margin:0 auto 16px;font-size:clamp(32px,3.5vw,46px);line-height:1.1}
+.reviews-cta p{margin:0 auto 28px;max-width:660px;line-height:1.7}
+.consultation-button{max-width:100%;white-space:normal;transition:transform 225ms ease,background-color 225ms ease,box-shadow 225ms ease}
+.consultation-button:focus-visible{outline:3px solid var(--dark);outline-offset:4px}
+@media(hover:hover){.consultation-button:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(26,26,26,.1)}}
+@media(max-width:767px){.reviews-cta{margin-top:32px;padding:32px 20px}.consultation-button{width:100%;font-size:22px;padding:14px 16px;min-height:56px}}
+@media(prefers-reduced-motion:reduce){.consultation-button{transition:none}.consultation-button:hover{transform:none}}
