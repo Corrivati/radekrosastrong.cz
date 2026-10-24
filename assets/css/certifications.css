@@ -34,10 +34,16 @@
 @media(hover:hover){.certificate-preview:hover{transform:translateY(-3px);border-color:#cbb5b7;box-shadow:0 7px 16px rgba(26,26,26,.08)}}
 @media(prefers-reduced-motion:reduce){.certificate-preview{transition:none}.certificate-preview:hover{transform:none}}
 
-/* Optional authentic workshop photo, faded behind the qualification text. */
+/* Natural image proportions; per-photo framing aligns full groups in the right half.
+   --portrait-height is image height relative to the card; --portrait-bottom offsets
+   empty floor; --portrait-shift compensates empty space to the right of the people. */
 .qualification-card.has-speaker-photo{position:relative;isolation:isolate;overflow:hidden}
-.qualification-card .qualification-photo{position:absolute;z-index:-2;inset:0 0 0 auto;width:70%;height:100%;object-fit:cover;object-position:center 35%;transform:translateX(18px) scale(1.15);transform-origin:50% 45%;opacity:.5;filter:saturate(.65);pointer-events:none}
-.qualification-card.has-speaker-photo::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.97) 28%,rgba(255,255,255,.78) 58%,rgba(255,255,255,.25) 100%);pointer-events:none}
+.qualification-card .qualification-photo{position:absolute;z-index:-2;right:8px;bottom:var(--portrait-bottom);height:var(--portrait-height);width:auto;max-width:none;object-fit:contain;transform:translateX(var(--portrait-shift));opacity:.5;filter:saturate(.65);mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 100%);pointer-events:none}
+.photo-luis-mesquita{--portrait-height:149%;--portrait-bottom:-15%;--portrait-shift:31%}
+.photo-tim-gabbett{--portrait-height:123%;--portrait-bottom:-10%;--portrait-shift:22%}
+.photo-alex-natera{--portrait-height:125%;--portrait-bottom:-7%;--portrait-shift:18%}
+.photo-cal-dietz{--portrait-height:139%;--portrait-bottom:0%;--portrait-shift:24%}
+.photo-jordan-shallow{--portrait-height:123%;--portrait-bottom:-6%;--portrait-shift:8%}
+.qualification-card.has-speaker-photo::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 35%,rgba(255,255,255,.78) 60%,rgba(255,255,255,.25) 100%);pointer-events:none}
 .qualification-card.has-speaker-photo .qualification-meta{position:relative}
-
-.qualification-card .qualification-photo-cal{object-position:center 48%;transform:translateX(42px) scale(1.5);transform-origin:75% 55%}
+@media(max-width:767px){.qualification-card .qualification-photo{opacity:.42}}
