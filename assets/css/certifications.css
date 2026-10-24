@@ -47,3 +47,6 @@
 .qualification-card.has-speaker-photo::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 35%,rgba(255,255,255,.78) 60%,rgba(255,255,255,.25) 100%);pointer-events:none}
 .qualification-card.has-speaker-photo .qualification-meta{position:relative}
 @media(max-width:767px){.qualification-card .qualification-photo{opacity:.42}}
+
+.photo-mladen-jovanovic{--portrait-height:126%;--portrait-bottom:-6%;--portrait-shift:15%}
+.qualification-mladen .qualification-program{font-size:14px;line-height:1.5}
