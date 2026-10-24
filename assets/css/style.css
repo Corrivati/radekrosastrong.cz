@@ -356,3 +356,16 @@ svg{fill:currentColor}
 .testimonials .review-name{display:block}
 .testimonials .review-client-type{display:block;margin-top:4px;color:var(--text);font-size:13px;font-weight:400;line-height:1.6}
 .testimonials .review-badge{display:inline-flex;align-items:center;min-height:28px;margin-top:10px;padding:4px 10px;border:1px solid #e3e0e0;border-radius:6px;background:var(--light);color:var(--text);font-size:12px;font-weight:400;line-height:18px;max-width:100%}
+
+/* Compact supporting media sections on the homepage. */
+.gallery{padding:56px 32px 64px}
+.gallery h2,.videos h2{font-size:clamp(40px,4.5vw,64px);margin-bottom:20px}
+.gallery .ghost,.videos .ghost{display:none}
+.gallery .carousel-track a{flex-basis:calc((100% - 33px)/4)}
+.videos{padding:48px 32px 64px}
+.videos .video-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--red) #333;padding-bottom:14px;margin-bottom:12px}
+.videos .yt{scroll-snap-align:start}
+.video-hint{font-size:13px;color:#ccc;margin:0}
+.video-grid:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+@media(max-width:1024px){.gallery .carousel-track a{flex-basis:calc((100% - 22px)/3)}.videos .video-grid{grid-auto-columns:calc((100% - 20px)/2)}}
+@media(max-width:767px){.gallery,.videos{padding:40px 24px 48px}.gallery .carousel-track a{flex-basis:calc((100% - 11px)/2)}.videos .video-grid{grid-auto-columns:88%;gap:16px}}
