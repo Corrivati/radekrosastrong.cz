@@ -40,4 +40,4 @@
 .qualification-card.has-speaker-photo::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.97) 28%,rgba(255,255,255,.78) 58%,rgba(255,255,255,.25) 100%);pointer-events:none}
 .qualification-card.has-speaker-photo .qualification-meta{position:relative}
 
-.qualification-card .qualification-photo-cal{object-position:center 48%;transform:translateX(18px) scale(1.5);transform-origin:75% 55%}
+.qualification-card .qualification-photo-cal{object-position:center 48%;transform:translateX(42px) scale(1.5);transform-origin:75% 55%}
