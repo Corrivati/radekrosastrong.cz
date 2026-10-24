@@ -8,3 +8,17 @@
 .certs-more summary:hover{background:#a3222a}
 .certs-more summary:focus-visible{outline:3px solid #222;outline-offset:4px}
 .certs-more .cert-lists{margin-top:24px}
+/* Featured qualifications; the remaining education stays a compact list. */
+.qualifications-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:20px;list-style:none;margin:28px 0 0;padding:0}
+.qualification-card{min-width:0;display:flex;flex-direction:column;padding:28px;background:var(--white);border:1px solid #e3e0e0;border-radius:8px;transition:border-color 225ms ease}
+.qualification-card h3{font-size:30px;font-weight:500;line-height:1.1;margin:0 0 12px;text-transform:none}
+.qualification-program{font-size:16px;line-height:1.6;margin:0 0 20px;color:var(--dark)}
+.qualification-meta{margin:auto 0 0;font-size:13px;line-height:1.6;color:var(--text)}
+.additional-education{margin-top:24px;padding-top:20px;border-top:1px solid #e3e0e0}
+.education-list{list-style:none;margin:0;padding:0;columns:2;column-gap:40px;font-size:14px;line-height:1.5}
+.education-list li{position:relative;break-inside:avoid;padding:4px 0 4px 14px;margin:0}
+.education-list li::before{content:'';position:absolute;left:0;top:13px;width:4px;height:4px;border-radius:50%;background:var(--red)}
+@media(hover:hover){.qualification-card:hover{border-color:#cbb5b7}}
+@media(max-width:1024px){.qualifications-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){.qualifications-grid{grid-template-columns:minmax(0,1fr);gap:16px;grid-auto-rows:auto}.qualification-card{padding:24px}.education-list{columns:1}}
+@media(prefers-reduced-motion:reduce){.qualification-card{transition:none}}
