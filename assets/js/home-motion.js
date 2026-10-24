@@ -4,7 +4,7 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (reduced.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
   var active = new Set();
-  var selector = '.hero h1, .hero-lead, #main > section:not(.hero) h2, .about-photo-frame, #clients .client, .testimonials .quote';
+  var selector = '.hero h1, .hero-lead, #main > section:not(.hero) h2, .about-photo-frame, .certificate-preview, #clients .client, .testimonials .quote';
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;

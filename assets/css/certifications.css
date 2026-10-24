@@ -22,3 +22,10 @@
 @media(max-width:1024px){.qualifications-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:767px){.qualifications-grid{grid-template-columns:minmax(0,1fr);gap:16px;grid-auto-rows:auto}.qualification-card{padding:18px 24px}.education-list{columns:1}}
 @media(prefers-reduced-motion:reduce){.qualification-card{transition:none}}
+
+.certifications-heading{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.certifications-heading .section-head{min-width:0}
+.certificate-preview{display:block;flex:0 0 180px;width:180px;border:1px solid #e3e0e0;border-radius:6px;overflow:hidden;background:var(--white);box-shadow:0 3px 10px rgba(26,26,26,.04)}
+.certificate-preview img{width:100%;height:auto;display:block}
+.certificate-preview:focus-visible{outline:3px solid var(--red);outline-offset:5px}
+@media(max-width:1024px){.certifications-heading{align-items:flex-start;flex-direction:column;gap:16px}.certificate-preview{flex-basis:auto;width:150px}}
