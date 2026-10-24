@@ -352,3 +352,6 @@ svg{fill:currentColor}
 @media(hover:hover){.consultation-button:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(26,26,26,.1)}}
 @media(max-width:767px){.reviews-cta{margin-top:32px;padding:32px 20px}.consultation-button{width:100%;font-size:22px;padding:14px 16px;min-height:56px}}
 @media(prefers-reduced-motion:reduce){.consultation-button{transition:none}.consultation-button:hover{transform:none}}
+
+.testimonials .review-name{display:block}
+.testimonials .review-badge{display:inline-flex;align-items:center;min-height:28px;margin-top:10px;padding:4px 10px;border:1px solid #e3e0e0;border-radius:6px;background:var(--light);color:var(--text);font-size:12px;font-weight:400;line-height:18px;max-width:100%}
