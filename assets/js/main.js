@@ -115,7 +115,7 @@
       }).catch(function () {
         btn.disabled = false;
         btn.textContent = "Odeslat";
-        msg.textContent = "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo napište na rosa.education@email.cz.";
+        msg.textContent = "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo napište na info@radekrosastrong.cz.";
       });
     });
   });

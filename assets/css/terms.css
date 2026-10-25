@@ -18,5 +18,3 @@
 .privacy-page ul{padding-left:22px}
 .privacy-page li{margin-bottom:6px;overflow-wrap:anywhere}
 @media print{.privacy-page h3{color:black;break-after:avoid}}
-
-.privacy-status{padding:16px 20px;border:1px solid #777171;border-radius:4px;font-size:15px;line-height:1.7}

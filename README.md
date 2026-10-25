@@ -29,7 +29,7 @@ Adresy stránek jsou stejné jako na WordPressu (včetně lomítka na konci), ta
 
 ## Formulář (webinář)
 
-Registrační formulář na `/webinar-zdarma/` posílá `assets/js/main.js` přes službu [FormSubmit](https://formsubmit.co) na `treninkzen@email.cz` (stejná adresa jako ve WPForms).
+Registrační formulář na `/webinar-zdarma/` posílá `assets/js/main.js` přes službu [FormSubmit](https://formsubmit.co) na `info@radekrosastrong.cz`.
 
 **Po prvním odeslání** přijde na tento e-mail žádost o aktivaci od FormSubmit. Je potřeba ji jednou potvrdit, jinak zprávy nedorazí.
 
