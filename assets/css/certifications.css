@@ -38,15 +38,15 @@
    --portrait-height is image height relative to the card; --portrait-bottom offsets
    empty floor; --portrait-shift compensates empty space to the right of the people. */
 .qualification-card.has-speaker-photo{position:relative;isolation:isolate;overflow:hidden}
-.qualification-card .qualification-photo{position:absolute;z-index:-2;right:8px;bottom:var(--portrait-bottom);height:var(--portrait-height);width:auto;max-width:none;object-fit:contain;transform:translateX(var(--portrait-shift)) scaleX(var(--portrait-flip,1));opacity:.5;filter:saturate(.65);mask-image:linear-gradient(var(--portrait-mask-angle,90deg),transparent 0%,#000 45%,#000 100%);-webkit-mask-image:linear-gradient(var(--portrait-mask-angle,90deg),transparent 0%,#000 45%,#000 100%);pointer-events:none}
+.qualification-card .qualification-photo{position:absolute;z-index:-2;right:8px;bottom:var(--portrait-bottom);height:var(--portrait-height);width:auto;max-width:none;object-fit:contain;transform:translateX(var(--portrait-shift)) scaleX(var(--portrait-flip,1));opacity:.6;filter:saturate(.7) contrast(1.03);mask-image:linear-gradient(var(--portrait-mask-angle,90deg),transparent 0%,#000 45%,#000 100%);-webkit-mask-image:linear-gradient(var(--portrait-mask-angle,90deg),transparent 0%,#000 45%,#000 100%);pointer-events:none}
 .photo-luis-mesquita{--portrait-height:149%;--portrait-bottom:-15%;--portrait-shift:31%}
 .photo-tim-gabbett{--portrait-height:123%;--portrait-bottom:-10%;--portrait-shift:22%}
 .photo-alex-natera{--portrait-height:125%;--portrait-bottom:-7%;--portrait-shift:18%}
 .photo-cal-dietz{--portrait-height:139%;--portrait-bottom:0%;--portrait-shift:24%}
 .photo-jordan-shallow{--portrait-height:123%;--portrait-bottom:-6%;--portrait-shift:8%}
-.qualification-card.has-speaker-photo::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 35%,rgba(255,255,255,.78) 60%,rgba(255,255,255,.25) 100%);pointer-events:none}
+.qualification-card.has-speaker-photo::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 35%,rgba(255,255,255,.74) 60%,rgba(255,255,255,.18) 100%);pointer-events:none}
 .qualification-card.has-speaker-photo .qualification-meta{position:relative}
-@media(max-width:767px){.qualification-card .qualification-photo{opacity:.42}}
+@media(max-width:767px){.qualification-card .qualification-photo{opacity:.51}}
 
 .photo-mladen-jovanovic{--portrait-height:126%;--portrait-bottom:-6%;--portrait-shift:15%}
 .qualification-mladen .qualification-program{font-size:14px;line-height:1.5}
