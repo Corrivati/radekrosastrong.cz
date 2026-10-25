@@ -32,14 +32,13 @@
 #sk-page .it-location h3{font-size:32px;margin-bottom:20px}
 #sk-page .it-location p,#sk-page address{font-size:16px;line-height:1.7;font-style:normal;margin-bottom:20px}
 #sk-page .it-travel{padding:32px;border:1px solid #5e5b5b;background:#2b2a2a}
-#sk-page.it-page .testimonials .quote{color:var(--text);border-radius:8px}
+#sk-page.it-page .testimonials .quote{padding:28px;color:var(--text);border-radius:8px}
 #sk-page.it-page .testimonials blockquote{margin:0 0 24px;padding:0}
-#sk-page.it-page .testimonials .review-badge{margin-top:10px;color:var(--text)}
+#sk-page.it-page .testimonials .review-badge{padding:6px 12px;box-sizing:border-box;line-height:1.5;margin-top:10px;color:var(--text)}
 #sk-page .it-consultation{text-align:center;max-width:840px}
 #sk-page .it-consultation .it-intro{margin:20px auto 28px}
-#sk-page .it-email{margin-top:24px;font-size:15px;line-height:1.7;overflow-wrap:anywhere}
 #sk-page.it-page a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
 @media(hover:hover){#sk-page .it-light .sk-card:hover{transform:translateY(-3px);border-color:#cbb5b7}}
 @media(max-width:1024px){#sk-page .it-process{gap:36px}#sk-page.it-page .testimonials .quotes{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:767px){#sk-page.it-page .sk-hero{padding:116px 0 48px}#sk-page.it-page h1{font-size:60px}#sk-page.it-page .sk-sub{font-size:26px}#sk-page .it-hero-photo{flex-basis:100%;max-width:none}#sk-page .it-hero-photo img{aspect-ratio:4/3}#sk-page .it-areas,#sk-page .it-process,#sk-page .it-location-grid{grid-template-columns:minmax(0,1fr)}#sk-page .it-process,#sk-page .it-location-grid{gap:32px}#sk-page .it-travel{padding:24px}#sk-page.it-page .testimonials .quotes{grid-template-columns:minmax(0,1fr)}#sk-page .it-consultation .sk-btn{width:100%;box-sizing:border-box}}
+@media(max-width:767px){#sk-page.it-page .sk-hero{padding:116px 0 48px}#sk-page.it-page h1{font-size:60px}#sk-page.it-page .sk-sub{font-size:26px}#sk-page .it-hero-photo{flex-basis:100%;max-width:none}#sk-page .it-hero-photo img{aspect-ratio:4/3}#sk-page .it-areas,#sk-page .it-process,#sk-page .it-location-grid{grid-template-columns:minmax(0,1fr)}#sk-page .it-process,#sk-page .it-location-grid{gap:32px}#sk-page .it-travel{padding:24px}#sk-page.it-page .testimonials .quotes{grid-template-columns:minmax(0,1fr)}#sk-page.it-page .testimonials .quote{padding:24px}#sk-page .it-consultation .sk-btn{width:100%;box-sizing:border-box}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#sk-page .it-light .sk-card{transition:none}#sk-page .it-light .sk-card:hover{transform:none}}
