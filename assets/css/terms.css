@@ -1,0 +1,15 @@
+/* Legal text is scoped to the existing terms page; header and footer stay shared. */
+.terms-page{max-width:880px;margin:0 auto;padding:146px 24px 80px;color:var(--white);font-size:17px;line-height:1.8}
+.terms-page h1{font-size:clamp(36px,4.5vw,56px);line-height:1.08;color:var(--white);margin:20px 0 32px}
+.terms-page h2{font-size:32px;line-height:1.15;color:var(--white);margin:44px 0 20px;scroll-margin-top:24px}
+.terms-page p{margin:0 0 18px;overflow-wrap:anywhere}
+.terms-page a{color:var(--white);text-decoration:underline;text-underline-offset:4px}
+.terms-page a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.terms-tools{font-size:14px;color:#d8d3d1}
+.terms-page hr{border:0;border-top:1px solid #656060;margin:40px 0}
+.terms-table-wrap{margin:24px 0 28px}
+.terms-page table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:16px;line-height:1.6}
+.terms-page th,.terms-page td{padding:14px 16px;border:1px solid #777171;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.terms-page th{background:#2e2d2d;font-weight:500}
+@media(max-width:767px){.terms-page{padding:112px 24px 56px;font-size:16px;line-height:1.75}.terms-page h2{font-size:28px}.terms-page th,.terms-page td{padding:12px 10px;font-size:14px}}
+@media print{body{background:white!important;color:black!important}.site-header,.offcanvas,.site-footer,.to-top,.skip,.terms-tools{display:none!important}.terms-page{max-width:none;padding:0;color:black;font-size:11pt;line-height:1.5}.terms-page h1,.terms-page h2,.terms-page a{color:black}.terms-page h2{break-after:avoid}.terms-page tr{break-inside:avoid}.terms-page th{background:#eee}.terms-page th,.terms-page td{border-color:#999}}

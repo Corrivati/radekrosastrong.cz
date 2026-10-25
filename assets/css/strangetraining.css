@@ -155,3 +155,12 @@
   #sk-page .sk-btn{width:100%;padding:0 20px;font-size:24px}
   #sk-page summary{font-size:24px}
 }
+
+/* Consistent, unobtrusive legal link beside the three payment entry points. */
+#sk-page .sk-terms-note{margin-top:10px;font-family:Ubuntu,sans-serif;font-size:13px;line-height:1.6;color:var(--sk-mut2);max-width:340px}
+#sk-page .sk-terms-note a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+#sk-page .sk-terms-note a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+#sk-page .sk-price .sk-terms-note{margin-top:0}
+#sk-page .sk-final-action{max-width:340px}
+#sk-page .sk-final .sk-terms-note{font-size:13px;color:#fff;margin-top:10px}
+@media(max-width:767px){#sk-page .sk-final-action{width:100%;max-width:none}}
