@@ -1,0 +1,276 @@
+# Zásady ochrany osobních údajů (GDPR)
+
+**Informace se průběžně doplňují.** Nastavení cookies, některé informace o externích službách, mezinárodním předávání a uchovávání technických údajů ještě nejsou ověřené. Otevřené body jsou označeny v příslušných kapitolách.
+
+**Správce osobních údajů:** Radek Rosa  
+**IČO:** 05898986  
+**Sídlo:** Arnošta Valenty 668/35, 198 00 Praha – Černý Most  
+**Kontaktní e-mail:** info@radekrosastrong.cz  
+**Webové stránky:** www.radekrosastrong.cz
+
+**Datum účinnosti:** 1. 1. 2026
+
+## 1. Úvodní ustanovení
+
+Ochrana osobních údajů a soukromí návštěvníků webových stránek, klientů a účastníků vzdělávacích akcí je pro mě důležitá.
+
+Tyto zásady vysvětlují, jaké osobní údaje zpracovávám, k jakým účelům je využívám, komu mohou být zpřístupněny, jak dlouho je uchovávám a jaká práva mají osoby, jejichž údaje jsou zpracovávány.
+
+Zpracování osobních údajů probíhá v souladu s nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR) a souvisejícími právními předpisy České republiky.
+
+Tyto zásady se vztahují zejména na:
+
+- návštěvníky webových stránek,
+- zájemce o individuální trénink a online coaching,
+- účastníky odborných kurzů a workshopů,
+- osoby komunikující se mnou prostřednictvím e-mailu nebo kontaktních kanálů,
+- osoby zachycené na fotografiích a videozáznamech z pořádaných vzdělávacích akcí,
+- příjemce marketingových sdělení.
+
+## 2. Jaké osobní údaje zpracovávám
+
+Rozsah údajů závisí na způsobu využití mých služeb.
+
+### 2.1 Registrace na kurzy a workshopy
+
+Při objednávce nebo registraci mohu zpracovávat:
+
+- jméno a příjmení,
+- e-mailovou adresu,
+- telefonní číslo, pokud je poskytnuto,
+- fakturační údaje,
+- název a termín objednaného kurzu,
+- údaje o objednávce a stavu platby,
+- informace potřebné pro organizaci účasti,
+- případné údaje potřebné pro vystavení potvrzení nebo certifikátu o absolvování.
+
+### 2.2 Platby a fakturace
+
+Při platbě prostřednictvím platební brány Stripe mohou být zpracovávány údaje potřebné pro provedení a ověření transakce.
+
+Jako pořadatel mohu obdržet zejména informace o platbě, její výši, stavu, identifikátoru transakce a příslušných fakturačních údajích.
+
+Úplné údaje platební karty nejsou standardně zpřístupňovány mně jako pořadateli; jejich zpracování zajišťuje poskytovatel platebních služeb podle rozsahu používané služby.
+
+### 2.3 Poptávky a komunikace
+
+Pokud mě kontaktujete ohledně tréninku, online coachingu, workshopu nebo jiné spolupráce, mohu zpracovávat:
+
+- jméno a kontaktní údaje,
+- obsah vaší zprávy,
+- informace o požadované spolupráci,
+- související komunikaci potřebnou k vyřízení poptávky.
+
+Pokud následná trenérská spolupráce zahrnuje další osobní údaje, například podrobné tréninkové záznamy nebo informace o zdravotním stavu, musí být jejich zpracování posouzeno podle skutečného rozsahu spolupráce. Údaje o zdravotním stavu vyžadují splnění zvláštních podmínek podle článku 9 GDPR.
+
+### 2.4 Fotografie a videozáznamy
+
+Během vzdělávacích akcí mohou vznikat:
+
+- fotografie účastníků a lektora,
+- krátké videozáznamy,
+- záznamy praktických ukázek,
+- skupinové fotografie,
+- dokumentační materiály zachycující průběh vzdělávání.
+
+Pokud lze na záznamu konkrétní osobu identifikovat a dochází ke zpracování jejích osobních údajů, uplatní se odpovídající pravidla ochrany osobních údajů.
+
+### 2.5 Údaje při používání webu
+
+Při návštěvě webových stránek mohou být zpracovávány také technické informace, například IP adresa, údaje o prohlížeči a zařízení, technické záznamy serveru a informace související s používáním cookies nebo obdobných technologií.
+
+Konkrétní rozsah závisí na skutečně používaných službách a nastavení webu.
+
+## 3. Účely a právní základy zpracování
+
+Osobní údaje zpracovávám pouze tehdy, pokud k tomu existuje odpovídající právní základ.
+
+| Účel zpracování | Právní základ |
+|---|---|
+| Registrace a organizace workshopů | Plnění smlouvy nebo kroky před jejím uzavřením – čl. 6 odst. 1 písm. b) GDPR |
+| Zpracování plateb a objednávek | Plnění smlouvy – čl. 6 odst. 1 písm. b) GDPR |
+| Fakturace a plnění daňových povinností | Plnění právní povinnosti – čl. 6 odst. 1 písm. c) GDPR |
+| Vyřízení poptávek | Jednání před uzavřením smlouvy nebo oprávněný zájem, podle povahy komunikace |
+| Evidence a řešení oprávněných nároků | Oprávněný zájem – čl. 6 odst. 1 písm. f) GDPR |
+| Zasílání marketingových sdělení | Souhlas nebo jiný přípustný základ v zákonném rozsahu |
+| Marketingové využití identifikovatelných fotografií a videí | Zejména předchozí souhlas, pokud je pro dané zpracování odpovídajícím právním základem |
+| Analytické a marketingové technologie na webu | Souhlas tam, kde je vyžadován právními předpisy |
+| Zabezpečení a nezbytný provoz webu | Oprávněný zájem nebo jiný odpovídající právní základ |
+
+Pokud je zpracování založeno na oprávněném zájmu, jde zejména o zajištění bezpečného provozu webu, vyřizování komunikace, ochranu práv a oprávněných nároků a předcházení zneužití služeb.
+
+Pokud je zpracování založeno na souhlasu, jeho poskytnutí je dobrovolné a lze jej kdykoliv odvolat.
+
+## 4. Fotografování a natáčení na vzdělávacích akcích
+
+### 4.1 Účel pořizování záznamů
+
+Na odborných kurzech a workshopech mohou být pořizovány fotografie a videozáznamy za účelem dokumentace průběhu vzdělávání, prezentace činnosti pořadatele a propagace dalších vzdělávacích akcí.
+
+Vybrané materiály mohou být zveřejněny na webových stránkách www.radekrosastrong.cz a na sociálních sítích, zejména Instagramu a Facebooku.
+
+Fotografie a videa mohou být případně použity také při propagaci budoucích vzdělávacích akcí prostřednictvím placené online reklamy.
+
+### 4.2 Ochrana soukromí účastníků
+
+Účastníci jsou o plánovaném fotografování a natáčení informováni předem nebo při příchodu na akci.
+
+Pokud si účastník nepřeje být fotografován, natáčen či zobrazován ve veřejně publikovaných materiálech, může mě o tom informovat předem prostřednictvím e-mailu info@radekrosastrong.cz nebo osobně na místě konání.
+
+Včasné oznámení pomáhá zajistit, aby účastník nebyl zachycen v plánovaných záběrech. Své přání však může oznámit i později.
+
+V přiměřeném rozsahu budou přijata organizační nebo technická opatření, například úprava kompozice fotografie, výběr jiného záběru nebo anonymizace podoby.
+
+### 4.3 Marketingové využití rozpoznatelné podoby
+
+Pro cílené propagační využití identifikovatelných osob, zejména detailních fotografií, rozhovorů, referenčních videí nebo záběrů používaných v placených reklamách, si předem opatřím potřebné svolení dotčených osob a případný samostatný souhlas podle GDPR.
+
+Takové svolení nebo souhlas není podmínkou účasti na workshopu.
+
+Samotná registrace, účast na workshopu ani nevyjádření nesouhlasu nepředstavují automatické svolení k libovolnému marketingovému využití podoby účastníka.
+
+### 4.4 Odvolání souhlasu a žádost o odstranění
+
+Pokud je zveřejnění založeno na souhlasu, lze jej kdykoliv odvolat zasláním žádosti na info@radekrosastrong.cz.
+
+Žádosti o odstranění či úpravu zveřejněných materiálů posoudím a vyřídím v souladu s právními předpisy.
+
+Pokud je žádost oprávněná, přijmu odpovídající opatření u materiálů a komunikačních kanálů, které spravuji.
+
+U obsahu, který již byl převzat nebo dále sdílen třetími osobami, nemusí být vždy možné zajistit jeho úplné odstranění ze všech internetových služeb.
+
+### 4.5 Sociální sítě
+
+Po zveřejnění obsahu na sociálních sítích mohou být osobní údaje dále zpracovávány jejich provozovateli podle jejich vlastních pravidel.
+
+Podrobnosti jsou dostupné v zásadách ochrany osobních údajů příslušných služeb.
+
+## 5. Komu mohou být osobní údaje zpřístupněny
+
+Osobní údaje neprodávám a nezpřístupňuji je třetím osobám pro jejich vlastní marketingové účely bez odpovídajícího právního důvodu.
+
+V rozsahu potřebném pro zajištění služeb však mohou být předávány následujícím kategoriím příjemců:
+
+- **Stripe** – zpracování plateb a souvisejících transakcí.
+- **Poskytovatelé webhostingu a technické správy** – provoz, zabezpečení a údržba webových stránek.
+- **Poskytovatelé e-mailových a komunikačních služeb** – komunikace s účastníky a zákazníky.
+- **Účetní nebo daňoví poradci** – pokud jsou zapojeni do zpracování účetních a daňových dokumentů.
+- **Poskytovatelé marketingových a analytických služeb** – pouze pokud jsou skutečně využíváni a za odpovídajících zákonných podmínek.
+- **Provozovatelé sociálních sítí** – v souvislosti se zveřejňováním obsahu na jejich platformách.
+
+**Používané služby a otevřené údaje:** Webglobe (webhosting), Ecomail (e-mailový marketing), Google Analytics (analytika), Meta Pixel (marketingové měření), TrueCoach (online coaching), FormSubmit (registrační formulář) a YouTube (náhledy a přehrávání videí). E-mailové služby poskytují Seznam.cz a Webglobe. Zapojení služby Zapier se ověřuje.
+
+Poskytovatelé služeb mohou podle konkrétního smluvního a technického nastavení vystupovat jako zpracovatelé, samostatní správci nebo společní správci osobních údajů.
+
+## 6. Předávání osobních údajů mimo Evropský hospodářský prostor
+
+Někteří poskytovatelé technických, platebních, komunikačních nebo marketingových služeb mohou zpracovávat osobní údaje také mimo Evropský hospodářský prostor.
+
+Pokud dochází k předávání osobních údajů do třetích zemí, musí být zajištěny odpovídající podmínky podle kapitoly V GDPR, například prostřednictvím rozhodnutí Evropské komise o odpovídající ochraně nebo vhodných smluvních záruk.
+
+**Konkrétní přehled případných mezinárodních předání a používaných záruk se ověřuje podle skutečně zapojených poskytovatelů a bude doplněn.**
+
+Informace o příslušných zárukách je možné vyžádat prostřednictvím kontaktního e-mailu správce.
+
+## 7. Jak dlouho osobní údaje uchovávám
+
+Osobní údaje uchovávám pouze po dobu nezbytnou k naplnění účelu jejich zpracování nebo po dobu vyžadovanou právními předpisy.
+
+Orientační pravidla uchovávání:
+
+| Kategorie údajů | Doba uchovávání |
+|---|---|
+| Nezávazné poptávky a související komunikace | 12 měsíců od poslední komunikace, pokud nenaváže spolupráce |
+| Evidence účastníků a organizační komunikace | 3 roky od konání kurzu, pokud není delší uchování odůvodněno |
+| Platební, účetní a daňové dokumenty | Po dobu vyžadovanou příslušnými právními předpisy |
+| Marketingové kontakty | Do odhlášení nebo zániku příslušného oprávnění k zasílání; doklady o souhlasu či námitce mohou být uchovány přiměřeně déle |
+| Identifikovatelné fotografie a videa | Po dobu nezbytnou pro konkrétní účel jejich pořízení a použití. Potřebnost uchování je pravidelně přezkoumávána; při odpadnutí účelu nebo jiného právního důvodu budou záznamy vymazány nebo anonymizovány. Případné odvolání souhlasu a žádosti o odstranění se posuzují podle kapitoly 4.4. |
+| Evidence udělených svolení a souhlasů | Po dobu nezbytnou k doložení oprávněnosti zpracování a ochraně práv |
+| Technické a analytické údaje | Konkrétní doby uchování podle nastavení webu a jednotlivých služeb se ověřují a budou doplněny. |
+
+Po uplynutí příslušné doby budou osobní údaje vymazány nebo anonymizovány, pokud neexistuje jiný právní důvod pro jejich další uchování.
+
+## 8. Cookies a analytické nástroje
+
+Webové stránky mohou využívat cookies a obdobné technologie.
+
+Podle svého účelu lze tyto technologie rozdělit na:
+
+**Nezbytné technické cookies** – zajišťují základní fungování, bezpečnost a správné používání webu. K jejich použití není obecně potřebný souhlas, pokud skutečně splňují zákonné podmínky nezbytnosti.
+
+**Analytické cookies** – umožňují vyhodnocovat návštěvnost a používání webových stránek.
+
+**Marketingové cookies** – mohou sloužit například k vyhodnocování reklamních kampaní nebo zobrazování relevantnější reklamy.
+
+Analytické a marketingové cookies nebo obdobné technologie, u kterých právní předpisy vyžadují souhlas, smějí být aktivovány až po jeho udělení. Skutečné nastavení těchto služeb na webu se nyní ověřuje.
+
+Souhlas s nepovinnými cookies musí být možné odmítnout i následně odvolat. Funkční řešení pro správu těchto voleb zatím není na tomto webu potvrzené.
+
+**Seznam skutečně používaných cookies, jejich poskytovatelů, účelů a dob platnosti se ověřuje a bude doplněn.**
+
+Nastavení cookies zde zatím není dostupné. Tato část zásad nepředstavuje potvrzení, že je řízení souhlasu již technicky zajištěno.
+
+## 9. Zasílání marketingových sdělení
+
+Informace o nových kurzech, workshopech a dalších vzdělávacích aktivitách mohu zasílat elektronicky pouze za podmínek stanovených příslušnými právními předpisy.
+
+Zasílání marketingových sdělení může být založeno na předchozím souhlasu příjemce nebo, při splnění zákonných podmínek, na oprávnění oslovovat vlastní zákazníky s nabídkou obdobných služeb.
+
+Každé marketingové sdělení bude obsahovat možnost jednoduchého a bezplatného odmítnutí dalšího zasílání, například prostřednictvím odhlašovacího odkazu.
+
+Souhlas se zasíláním marketingových sdělení není podmínkou nákupu kurzu ani účasti na workshopu.
+
+## 10. Jaká máte práva
+
+V souladu s GDPR máte za splnění příslušných zákonných podmínek zejména právo:
+
+- na informace o zpracování svých osobních údajů,
+- požádat o přístup ke svým osobním údajům,
+- požádat o opravu nepřesných nebo doplnění neúplných údajů,
+- požádat o výmaz osobních údajů,
+- požádat o omezení zpracování,
+- vznést námitku proti zpracování založenému na oprávněném zájmu,
+- získat a přenést osobní údaje v případech, kdy to GDPR umožňuje,
+- kdykoliv odvolat udělený souhlas bez vlivu na zákonnost předchozího zpracování,
+- nebýt za zákonem stanovených podmínek předmětem výhradně automatizovaného individuálního rozhodování s právními či obdobně významnými účinky.
+
+Proti zpracování osobních údajů za účelem přímého marketingu máte právo kdykoliv vznést námitku.
+
+Svá práva můžete uplatnit na e-mailové adrese **info@radekrosastrong.cz**.
+
+Na žádosti odpovídám bez zbytečného odkladu, zpravidla nejpozději do jednoho měsíce od jejich doručení. V případech stanovených GDPR může být tato lhůta prodloužena.
+
+Máte také právo podat stížnost u dozorového úřadu:
+
+**Úřad pro ochranu osobních údajů**  
+Pplk. Sochora 27  
+170 00 Praha 7  
+Web: https://uoou.gov.cz
+
+## 11. Poskytnutí údajů a automatizované rozhodování
+
+Poskytnutí údajů nezbytných pro registraci a organizaci workshopu, úhradu ceny nebo vystavení zákonem požadovaných dokladů je potřebné pro uzavření či plnění smlouvy nebo splnění právních povinností.
+
+Pokud tyto nezbytné údaje nebudou poskytnuty, nemusí být možné registraci dokončit nebo službu poskytnout.
+
+Poskytnutí souhlasu s marketingem, marketingovým využitím podobizny nebo nepovinnými cookies je dobrovolné.
+
+**Automatizované individuální rozhodování:** Případné rozhodování podle čl. 22 GDPR v objednávkovém systému a dalších službách se ověřuje; výsledek bude doplněn.
+
+## 12. Zabezpečení osobních údajů
+
+Přijímám přiměřená technická a organizační opatření s cílem chránit osobní údaje před neoprávněným přístupem, ztrátou, zneužitím nebo neoprávněným zpřístupněním.
+
+Přístup k osobním údajům mají pouze osoby a poskytovatelé služeb, kteří jej potřebují pro příslušný účel a jsou vázáni odpovídajícími povinnostmi.
+
+## 13. Aktualizace zásad
+
+Tyto zásady mohou být aktualizovány zejména v případě změny používaných služeb, způsobu zpracování osobních údajů nebo právních předpisů.
+
+Aktuální znění je vždy dostupné na:
+
+https://radekrosastrong.cz/gdpr/
+
+V případě podstatných změn budou dotčené osoby informovány vhodným způsobem, pokud to vyžadují právní předpisy.
+
+**Účinnost od:** 1. 1. 2026

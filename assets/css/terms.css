@@ -13,3 +13,10 @@
 .terms-page th{background:#2e2d2d;font-weight:500}
 @media(max-width:767px){.terms-page{padding:112px 24px 56px;font-size:16px;line-height:1.75}.terms-page h2{font-size:28px}.terms-page th,.terms-page td{padding:12px 10px;font-size:14px}}
 @media print{body{background:white!important;color:black!important}.site-header,.offcanvas,.site-footer,.to-top,.skip,.terms-tools{display:none!important}.terms-page{max-width:none;padding:0;color:black;font-size:11pt;line-height:1.5}.terms-page h1,.terms-page h2,.terms-page a{color:black}.terms-page h2{break-after:avoid}.terms-page tr{break-inside:avoid}.terms-page th{background:#eee}.terms-page th,.terms-page td{border-color:#999}}
+
+.privacy-page h3{font-size:25px;line-height:1.3;color:var(--white);margin:28px 0 16px;scroll-margin-top:24px}
+.privacy-page ul{padding-left:22px}
+.privacy-page li{margin-bottom:6px;overflow-wrap:anywhere}
+@media print{.privacy-page h3{color:black;break-after:avoid}}
+
+.privacy-status{padding:16px 20px;border:1px solid #777171;border-radius:4px;font-size:15px;line-height:1.7}
