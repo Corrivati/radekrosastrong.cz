@@ -38,7 +38,7 @@
    --portrait-height is image height relative to the card; --portrait-bottom offsets
    empty floor; --portrait-shift compensates empty space to the right of the people. */
 .qualification-card.has-speaker-photo{position:relative;isolation:isolate;overflow:hidden}
-.qualification-card .qualification-photo{position:absolute;z-index:-2;right:8px;bottom:var(--portrait-bottom);height:var(--portrait-height);width:auto;max-width:none;object-fit:contain;transform:translateX(var(--portrait-shift));opacity:.5;filter:saturate(.65);mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%,#000 100%);pointer-events:none}
+.qualification-card .qualification-photo{position:absolute;z-index:-2;right:8px;bottom:var(--portrait-bottom);height:var(--portrait-height);width:auto;max-width:none;object-fit:contain;transform:translateX(var(--portrait-shift)) scaleX(var(--portrait-flip,1));opacity:.5;filter:saturate(.65);mask-image:linear-gradient(var(--portrait-mask-angle,90deg),transparent 0%,#000 45%,#000 100%);-webkit-mask-image:linear-gradient(var(--portrait-mask-angle,90deg),transparent 0%,#000 45%,#000 100%);pointer-events:none}
 .photo-luis-mesquita{--portrait-height:149%;--portrait-bottom:-15%;--portrait-shift:31%}
 .photo-tim-gabbett{--portrait-height:123%;--portrait-bottom:-10%;--portrait-shift:22%}
 .photo-alex-natera{--portrait-height:125%;--portrait-bottom:-7%;--portrait-shift:18%}
@@ -50,3 +50,9 @@
 
 .photo-mladen-jovanovic{--portrait-height:126%;--portrait-bottom:-6%;--portrait-shift:15%}
 .qualification-mladen .qualification-program{font-size:14px;line-height:1.5}
+
+/* Flip only the photo; counter-flip its mask so the visible fade still runs left. */
+.photo-mladen-jovanovic,.photo-luis-mesquita,.photo-alex-natera,.photo-cal-dietz{--portrait-flip:-1;--portrait-mask-angle:270deg}
+.photo-mladen-jovanovic{--portrait-shift:20%}
+.photo-luis-mesquita{--portrait-shift:24%}
+.photo-cal-dietz{--portrait-shift:20%}
