@@ -8,6 +8,7 @@ Web Radka Rosy (silový a kondiční trenér). Je to kopie původního WordPress
 index.html                          /                       (úvod: o mně, certifikace, galerie, klienti, videa, reference, kontakt)
 edukace/index.html                  /edukace/               (Přehled kurzů)
 onlinecoaching/index.html           /onlinecoaching/        (Online Coaching)
+individualni-trenink/index.html      /individualni-trenink/   (Individuální trénink v Praze, kontakt e-mailem)
 strangetraining/index.html          /strangetraining/       (landing page Svalové kontrakce Brno)
 strangetraining-old/index.html      /strangetraining-old/   (původní stránka Brno, odkaz v menu)
 svalove-kontrakce/index.html        /svalove-kontrakce/     (Kontrakce level 1)
@@ -70,3 +71,7 @@ Pak otevřete http://localhost:8000.
 ## Nasazení na doménu
 
 Na GitHub Pages: **Settings → Pages → Deploy from branch**, pak přidat soubor `CNAME` s textem `radekrosastrong.cz` a u registrátora domény nasměrovat DNS na GitHub Pages. Dokud se DNS nepřepne, běží dál WordPress.
+
+## Individuální trénink
+
+Stránka `/individualni-trenink/` používá společné styly workshopů a `assets/css/individualni-trenink.css`. Konzultační tlačítka otevírají e-mailového klienta přes `mailto:rosa.radek@email.cz` s předvyplněným předmětem a zprávou. Stránka neobsahuje dotazník ani serverové odesílání; nevyžaduje PHP, Node.js nebo další službu. Navigace sdružuje individuální trénink a online coaching pod „Spolupráce“ a používá `assets/css/navigation-services.css`.

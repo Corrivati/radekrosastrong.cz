@@ -1,0 +1,15 @@
+/* Shared native disclosure keeps the desktop menu compact and keyboard accessible. */
+.menu-services{position:relative}
+.menu-services summary{display:block;list-style:none;cursor:pointer;padding:0 1em;font:500 20px/98px var(--head);color:var(--light);white-space:nowrap}
+.menu-services summary::-webkit-details-marker{display:none}
+.menu-services summary::after{content:'⌄';font:14px Arial,sans-serif;margin-left:6px}
+.menu-services summary:focus-visible{outline:2px solid var(--red);outline-offset:-6px}
+.menu-services summary:hover,.menu-services .current-service{color:var(--white)}
+.menu-services details>ul{position:absolute;z-index:60;top:calc(100% - 12px);right:0;list-style:none;margin:0;padding:10px;background:#2e2d2d;border:1px solid #5e5b5b;min-width:210px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.menu-services details>ul a{font-size:20px;line-height:1.5;padding:10px 12px;white-space:nowrap}
+.menu-services details>ul a::before{display:none}
+.menu-services details>ul a:hover,.menu-services details>ul a[aria-current]{background:#414040}
+.offcanvas .menu-services summary{padding:6px 0;line-height:1.44;font-size:21px;color:var(--text);border-bottom:1px solid #eaeaea}
+.offcanvas .menu-services details>ul{position:static;min-width:0;background:#fafafa;border:0;box-shadow:none;margin:8px 0;padding:6px 12px}
+.offcanvas .menu-services details>ul a{font-size:19px;white-space:normal}
+.offcanvas .menu-services details>ul a:hover,.offcanvas .menu-services details>ul a[aria-current]{background:transparent;color:var(--red)}
