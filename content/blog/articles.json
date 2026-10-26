@@ -6,6 +6,12 @@
     "author": "Radek Rosa",
     "published": "2026-10-26",
     "seoTitle": "Jak poznat kvalitního trenéra? 7 kritérií výběru | Radek Rosa",
-    "description": "Jak si vybrat kvalitního trenéra? Odbornost, zkušenosti, komunikace, výsledky klientů i osobní kompatibilita. Pohled silového a kondičního trenéra."
+    "description": "Jak si vybrat kvalitního trenéra? Odbornost, zkušenosti, komunikace, výsledky klientů i osobní kompatibilita. Pohled silového a kondičního trenéra.",
+    "thumbnail": {
+      "src": "/assets/images/blog-jak-poznat-kvalitniho-trenera.webp",
+      "alt": "Ilustrace výběru osobního trenéra: člověk zvažuje různé trenéry a jejich přístupy.",
+      "width": 1200,
+      "height": 675
+    }
   }
 ]

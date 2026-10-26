@@ -23,6 +23,7 @@ class BlogGenerationTests(unittest.TestCase):
             preview = json.loads(metadata.read_text())
             for entry in preview:
                 entry["published"] = None
+                entry.pop("thumbnail", None)
             metadata.write_text(json.dumps(preview))
             previous = build.ROOT
             build.ROOT = root
