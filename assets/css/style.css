@@ -48,10 +48,11 @@ svg{fill:currentColor}
 
 /* ---------- Hlavička (průhledná, leží přes první sekci) ---------- */
 .site-header{position:absolute;top:0;left:0;right:0;z-index:50}
-.header-bar{display:flex;align-items:center;height:98px;padding:0 40px}
-.header-left,.header-right{flex:1 1 0;display:flex;align-items:center}
-.header-right{justify-content:flex-end;gap:20px}
-.logo{display:block;flex:0 0 auto;margin:0 20px}
+.header-bar{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;height:98px;padding:0 40px}
+.header-left,.header-right{min-width:0;display:flex;align-items:center}
+.header-left{grid-column:1;grid-row:1}
+.header-right{grid-column:3;grid-row:1;justify-content:flex-end;gap:20px}
+.logo{display:block;grid-column:2;grid-row:1;justify-self:center;margin:0 20px}
 .logo img{width:80px;height:auto}
 .menu{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0}
 .menu a{position:relative;display:block;padding:0 1em;font:500 20px/98px var(--head);color:var(--light);text-transform:none}
@@ -79,11 +80,10 @@ svg{fill:currentColor}
 .offcanvas .menu a::before{display:none}
 .offcanvas .menu a:hover{color:var(--red)}
 
-@media(max-width:921px){
-  .header-bar{height:80px;padding:0 20px;justify-content:space-between}
+@media(max-width:1100px){
+  .header-bar{height:80px;padding:0 20px}
   .header-left .menu,.header-right .menu,.header-right .social{display:none}
-  .header-left,.header-right{flex:0 0 auto}
-  .logo{margin:0;order:-1}
+  .logo{margin:0}
   .logo img{width:74px}
   .menu-toggle{display:flex}
 }
