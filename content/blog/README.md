@@ -12,3 +12,5 @@ Blog je statický. Na hostingu nejsou potřeba Python, databáze ani CMS; publik
 Společný obal je v `templates/blog/base.html`, rozložení v `article.html` a `index.html`. Vzhled upravuje `assets/css/blog.css`. Při budoucí změně společné navigace aktualizuj i `base.html` a znovu vygeneruj blog.
 
 Nový článek zatím nemá úvodní ani sdílecí obrázek. Po dodání autentického vhodného obrázku lze doplnit OG/Twitter metadata. Nevkládá se náhradní nebo vymyšlený vizuál.
+
+Volitelný náhled obrázku v přehledu: k záznamu článku přidej `"thumbnail": {"src": "/assets/images/nazev.webp", "alt": "Popis obrázku", "width": 1200, "height": 675}`. Použij skutečné rozměry a nejdřív nahraj soubor do assets/images. Generátor ověřuje jeho existenci. U jediného článku je obrázek na desktopu napravo vedle textu a na menších obrazovkách nad textem. Bez dodaného obrázku se nevykresluje prázdná výplň ani nefunkční obrázek.

@@ -47,6 +47,18 @@ class BlogGenerationTests(unittest.TestCase):
                 self.assertIn('"datePublished": "2026-01-01"', article.read_text())
                 self.assertNotIn('noindex, follow', article.read_text())
                 self.assertTrue((root/'blog/test/index.html').exists())
+                image = root / 'assets/images/test.webp'
+                image.parent.mkdir(parents=True)
+                image.write_bytes(b'local asset validation fixture')
+                entries[0]['thumbnail'] = {'src': '/assets/images/test.webp', 'alt': 'Náhled článku', 'width': 1200, 'height': 675}
+                data_path.write_text(json.dumps(entries))
+                build.main()
+                self.assertIn('class="blog-card-media"', (root/'blog/index.html').read_text())
+                self.assertIn('loading="lazy"', (root/'blog/index.html').read_text())
+                entries[0]['thumbnail']['src'] = '/assets/images/missing.webp'
+                data_path.write_text(json.dumps(entries))
+                with self.assertRaisesRegex(ValueError, 'existing local image'):
+                    build.main()
                 self.assertEqual((root/'blog/index.html').read_text().count('class="blog-card"'), 2)
                 self.assertEqual((root/'sitemap.xml').read_text().count('<loc>https://radekrosastrong.cz/blog/test/</loc>'), 1)
             finally:

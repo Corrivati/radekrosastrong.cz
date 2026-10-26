@@ -95,7 +95,16 @@ def main():
         output = ROOT / 'blog' / slug / 'index.html'
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(template('base.html', dict(common, content=content)))
-        cards.append(f'''<article class="blog-card"><p class="blog-category">{escape(entry['category'])}</p><h3><a href="/blog/{slug}/">{escape(heading)}</a></h3><p class="blog-card-perex">{escape(plain(perex))}</p><div class="blog-meta"><span>{escape(entry['author'])}</span>{date_html}<span>{minutes} min čtení</span></div><a class="blog-read" href="/blog/{slug}/">Přečíst článek <span aria-hidden="true">→</span></a></article>''')
+        media = ''
+        thumbnail = entry.get('thumbnail')
+        if thumbnail:
+            image_path = ROOT / thumbnail['src'].lstrip('/')
+            if not thumbnail['src'].startswith('/assets/images/') or not image_path.resolve().is_relative_to((ROOT/'assets/images').resolve()) or not image_path.is_file():
+                raise ValueError('Thumbnail must reference an existing local image in assets/images')
+            if not thumbnail.get('alt') or any(not isinstance(thumbnail.get(k), int) or thumbnail[k] <= 0 for k in ('width', 'height')):
+                raise ValueError('Thumbnail needs descriptive alt text and positive width/height')
+            media = f'<a class="blog-card-media" href="/blog/{slug}/" aria-label="{escape(heading)}"><img src="{escape(thumbnail["src"])}" alt="{escape(thumbnail["alt"])}" width="{thumbnail["width"]}" height="{thumbnail["height"]}" loading="lazy" decoding="async"></a>'
+        cards.append(f'''<article class="blog-card"><div class="blog-card-copy"><p class="blog-category">{escape(entry['category'])}</p><h3><a href="/blog/{slug}/">{escape(heading)}</a></h3><p class="blog-card-perex">{escape(plain(perex))}</p><div class="blog-meta"><span>{escape(entry['author'])}</span>{date_html}<span>{minutes} min čtení</span></div><a class="blog-read" href="/blog/{slug}/">Přečíst článek <span aria-hidden="true">→</span></a></div>{media}</article>''')
     content = template('index.html', dict(cards='\n'.join(cards)))
     (ROOT / 'blog/index.html').write_text(template('base.html', dict(content=content, title='Blog – Myšlenky. Zkušenosti. Trénink. | Radek Rosa',
        description='Odborné poznatky a praktické zkušenosti Radka Rosy o trenérské profesi, silovém tréninku a sportovní přípravě.',
