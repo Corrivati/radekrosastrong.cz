@@ -3,10 +3,10 @@
   "use strict";
 
   // Hover opens the native desktop disclosure; touch and keyboard retain click control.
-  document.querySelectorAll(".site-header .menu-services details").forEach(function (menu) {
+  document.querySelectorAll(".menu-services details").forEach(function (menu) {
     var hoverOpened = false;
     menu.addEventListener("pointerenter", function (event) {
-      if (event.pointerType !== "mouse" || !window.matchMedia("(hover: hover)").matches) return;
+      if (!menu.closest(".site-header") || event.pointerType !== "mouse" || !window.matchMedia("(hover: hover)").matches) return;
       hoverOpened = !menu.open;
       menu.open = true;
     });
@@ -16,6 +16,7 @@
     });
     menu.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
+        event.stopPropagation();
         menu.open = false;
         menu.querySelector("summary").focus();
       }

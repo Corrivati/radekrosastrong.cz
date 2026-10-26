@@ -1,15 +1,28 @@
-/* Shared native disclosure keeps the desktop menu compact and keyboard accessible. */
-.menu-services{position:relative}
-.menu-services summary{display:block;list-style:none;cursor:pointer;padding:0 1em;font:500 20px/98px var(--head);color:var(--light);white-space:nowrap}
+/* Native disclosure: desktop hover, keyboard and touch share the same two links. */
+.menu-services{position:relative;--services-bg:#2e2d2d;--services-line:rgba(255,255,255,.13);--services-hover:#3b3939;--services-text:var(--light)}
+.menu-services summary{display:block;list-style:none;cursor:pointer;padding:0 1em;font:500 20px/98px var(--head);color:var(--light);white-space:nowrap;transition:color 200ms ease-out}
 .menu-services summary::-webkit-details-marker{display:none}
-.menu-services summary::after{content:'⌄';font:14px Arial,sans-serif;margin-left:6px}
+.menu-services summary::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;margin:0 0 3px 9px;transform:rotate(45deg);transition:transform 200ms ease-out}
+.menu-services details[open]>summary::after{transform:rotate(225deg)}
 .menu-services summary:focus-visible{outline:2px solid var(--red);outline-offset:-6px}
-.menu-services summary:hover,.menu-services .current-service{color:var(--white)}
-.menu-services details>ul{position:absolute;z-index:60;top:calc(100% - 12px);right:0;list-style:none;margin:0;padding:10px;background:#2e2d2d;border:1px solid #5e5b5b;min-width:210px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
-.menu-services details>ul a{font-size:20px;line-height:1.5;padding:10px 12px;white-space:nowrap}
+.menu-services summary:hover,.menu-services .current-service,.menu-services details[open]>summary{color:var(--white)}
+.menu-services details::details-content{transition:content-visibility 150ms allow-discrete}
+.menu-services details>ul{position:absolute;z-index:60;top:calc(100% - 12px);right:0;list-style:none;margin:0;padding:8px;background:var(--services-bg);border:1px solid var(--services-line);border-radius:8px;min-width:226px;box-shadow:0 10px 28px rgba(0,0,0,.16);opacity:0;transform:translateY(-7px);transform-origin:top right;transition:opacity 150ms ease-out,transform 150ms ease-out}
+.menu-services details[open]>ul{opacity:1;transform:translateY(0);transition-duration:200ms}
+@starting-style{.menu-services details[open]>ul{opacity:0;transform:translateY(-7px)}}
+.menu-services details>ul li+li{margin-top:4px}
+.menu-services details>ul a{font-family:var(--head);font-size:20px;font-weight:500;line-height:1.5;padding:11px 14px;min-height:44px;box-sizing:border-box;border-radius:5px;color:var(--services-text);white-space:nowrap;transition:background-color 200ms ease-out,color 200ms ease-out}
 .menu-services details>ul a::before{display:none}
-.menu-services details>ul a:hover,.menu-services details>ul a[aria-current]{background:#414040}
-.offcanvas .menu-services summary{padding:6px 0;line-height:1.44;font-size:21px;color:var(--text);border-bottom:1px solid #eaeaea}
-.offcanvas .menu-services details>ul{position:static;min-width:0;background:#fafafa;border:0;box-shadow:none;margin:8px 0;padding:6px 12px}
-.offcanvas .menu-services details>ul a{font-size:19px;white-space:normal}
-.offcanvas .menu-services details>ul a:hover,.offcanvas .menu-services details>ul a[aria-current]{background:transparent;color:var(--red)}
+.menu-services details>ul a:hover,.menu-services details>ul a[aria-current]{background:var(--services-hover);color:var(--white)}
+.menu-services details>ul a:focus-visible{outline:2px solid var(--red);outline-offset:-2px;background:var(--services-hover)}
+.offcanvas .menu-services{--services-bg:#fafafa;--services-line:#e8e4e4;--services-hover:#f0ebeb;--services-text:var(--text)}
+.offcanvas .menu-services summary{padding:9px 0;line-height:1.44;font-size:21px;color:var(--text);border-bottom:1px solid #eaeaea}
+.offcanvas .menu-services details>ul{position:static;min-width:0;box-shadow:none;margin:8px 0;padding:8px;transform-origin:top left}
+.offcanvas .menu-services details>ul a{font-size:19px;white-space:normal;padding:12px 14px}
+.offcanvas .menu-services summary:hover,.offcanvas .menu-services details[open]>summary,.offcanvas .menu-services details>ul a:hover,.offcanvas .menu-services details>ul a[aria-current]{color:var(--red)}
+@supports(interpolate-size:allow-keywords){
+  .offcanvas .menu-services details{interpolate-size:allow-keywords}
+  .offcanvas .menu-services details::details-content{block-size:0;overflow:hidden;transition:block-size 150ms ease-out,content-visibility 150ms allow-discrete}
+  .offcanvas .menu-services details[open]::details-content{block-size:auto;transition-duration:200ms}
+}
+@media(prefers-reduced-motion:reduce){.menu-services summary,.menu-services summary::after,.menu-services details::details-content,.menu-services details>ul,.menu-services details>ul a,.offcanvas .menu-services details::details-content{transition:none!important}}
