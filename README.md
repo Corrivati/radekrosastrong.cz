@@ -75,3 +75,7 @@ Na GitHub Pages: **Settings → Pages → Deploy from branch**, pak přidat soub
 ## Individuální trénink
 
 Stránka `/individualni-trenink/` používá společné styly workshopů a `assets/css/individualni-trenink.css`. Konzultační tlačítka otevírají e-mailového klienta přes `mailto:rosa.radek@email.cz` s předvyplněným předmětem a zprávou. Stránka neobsahuje dotazník ani serverové odesílání; nevyžaduje PHP, Node.js nebo další službu. Navigace sdružuje individuální trénink a online coaching pod „Spolupráce“ a používá `assets/css/navigation-services.css`.
+
+## Blog
+
+Přehled `/blog/` a články generuje `python3 scripts/build_blog.py` ze zdrojů v `content/blog/` a sdílených šablon `templates/blog/`. Postup přidání článku, nastavení skutečného data publikace a kontrola před nasazením jsou v [content/blog/README.md](content/blog/README.md). Generátor nic nenasazuje a nepotřebuje externí Python balíčky. Ověření generátoru: `python3 -m unittest discover -s tests -p test_blog.py`.

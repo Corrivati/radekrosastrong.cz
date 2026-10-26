@@ -109,7 +109,7 @@ svg{fill:currentColor}
 .hero-eyebrow{margin:0 0 16px;font-size:13px;line-height:1.4;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff}
 .hero h1{margin:0 0 20px;font-size:clamp(64px,6vw,84px);line-height:.97;font-weight:600;letter-spacing:.005em;color:#fff;animation:none}
 .hero-lead{max-width:820px;margin:0 0 28px;font-size:18px;line-height:1.6;color:#fff}
-.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:14px}
 .hero-cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 28px;background:var(--red);border:1px solid var(--red);color:#fff;font:500 25px/1.1 var(--head);letter-spacing:.03em;text-transform:uppercase}
 .hero-cta:hover{background:#a3222a;border-color:#a3222a;color:#fff}
 .hero-cta-secondary{background:transparent;border-color:#89939b}

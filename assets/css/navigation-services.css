@@ -26,3 +26,5 @@
   .offcanvas .menu-services details[open]::details-content{block-size:auto;transition-duration:200ms}
 }
 @media(prefers-reduced-motion:reduce){.menu-services summary,.menu-services summary::after,.menu-services details::details-content,.menu-services details>ul,.menu-services details>ul a,.offcanvas .menu-services details::details-content{transition:none!important}}
+/* Keep the existing single-row navigation comfortable with the direct Blog link. */
+@media(min-width:922px) and (max-width:1439px){.header-bar{padding-left:24px;padding-right:24px}.site-header .menu{flex-wrap:nowrap}.site-header .header-left{flex:1 1 auto}.site-header .header-right{flex:0 0 auto}.site-header .menu a,.site-header .menu-services summary{padding-left:.4em;padding-right:.4em}.header-right{gap:12px}.social{gap:20px;margin-left:8px}.logo{margin-left:12px;margin-right:12px}}
