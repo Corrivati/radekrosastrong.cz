@@ -70,7 +70,7 @@ Přesný příklad kompletního záznamu včetně obrázků a interaktivních ko
 
 ## Přepínač a interní odkazy
 
-Přepínač `🇨🇿 CZ | 🇬🇧 EN` je vpravo v desktopové navigaci a ve stávajícím mobilním menu. Má přístupné popisky a označení aktuálního jazyka. Používá skutečné odkazy, takže funguje i bez JavaScriptu. S JavaScriptem zachovává také aktuální kotvu a query string.
+Přepínač se samotnými vlaječkami `🇨🇿 🇬🇧` je vpravo v desktopové navigaci a ve stávajícím mobilním menu. Má přístupné popisky a označení aktuálního jazyka. Používá skutečné odkazy, takže funguje i bez JavaScriptu. S JavaScriptem zachovává také aktuální kotvu a query string.
 
 Zvolený jazyk určuje URL, nikoli cookie nebo automatický redirect podle prohlížeče. EN interní odkazy míří na EN protějšky. Přímá česká i anglická URL zůstává vždy dostupná, uživatelovu volbu nic nepřebíjí. Pokud překlad budoucího článku není publikovaný, nevzniká falešný EN protějšek; případný běžný interní odkaz vede na existující český originál.
 

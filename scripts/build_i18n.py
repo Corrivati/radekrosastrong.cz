@@ -144,13 +144,13 @@ def localise(source, cs, routes, catalogue, strict=True):
 def switch(cs, en, language):
     label='Jazyk stránky' if language=='cs' else 'Page language'
     links=[]
-    for code,href,flag,name in [('cs',cs,'🇨🇿','CZ'),('en',en,'🇬🇧','EN')]:
+    for code,href,flag in [('cs',cs,'🇨🇿'),('en',en,'🇬🇧')]:
         if href:
             current=' aria-current="true"' if code==language else ''
             desc='Česky' if code=='cs' else 'English'
-            links.append(f'<a href="{escape(href)}" lang="{code}" hreflang="{code}" aria-label="{desc}"{current} data-language-link><span aria-hidden="true">{flag}</span> {name}</a>')
-        else:links.append('<span class="language-unavailable" lang="en" title="Anglický překlad zatím není k dispozici">🇬🇧 EN</span>')
-    return '<!-- i18n:switch --><nav class="language-switch" aria-label="'+label+'">'+'<span class="language-divider" aria-hidden="true">|</span>'.join(links)+'</nav><!-- /i18n:switch -->'
+            links.append(f'<a href="{escape(href)}" lang="{code}" hreflang="{code}" aria-label="{desc}" title="{desc}"{current} data-language-link><span class="language-flag" aria-hidden="true">{flag}</span></a>')
+        else:links.append('<span class="language-unavailable" role="img" aria-label="Anglický překlad zatím není k dispozici" title="Anglický překlad zatím není k dispozici"><span class="language-flag" aria-hidden="true">🇬🇧</span></span>')
+    return '<!-- i18n:switch --><nav class="language-switch" aria-label="'+label+'">'+''.join(links)+'</nav><!-- /i18n:switch -->'
 
 
 def decorate(source, route, language):
@@ -160,7 +160,7 @@ def decorate(source, route, language):
     if route.get('indexable') and en:
         seo=f'<link rel="alternate" hreflang="cs-CZ" href="{BASE+cs}">\n<link rel="alternate" hreflang="en" href="{BASE+en}">\n<link rel="alternate" hreflang="x-default" href="{BASE+cs}">\n'
     ui=json.loads((ROOT/'i18n/ui.json').read_text())[language]
-    extras='<!-- i18n:head -->'+seo+'<link rel="stylesheet" href="/assets/css/i18n.css?v=1">\n<script id="i18n-runtime" type="application/json">'+json.dumps(ui,ensure_ascii=False).replace('<','\\u003c')+'</script>\n<script src="/assets/js/i18n.js?v=1" defer></script>\n<!-- /i18n:head -->\n'
+    extras='<!-- i18n:head -->'+seo+'<link rel="stylesheet" href="/assets/css/i18n.css?v=2">\n<script id="i18n-runtime" type="application/json">'+json.dumps(ui,ensure_ascii=False).replace('<','\\u003c')+'</script>\n<script src="/assets/js/i18n.js?v=1" defer></script>\n<!-- /i18n:head -->\n'
     source=source.replace('</head>',extras+'</head>')
     control=switch(cs,en,language)
     if '<button class="menu-toggle"' in source:
