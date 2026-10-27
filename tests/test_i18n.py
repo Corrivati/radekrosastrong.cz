@@ -80,13 +80,19 @@ class I18nTests(unittest.TestCase):
 
     def test_czech_text_preserved(self):
         config=json.loads((ROOT/'i18n/config.json').read_text())
-        sources=[p['source'] for p in config['pages']]+['blog/jak-poznat-kvalitniho-trenera/index.html']
+        # Blog discovery changes when an article is added; unrelated page copy must not.
+        sources=[p['source'] for p in config['pages'] if p['source'] != 'blog/index.html']
         for source in sources:
             original=subprocess.check_output(['git','show','HEAD:'+source],cwd=ROOT,text=True)
             current=build.clean((ROOT/source).read_text())
             self.assertEqual(build.normal(' '.join(Page(build.clean(original)).text)),build.normal(' '.join(Page(current).text)),source)
         source='content/blog/jak-poznat-kvalitniho-trenera.md'
         self.assertEqual(subprocess.check_output(['git','show','HEAD:'+source],cwd=ROOT),(ROOT/source).read_bytes())
+        source='blog/jak-poznat-kvalitniho-trenera/index.html'
+        original=subprocess.check_output(['git','show','HEAD:'+source],cwd=ROOT,text=True)
+        current=(ROOT/source).read_text()
+        prose=lambda html:re.search(r'<div class="blog-prose" data-article-body>(.*?)</div>\s*<section class="blog-author"',html,re.S)[1]
+        self.assertEqual(prose(original),prose(current))
 
     def test_draft_translation_creates_no_public_route(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -103,7 +109,8 @@ class I18nTests(unittest.TestCase):
                 article=root/'en/blog/how-to-choose-a-good-personal-trainer/index.html'
                 self.assertTrue(article.exists())
                 metadata=root/'content/blog/articles.json';entries=json.loads(metadata.read_text())
-                entries[0]['locales']['en']['status']='draft';entries[0]['locales']['en']['source']='does-not-exist.md'
+                for entry in entries:
+                    entry['locales']['en']['status']='draft';entry['locales']['en']['source']='does-not-exist.md'
                 metadata.write_text(json.dumps(entries))
                 index=root/'blog/index.html'
                 index.write_text(index.read_text().replace('Jak poznat kvalitního trenéra? Podle čeho si vybrat toho správného?', 'Nový český titulek bez anglického překladu'))

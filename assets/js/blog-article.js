@@ -4,6 +4,32 @@
   function ui(key, fallback) { return window.RosaI18n ? window.RosaI18n.t(key, fallback) : fallback; }
   var article = document.querySelector('[data-article]');
   if (!article) return;
+
+  // Study visuals are fully rendered by default, including when JS is disabled.
+  var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (article.querySelector('[data-study-reveal]') && !motion.matches && 'IntersectionObserver' in window && Element.prototype.animate) {
+    var animations = new Set();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        if (motion.matches) return;
+        var element = entry.target;
+        var isBar = element.hasAttribute('data-study-bar');
+        var frames = isBar ? [{transform: 'scaleX(0)'}, {transform: 'scaleX(1)'}] : [{opacity: 0, translate: '0 20px'}, {opacity: 1, translate: '0 0'}];
+        var delay = element.classList.contains('blog-study-stat') ? Array.prototype.indexOf.call(element.parentElement.children, element) % 2 * 60 : 0;
+        var animation = element.animate(frames, {duration: 450, delay: delay, easing: 'cubic-bezier(.2,.65,.3,1)', fill: 'backwards'});
+        animations.add(animation);
+        animation.onfinish = animation.oncancel = function () { animations.delete(animation); };
+      });
+    }, {threshold: 0.12});
+    article.querySelectorAll('[data-study-reveal], [data-study-bar]').forEach(function (element) { observer.observe(element); });
+    function finishAnimations() { animations.forEach(function (animation) { animation.finish(); }); }
+    motion.addEventListener('change', function () {
+      if (motion.matches) { observer.disconnect(); finishAnimations(); }
+    });
+    window.addEventListener('beforeprint', finishAnimations);
+  }
   article.querySelectorAll('[data-checklist]').forEach(function (checklist) {
     var inputs = Array.from(checklist.querySelectorAll('input[type="checkbox"]'));
     var counter = checklist.querySelector('[data-checklist-count]');

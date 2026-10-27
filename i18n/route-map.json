@@ -104,6 +104,13 @@
     "en": "/en/404.html",
     "indexable": false
   },
+  "/blog/chatgpt-vs-osobni-trener/": {
+    "cs": "/blog/chatgpt-vs-osobni-trener/",
+    "en": "/en/blog/chatgpt-vs-personal-trainers/",
+    "source": "blog/chatgpt-vs-osobni-trener/index.html",
+    "indexable": true,
+    "articleId": "chatgpt-personal-trainers-study"
+  },
   "/blog/jak-poznat-kvalitniho-trenera/": {
     "cs": "/blog/jak-poznat-kvalitniho-trenera/",
     "en": "/en/blog/how-to-choose-a-good-personal-trainer/",

@@ -1,5 +1,44 @@
 [
   {
+    "id": "chatgpt-personal-trainers-study",
+    "slug": "chatgpt-vs-osobni-trener",
+    "source": "chatgpt-vs-osobni-trener.md",
+    "category": "Věda & trénink",
+    "author": "Radek Rosa",
+    "published": "2026-10-27",
+    "seoTitle": "ChatGPT vs. osobní trenér: Co ukázala studie? | Radek Rosa",
+    "description": "Vědecká studie porovnala ChatGPT a osobní trenéry. AI dosáhla lepšího hodnocení v 6 z 9 otázek. Co výsledky skutečně znamenají?",
+    "studyData": "studies/chatgpt-personal-trainers.json",
+    "thumbnail": {
+      "src": "/assets/images/blog-chatgpt-vs-osobni-trener.svg",
+      "alt": "ChatGPT 3.5: lepší celkové hodnocení písemných odpovědí v 6 z 9 otázek, nikoliv hodnocení vedení klientů.",
+      "width": 1200,
+      "height": 675
+    },
+    "features": {
+      "eyebrow": "VĚDA & TRENÉRSKÁ PRAXE",
+      "pullQuotes": [
+        "Ne. Studie hodnotila kvalitu teoretických odpovědí, nikoliv skutečné vedení klientů."
+      ]
+    },
+    "locales": {
+      "en": {
+        "status": "published",
+        "slug": "chatgpt-vs-personal-trainers",
+        "source": "en/chatgpt-vs-personal-trainers.md",
+        "category": "Science & training",
+        "seoTitle": "ChatGPT vs. Personal Trainers: What Did the Study Show? | Radek Rosa",
+        "description": "A study compared ChatGPT with personal trainers. AI received higher ratings for 6 of 9 questions. What do the findings actually mean?",
+        "features": {
+          "eyebrow": "SCIENCE & COACHING PRACTICE",
+          "pullQuotes": [
+            "No. The study assessed the quality of theoretical answers, not the actual coaching of clients."
+          ]
+        }
+      }
+    }
+  },
+  {
     "slug": "jak-poznat-kvalitniho-trenera",
     "source": "jak-poznat-kvalitniho-trenera.md",
     "category": "Trenérství",

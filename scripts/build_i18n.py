@@ -168,7 +168,7 @@ def decorate(source, route, language):
         start=source.index('<nav class="offcanvas-panel"');end=source.index('</nav>',start)
         source=source[:end]+control+source[end:]
     else:source=source.replace('</main>',control+'</main>',1)
-    for script,version in [('main.js',8),('edukace.js',2),('blog-article.js',2)]:
+    for script,version in [('main.js',8),('edukace.js',2),('blog-article.js',3)]:
         source=re.sub(re.escape(script)+r'\?v=\d+',script+'?v='+str(version),source)
     return source
 
@@ -177,12 +177,14 @@ def english_article(entry, locale):
     source_path=ROOT/'content/blog'/locale['source']
     if not source_path.resolve().is_relative_to((ROOT/'content/blog/en').resolve()):
         raise ValueError('English article sources must be in content/blog/en')
-    source=source_path.read_text()
+    source=blog.article_source(entry,locale)
     heading,perex,body=re.split(r'\n\s*\n',source.strip(),maxsplit=2)
     heading=heading.removeprefix('# ')
     rendered,headings=blog.render_markdown(body)
     rendered=blog.editorial_body(rendered,locale.get('features',{}))
-    minutes=max(1,math.ceil(len(re.findall(r'\b[\w]+(?:[’–-][\w]+)*\b',blog.plain(source)))/200))
+    study=blog.blog_study.load(ROOT,entry)
+    rendered=blog.blog_study.enhance(rendered,study,'en')
+    minutes=max(1,math.ceil(blog.blog_study.word_count(blog.plain(source),study,'en')/200))
     url=BASE+'/en/blog/'+locale['slug']+'/'
     image=entry.get('heroImage',entry.get('thumbnail'))
     hero='<figure class="blog-hero-illustration">'+blog.image_markup(image,eager=True)+'</figure>' if image else ''
@@ -196,7 +198,7 @@ def english_article(entry, locale):
     meta=f'<meta property="article:published_time" content="{entry["published"]}">'
     if image:
         schema['image']=BASE+image['src'];meta+=f'<meta property="og:image" content="{escape(BASE+image["src"])}"><meta property="og:image:alt" content="{escape(image["alt"])}"><meta name="twitter:image" content="{escape(BASE+image["src"])}">'
-    output=blog.template('base.html',dict(content=content,title=escape(locale['seoTitle']),description=escape(locale['description']),canonical=url,og_type='article',blog_current='location',page_assets='<link rel="stylesheet" href="/assets/css/blog-article.css?v=1"><script src="/assets/js/blog-article.js?v=2" defer></script>',extra_meta=meta+'<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')+'</script>'))
+    output=blog.template('base.html',dict(content=content,title=escape(locale['seoTitle']),description=escape(locale['description']),canonical=url,og_type='article',blog_current='location',page_assets=blog.article_assets(entry),extra_meta=meta+'<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')+'</script>'))
     return output,heading,blog.plain(perex),minutes
 
 

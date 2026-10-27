@@ -6,16 +6,18 @@ import shutil
 import tempfile
 import unittest
 import re
+import sys
 from html.parser import HTMLParser
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
 spec = importlib.util.spec_from_file_location('build_blog', ROOT / 'scripts/build_blog.py')
 build = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(build)
 
 class BlogGenerationTests(unittest.TestCase):
     def test_editorial_components_preserve_original_text(self):
-        entry = json.loads((ROOT/'content/blog/articles.json').read_text())[0]
+        entry = next(e for e in json.loads((ROOT/'content/blog/articles.json').read_text()) if e['id'] == 'choosing-a-coach')
         source = (ROOT/'content/blog'/entry['source']).read_text()
         body = re.split(r'\n\s*\n', source.strip(), maxsplit=2)[2]
         original, _ = build.render_markdown(body)
@@ -54,6 +56,7 @@ class BlogGenerationTests(unittest.TestCase):
             shutil.copyfile(ROOT / 'sitemap.xml', root / 'sitemap.xml')
             metadata = root / "content/blog/articles.json"
             preview = json.loads(metadata.read_text())
+            preview = [e for e in preview if e['id'] == 'choosing-a-coach']
             for entry in preview:
                 entry["published"] = None
                 entry.pop("thumbnail", None)

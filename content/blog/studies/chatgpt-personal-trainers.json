@@ -1,0 +1,169 @@
+{
+  "model": "ChatGPT",
+  "version": "3.5",
+  "year": 2026,
+  "counts": {
+    "trainers": 9,
+    "raters": 27,
+    "trainerRaters": 18,
+    "scientistRaters": 9,
+    "questions": 9,
+    "weightLossQuestions": 5
+  },
+  "results": {
+    "overall": 6,
+    "accuracy": 5,
+    "clarity": 6,
+    "applicability": 5
+  },
+  "citation": {
+    "authors": "D’hoe, B., Kirk, D., Boone, J., & Colosio, A.",
+    "title": "ChatGPT Outperforms Personal Trainers in Answering Common Exercise Training Questions.",
+    "journal": "Journal of Sports Science and Medicine",
+    "volume": 25,
+    "issue": 1,
+    "pages": "235–261",
+    "doi": "https://doi.org/10.52082/jssm.2026.235",
+    "fullText": "https://www.jssm.org/jssm-25-235.xml-Fulltext"
+  },
+  "locales": {
+    "cs": {
+      "statsLabel": "Základní čísla studie",
+      "stats": [
+        "Kvalifikovaných trenérů",
+        "Hodnotitelů",
+        "Tréninkových otázek",
+        "Otázek s lepším celkovým hodnocením AI"
+      ],
+      "chartTitle": "V čem ChatGPT překonal trenéry?",
+      "resultLabels": {
+        "overall": "Celkové hodnocení",
+        "accuracy": "Vědecká správnost",
+        "clarity": "Srozumitelnost",
+        "applicability": "Praktická využitelnost"
+      },
+      "resultValue": "{count} z {total} otázek",
+      "axisEnd": "{total} otázek",
+      "chartNote": "Údaje představují počet otázek se statisticky významně lepším hodnocením ChatGPT, nikoliv procentuální úspěšnost při trénování klientů.",
+      "evidenceTitle": "Co studie ukázala a co ne?",
+      "evidence": [
+        {
+          "title": "Co studie ukázala",
+          "icon": "check",
+          "items": [
+            "AI dokázala kvalitně odpovídat na běžné otázky o cvičení.",
+            "V {overall} z {questions} otázek dosáhla vyššího celkového hodnocení.",
+            "Často získávala lepší hodnocení odborné správnosti a srozumitelnosti."
+          ]
+        },
+        {
+          "title": "Co studie neprokázala",
+          "icon": "info",
+          "items": [
+            "Že AI vede klienty dlouhodobě lépe.",
+            "Že dokáže lépe individualizovat trénink.",
+            "Že dosahuje lepších skutečných tréninkových výsledků.",
+            "Že dokáže nahradit všechny činnosti osobního trenéra."
+          ]
+        }
+      ],
+      "comparisonTitle": "Informace vs. jejich využití v praxi",
+      "columns": [
+        "Co může nabídnout AI",
+        "Co přináší práce kvalitního trenéra"
+      ],
+      "rows": [
+        [
+          "Vysvětlení tréninkových principů",
+          "Posouzení jejich vhodnosti pro klienta"
+        ],
+        [
+          "Návrhy tréninkových programů",
+          "Praktickou realizaci a průběžné úpravy"
+        ],
+        [
+          "Zpracování tréninkových dat",
+          "Interpretaci v kontextu konkrétního sportovce"
+        ],
+        [
+          "Informace a doporučení",
+          "Osobní komunikaci, vedení a zpětnou vazbu"
+        ]
+      ],
+      "comparisonNote": "Schopnosti AI a trenéra se mohou překrývat. Tabulka ilustruje rozdílné způsoby využití, nikoliv výhradní schopnosti člověka nebo technologie.",
+      "quote": "Budoucnost nebude patřit trenérům, kteří pouze předávají informace, ale těm, kteří je dokážou správně použít u konkrétního člověka.",
+      "authorRole": "Silový a kondiční trenér",
+      "doiLabel": "DOI studie",
+      "fullTextLabel": "Přečíst původní studii"
+    },
+    "en": {
+      "statsLabel": "The study at a glance",
+      "stats": [
+        "Qualified personal trainers",
+        "Reviewers",
+        "Exercise questions",
+        "Questions with a higher overall rating for AI"
+      ],
+      "chartTitle": "Where did ChatGPT outperform the trainers?",
+      "resultLabels": {
+        "overall": "Overall rating",
+        "accuracy": "Scientific accuracy",
+        "clarity": "Clarity",
+        "applicability": "Practical usefulness"
+      },
+      "resultValue": "{count} of {total} questions",
+      "axisEnd": "{total} questions",
+      "chartNote": "These figures show the number of questions for which ChatGPT received statistically significantly higher ratings, not a percentage success rate in coaching clients.",
+      "evidenceTitle": "What did the study show — and what did it not establish?",
+      "evidence": [
+        {
+          "title": "What the study showed",
+          "icon": "check",
+          "items": [
+            "AI could provide high-quality answers to common exercise questions.",
+            "It received a higher overall rating for {overall} of the {questions} questions.",
+            "It often received higher ratings for scientific accuracy and clarity."
+          ]
+        },
+        {
+          "title": "What the study did not establish",
+          "icon": "info",
+          "items": [
+            "That AI coaches clients better over the long term.",
+            "That it can individualise training better.",
+            "That it achieves better real-world training outcomes.",
+            "That it can replace every aspect of a personal trainer’s work."
+          ]
+        }
+      ],
+      "comparisonTitle": "Information vs. putting it into practice",
+      "columns": [
+        "What AI can offer",
+        "What a good coach’s work brings"
+      ],
+      "rows": [
+        [
+          "Explanations of training principles",
+          "Judging their suitability for the client"
+        ],
+        [
+          "Suggested training programmes",
+          "Putting them into practice and adjusting them over time"
+        ],
+        [
+          "Processing training data",
+          "Interpreting it in the context of an individual athlete"
+        ],
+        [
+          "Information and recommendations",
+          "Personal communication, guidance and feedback"
+        ]
+      ],
+      "comparisonNote": "The capabilities of AI and coaches can overlap. This table illustrates different ways they can be used, rather than abilities exclusive to people or technology.",
+      "quote": "The future will not belong to coaches who merely pass on information, but to those who can apply it appropriately to the individual in front of them.",
+      "authorRole": "Strength and conditioning coach",
+      "doiLabel": "Study DOI",
+      "fullTextLabel": "Read the original study"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" rx="16" fill="#18232d"/>
+<text x="90" y="140" font-family="Ubuntu,Arial,sans-serif" font-size="42" fill="#e5e9ec">ChatGPT 3.5</text>
+<text x="82" y="420" font-family="Teko,Arial,sans-serif" font-size="270" font-weight="700" fill="#fff">6<tspan fill="#aab3bb" font-size="190"> / 9</tspan></text>
+<circle cx="120" cy="525" r="25" fill="#bf2932"/><circle cx="240" cy="525" r="25" fill="#bf2932"/><circle cx="360" cy="525" r="25" fill="#bf2932"/><circle cx="480" cy="525" r="25" fill="#bf2932"/><circle cx="600" cy="525" r="25" fill="#bf2932"/><circle cx="720" cy="525" r="25" fill="#bf2932"/><circle cx="840" cy="525" r="25" fill="#78838d"/><circle cx="960" cy="525" r="25" fill="#78838d"/><circle cx="1080" cy="525" r="25" fill="#78838d"/></svg>

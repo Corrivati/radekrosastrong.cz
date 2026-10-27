@@ -144,6 +144,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/workshop-slachy/" />
   </url>
   <url>
+    <loc>https://radekrosastrong.cz/blog/chatgpt-vs-osobni-trener/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/chatgpt-vs-osobni-trener/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/chatgpt-vs-personal-trainers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/blog/chatgpt-vs-osobni-trener/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/blog/chatgpt-vs-personal-trainers/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/chatgpt-vs-osobni-trener/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/chatgpt-vs-personal-trainers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/blog/chatgpt-vs-osobni-trener/" />
+  </url>
+  <url>
     <loc>https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/</loc>
     <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/how-to-choose-a-good-personal-trainer/" />

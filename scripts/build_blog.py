@@ -8,6 +8,7 @@ import math
 import re
 import xml.etree.ElementTree as ET
 from urllib.parse import urlencode, quote
+import blog_study
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = 'https://radekrosastrong.cz'
@@ -23,6 +24,20 @@ def inline(text):
 
 def plain(text):
     return text.replace('**', '').replace('*', '').replace('\n', ' ').strip()
+
+def article_source(entry, locale=None):
+    metadata = locale or entry
+    path = ROOT / 'content/blog' / metadata['source']
+    allowed = ROOT / 'content/blog/en' if locale else ROOT / 'content/blog'
+    if (locale and not path.resolve().is_relative_to(allowed.resolve())) or (not locale and path.resolve().parent != allowed.resolve()):
+        raise ValueError('Article source must be in its language content/blog directory')
+    return blog_study.source(path.read_text(), blog_study.load(ROOT, entry))
+
+def article_assets(entry):
+    css = '<link rel="stylesheet" href="/assets/css/blog-article.css?v=1">'
+    if entry.get('studyData'):
+        css += '\n<link rel="stylesheet" href="/assets/css/blog-study.css?v=1">'
+    return css + '\n<script src="/assets/js/blog-article.js?v=3" defer></script>'
 
 def render_markdown(source):
     """Headings, paragraphs, emphasis, unordered lists and thematic breaks only.
@@ -123,10 +138,9 @@ def main():
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug) or slug in slugs:
             raise ValueError('Invalid or duplicate slug: ' + slug)
         slugs.add(slug)
-        source_path = ROOT / 'content/blog' / entry['source']
-        if source_path.resolve().parent != (ROOT / 'content/blog').resolve():
-            raise ValueError('Article source must be in content/blog')
-        source = source_path.read_text()
+        study = blog_study.load(ROOT, entry)
+        blog_study.artwork(ROOT, entry, study)
+        source = article_source(entry)
         parts = re.split(r'\n\s*\n', source.strip(), maxsplit=2)
         if len(parts) < 3 or not parts[0].startswith('# '):
             raise ValueError('Article requires an H1, perex and body')
@@ -134,7 +148,8 @@ def main():
         rendered, headings = render_markdown(body)
         features = entry.get('features', {})
         rendered = editorial_body(rendered, features)
-        minutes = max(1, math.ceil(len(re.findall(r'\b[\w]+(?:[’–-][\w]+)*\b', plain(source))) / 200))
+        rendered = blog_study.enhance(rendered, study, 'cs')
+        minutes = max(1, math.ceil(blog_study.word_count(plain(source), study, 'cs') / 200))
         published = entry.get('published')
         if published and date.fromisoformat(published) > date.today():
             raise ValueError('Publication date cannot be in the future')
@@ -160,7 +175,7 @@ def main():
             extra += f'\n<meta property="og:image" content="{escape(BASE_URL+hero_image["src"])}">\n<meta property="og:image:alt" content="{escape(hero_image["alt"])}">\n<meta name="twitter:image" content="{escape(BASE_URL+hero_image["src"])}">'
         extra += '\n<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
         common = dict(title=escape(entry['seoTitle']), description=escape(entry['description']), canonical=url,
-                      og_type='article', extra_meta=extra, blog_current='location', page_assets='<link rel="stylesheet" href="/assets/css/blog-article.css?v=1">\n<script src="/assets/js/blog-article.js?v=1" defer></script>')
+                      og_type='article', extra_meta=extra, blog_current='location', page_assets=article_assets(entry))
         related = ''
         others = [other for other in entries if other['slug'] != slug and other.get('published')]
         if others:

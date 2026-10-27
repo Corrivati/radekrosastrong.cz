@@ -1,0 +1,66 @@
+/* Study visuals reuse the existing article palette and typography. */
+.blog-study-stats{margin:0 0 30px}
+.blog-article .blog-study-stats ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.blog-article .blog-study-stat{padding:20px 16px;margin:0;border:1px solid var(--article-line);border-radius:8px;background:var(--white)}
+.blog-study-stat strong{display:block;font:500 52px/1 var(--head);margin-bottom:12px}
+.blog-study-stat span{display:block;font-size:13px;line-height:1.55}
+.blog-article .blog-study-stat.is-highlighted{background:var(--article-soft);border-color:var(--red)}
+.blog-article .blog-study-stat.is-highlighted strong{color:var(--red)}
+.blog-study-chart{padding:28px;margin:28px 0 0;background:var(--article-soft);border:1px solid var(--article-line);border-radius:8px}
+.blog-article .blog-study-chart h3{margin:0 0 28px}
+.blog-article .blog-study-chart ul{list-style:none;padding:0;margin:0}
+.blog-article .blog-study-chart li{padding:0;margin:0 0 24px}
+.blog-article .blog-study-chart li:last-child{margin-bottom:14px}
+.blog-study-result-label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:15px;line-height:1.6;margin-bottom:10px}
+.blog-study-result-label strong{font-size:13px;white-space:nowrap}
+.blog-study-track{height:14px;overflow:hidden;border-radius:3px;background:#e4e7e9}
+.blog-study-track span{display:block;height:100%;width:calc(var(--study-fraction)*100%);background:var(--red);transform-origin:left;border-radius:3px}
+.blog-study-axis{display:flex;justify-content:space-between;font-size:12px;line-height:1.5;color:var(--text)}
+.blog-study-chart figcaption,.blog-study-note{font-size:13px;line-height:1.65;color:var(--text)}
+.blog-study-chart figcaption{margin-top:24px;padding-top:20px;border-top:1px solid var(--article-line)}
+.blog-study-evidence{margin:32px 0 0}
+.blog-article .blog-study-evidence>h3{margin:0 0 20px}
+.blog-study-evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.blog-study-evidence-card{padding:24px;border:1px solid var(--article-line);border-radius:8px;background:var(--article-soft);min-width:0}
+.blog-study-evidence-card svg{display:block;width:24px;height:24px;margin-bottom:16px;fill:none;stroke:var(--red);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.blog-study-evidence-card h4{font-family:var(--head);font-size:27px;font-weight:500;line-height:1.15;margin:0 0 18px;text-transform:none;color:var(--dark)}
+.blog-article .blog-study-evidence-card ul{font-size:14px;line-height:1.65;padding-left:18px;margin:0}
+.blog-article .blog-study-evidence-card li{padding:0;margin-bottom:12px}
+.blog-article .blog-study-evidence-card li:last-child{margin-bottom:0}
+.blog-study-comparison{margin:32px 0 0}
+.blog-study-comparison table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:15px;line-height:1.65;border:1px solid var(--article-line);border-radius:8px;overflow:hidden}
+.blog-study-comparison caption{text-align:left;font:500 30px/1.15 var(--head);color:var(--dark);margin-bottom:20px}
+.blog-study-comparison th,.blog-study-comparison td{text-align:left;vertical-align:top;padding:18px 20px;overflow-wrap:anywhere}
+.blog-study-comparison th{background:var(--article-soft);font-weight:500;color:var(--dark)}
+.blog-study-comparison td{border-top:1px solid var(--article-line)}
+.blog-study-comparison th+th,.blog-study-comparison td+td{border-left:1px solid var(--article-line)}
+.blog-article .blog-study-note{margin:18px 0 0}
+.blog-study-quote{margin:28px 0 0;padding:30px 32px;background:var(--article-soft);border-left:3px solid var(--red);border-radius:0 8px 8px 0}
+.blog-study-quote blockquote{margin:0}
+.blog-article .blog-study-quote blockquote p{font:500 clamp(28px,2.7vw,36px)/1.25 var(--head);color:var(--dark);margin:0}
+.blog-study-quote figcaption{margin-top:24px;font-size:13px;line-height:1.7}
+.blog-study-quote figcaption strong,.blog-study-quote figcaption span{display:block}
+.blog-study-reference{font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+.blog-article .blog-study-reference p{margin-bottom:16px}
+.blog-article .blog-study-reference ul{list-style:none;padding:0;margin:0}
+.blog-article .blog-study-reference li{padding:0;margin:0 0 8px}
+.blog-study-reference a{display:inline-block;text-decoration:underline;text-underline-offset:3px;padding:4px 0}
+@media(max-width:600px){
+  .blog-article .blog-study-stats ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .blog-article .blog-study-stat{padding:18px 14px}
+  .blog-study-stat strong{font-size:46px;margin-bottom:10px}
+  .blog-study-chart{padding:22px 18px}
+  .blog-study-result-label{flex-direction:column;gap:2px;font-size:14px}
+  .blog-study-result-label strong{font-size:12px}
+  .blog-study-evidence-grid{grid-template-columns:minmax(0,1fr)}
+  .blog-study-evidence-card{padding:22px}
+  .blog-study-comparison table,.blog-study-comparison tbody{display:block;border:0;overflow:visible}
+  .blog-study-comparison caption{display:block;font-size:28px}
+  .blog-study-comparison thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .blog-study-comparison tr{display:block;border:1px solid var(--article-line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+  .blog-study-comparison td{display:block;width:100%;padding:16px 18px;border:0}
+  .blog-study-comparison td+td{background:var(--article-soft);border-left:0;border-top:1px solid var(--article-line)}
+  .blog-study-comparison td::before{content:attr(data-label);display:block;font-size:12px;font-weight:500;color:var(--dark);margin-bottom:8px}
+  .blog-study-quote{padding:24px 22px}
+}
+@media print{.blog-study-track,.blog-study-stat.is-highlighted{print-color-adjust:exact}}

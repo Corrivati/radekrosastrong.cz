@@ -33,3 +33,13 @@ Všechny tyto možnosti lze vynechat. Nepřebírej celý záznam prvního člán
 Ověření: `python3 -m unittest discover -s tests -p test_blog.py`. Testy porovnávají text před a po přidání komponent, ověřují existenci citací, generování dalších článků, datum, sitemap a obrázky. Zdrojový Markdown prvního článku zůstává beze změny.
 
 Pro české a anglické verze vždy spouštěj kompletní `build_site.py`, který navazuje generováním EN stránek a jazykových vazeb. Samostatný `build_blog.py` je pouze dílčí generátor české šablony. Viz [I18N_GUIDE.md](../../I18N_GUIDE.md).
+
+## Článek ChatGPT vs. osobní trenéři
+
+Český zdroj je `chatgpt-vs-osobni-trener.md`, anglický `en/chatgpt-vs-personal-trainers.md`. V přehledu je nejnovější článek první. Sdílený datový soubor `studies/chatgpt-personal-trainers.json` obsahuje všechny počty, verzi modelu, bibliografické údaje a texty infografik v obou jazycích. Ve zdrojových odstavcích se hodnoty vkládají pomocí `{{study.counts.questions}}`, `{{study.results.overall}}` apod.; výsledný web žádné šablonové značky neobsahuje.
+
+Pole `studyData` v `articles.json` aktivuje komponenty v `scripts/blog_study.py`. Značky `[[study:stats]]`, `[[study:results]]`, `[[study:evidence]]`, `[[study:comparison]]`, `[[study:quote]]` a `[[study:reference]]` označují jejich umístění v Markdownu. Každá se musí vyskytovat právě jednou. Generátor ověřuje součty hodnotitelů, rozsah počtů otázek, bezpečné cesty a HTTPS odkazy. Statistické karty, graf a mobilní porovnání jsou sémantické HTML/CSS; přístupné jsou i bez JavaScriptu. Jednorázové animace přidává společný skript článků, respektující reduced motion. Nové styly `assets/css/blog-study.css` se načítají pouze u tohoto článku.
+
+Malý náhled `assets/images/blog-chatgpt-vs-osobni-trener.svg` se při sestavení vytváří ze stejných dat. Zobrazuje šest zvýrazněných bodů z devíti; alt text výslovně uvádí, že jde o hodnocení odpovědí. Není to fotografie ani obrázek nahrazující obsahové infografiky.
+
+Původ čísel: dodané zadání s citací DOI `10.52082/jssm.2026.235`. Při přípravě dne 27. 10. 2026 vracely vydavatel, DOI i bibliografické databáze přes síťový proxy chybu 403, a proto nezávislá kontrola plného textu nebyla dokončena. Žádné další výsledky ani p-hodnoty nebyly doplněny. Majitel byl na nedokončené ověření upozorněn a dne 27. 10. 2026 následně výslovně schválil zveřejnění připraveného článku. Porovnání s původním PDF zůstává otevřené; tato poznámka je pouze pro správu projektu, nikoliv součást veřejného článku.
