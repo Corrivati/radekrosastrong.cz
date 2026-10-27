@@ -1,16 +1,158 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://radekrosastrong.cz/</loc></url>
-  <url><loc>https://radekrosastrong.cz/edukace/</loc></url>
-  <url><loc>https://radekrosastrong.cz/onlinecoaching/</loc></url>
-  <url><loc>https://radekrosastrong.cz/strangetraining/</loc></url>
-  <url><loc>https://radekrosastrong.cz/strangetraining-old/</loc></url>
-  <url><loc>https://radekrosastrong.cz/kontrakce2/</loc></url>
-  <url><loc>https://radekrosastrong.cz/workshop-slachy/</loc></url>
-  <url><loc>https://radekrosastrong.cz/webinar-zdarma/</loc></url>
-  <url><loc>https://radekrosastrong.cz/gdpr/</loc></url>
-  <url><loc>https://radekrosastrong.cz/obchodni-podminky/</loc></url>
-  <url><loc>https://radekrosastrong.cz/individualni-trenink/</loc></url>
-  <url><loc>https://radekrosastrong.cz/blog/</loc></url>
-  <url><loc>https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://radekrosastrong.cz/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/blog/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/blog/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/edukace/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/edukace/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/edukace/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/edukace/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/edukace/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/edukace/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/edukace/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/edukace/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/gdpr/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/gdpr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/gdpr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/gdpr/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/gdpr/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/gdpr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/gdpr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/gdpr/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/individualni-trenink/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/individualni-trenink/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/individualni-trenink/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/individualni-trenink/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/individualni-trenink/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/individualni-trenink/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/individualni-trenink/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/individualni-trenink/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/kontrakce2/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/kontrakce2/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/kontrakce2/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/kontrakce2/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/kontrakce2/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/kontrakce2/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/kontrakce2/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/kontrakce2/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/obchodni-podminky/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/obchodni-podminky/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/obchodni-podminky/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/obchodni-podminky/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/obchodni-podminky/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/obchodni-podminky/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/obchodni-podminky/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/obchodni-podminky/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/onlinecoaching/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/onlinecoaching/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/onlinecoaching/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/onlinecoaching/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/onlinecoaching/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/onlinecoaching/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/onlinecoaching/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/onlinecoaching/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/strangetraining/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/strangetraining/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/strangetraining/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/strangetraining/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/strangetraining/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/strangetraining/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/strangetraining/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/strangetraining/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/strangetraining-old/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/strangetraining-old/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/strangetraining-old/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/strangetraining-old/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/strangetraining-old/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/strangetraining-old/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/strangetraining-old/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/strangetraining-old/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/webinar-zdarma/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/webinar-zdarma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/webinar-zdarma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/webinar-zdarma/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/webinar-zdarma/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/webinar-zdarma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/webinar-zdarma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/webinar-zdarma/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/workshop-slachy/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/workshop-slachy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/workshop-slachy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/workshop-slachy/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/workshop-slachy/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/workshop-slachy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/workshop-slachy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/workshop-slachy/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/how-to-choose-a-good-personal-trainer/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/" />
+  </url>
+  <url>
+    <loc>https://radekrosastrong.cz/en/blog/how-to-choose-a-good-personal-trainer/</loc>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://radekrosastrong.cz/en/blog/how-to-choose-a-good-personal-trainer/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://radekrosastrong.cz/blog/jak-poznat-kvalitniho-trenera/" />
+  </url>
 </urlset>

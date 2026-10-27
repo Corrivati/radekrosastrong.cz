@@ -22,7 +22,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
-            with open(os.path.join(ROOT, "404.html"), "rb") as f:
+            error_page = os.path.join("en", "404.html") if path.startswith("/en/") and os.path.isfile(os.path.join(ROOT, "en", "404.html")) else "404.html"
+            with open(os.path.join(ROOT, error_page), "rb") as f:
                 self.wfile.write(f.read())
             return None
         return super().send_head()

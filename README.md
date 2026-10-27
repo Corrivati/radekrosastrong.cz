@@ -78,4 +78,8 @@ Stránka `/individualni-trenink/` používá společné styly workshopů a `asse
 
 ## Blog
 
-Přehled `/blog/` a články generuje `python3 scripts/build_blog.py` ze zdrojů v `content/blog/` a sdílených šablon `templates/blog/`. Postup přidání článku, nastavení skutečného data publikace a kontrola před nasazením jsou v [content/blog/README.md](content/blog/README.md). Generátor nic nenasazuje a nepotřebuje externí Python balíčky. Ověření generátoru: `python3 -m unittest discover -s tests -p test_blog.py`.
+Přehled `/blog/` a články v obou jazycích generuje `python3 scripts/build_site.py` ze zdrojů v `content/blog/` a sdílených šablon `templates/blog/`. Postup přidání článku, nastavení skutečného data publikace a kontrola před nasazením jsou v [content/blog/README.md](content/blog/README.md). Generátor nic nenasazuje a nepotřebuje externí Python balíčky. Ověření generátoru: `python3 -m unittest discover -s tests -p test_blog.py`.
+
+## CZ / EN build
+
+Kompletní místní sestavení obou jazyků: `python3 scripts/build_site.py`. Návod k překladům, mapování URL, konceptům článků a kontrole před nasazením: [I18N_GUIDE.md](I18N_GUIDE.md). Generované HTML v `en/` neupravujte ručně. Testy: `python3 -m unittest discover -s tests`.

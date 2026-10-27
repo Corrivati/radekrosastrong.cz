@@ -5,7 +5,7 @@ Blog je statický. Na hostingu nejsou potřeba Python, databáze ani CMS; publik
 1. Vlož nový soubor `.md` do `content/blog/`. Použij jeden hlavní nadpis `#`, poté samostatný perex a další obsah. Podporované značky: kapitoly `##`, odstavce, `**tučně**`, `*kurzíva*`, seznamy `-` a oddělovač `---`. HTML se bezpečně vypisuje jako text. Odkazy, obrázky a jiné rozšířené Markdown prvky zatím nejsou součástí této jednoduché šablony.
 2. Přidej záznam do `articles.json`: unikátní `slug`, `source`, `category`, `author`, `published`, `seoTitle`, `description`. Pořadí záznamů určuje pořadí karet.
 3. Pro náhled nech `published: null`. Datum se nevymýšlí: karta i článek zobrazují „Připraveno k publikaci“ a nové stránky mají `noindex, follow`. Při schváleném zveřejnění nastav skutečný den ve formátu `YYYY-MM-DD`. Generátor potom doplní datum do stránky a BlogPosting a odstraní náhledové noindex. Při prvním zveřejnění tohoto článku musí být datum nastavené před nasazením.
-4. Z kořene projektu spusť `python3 scripts/build_blog.py`. Skript bez externích balíčků vytvoří články, přehledové karty a aktualizuje pouze blogové položky v sitemap. Doba čtení se počítá z celého textu tempem 200 slov za minutu, zaokrouhlením nahoru. Názvy, obsah, perex a zvýraznění pocházejí ze zdrojového souboru.
+4. Z kořene projektu spusť `python3 scripts/build_site.py`. Skript bez externích balíčků vytvoří články, přehledové karty a aktualizuje pouze blogové položky v sitemap. Doba čtení se počítá z celého textu tempem 200 slov za minutu, zaokrouhlením nahoru. Názvy, obsah, perex a zvýraznění pocházejí ze zdrojového souboru.
 5. Prohlédni výsledek přes `python3 serve.py` a zkontroluj změny. Při přejmenování nebo odstranění článku odstraň ručně také starý vygenerovaný adresář v `blog/`; skript existující soubory nemaže.
 6. Teprve po schválení odešli zdrojové soubory, šablony a vygenerované HTML do publikační větve. Samotné spuštění generátoru nic nepublikuje.
 
@@ -31,3 +31,5 @@ Volitelné pole `features` u článku:
 Všechny tyto možnosti lze vynechat. Nepřebírej celý záznam prvního článku pro nový článek bez úpravy `features`, protože citace i názvy kapitol se ověřují. Číslování, kotvy a obsah se generují z nadpisů. Související články se zobrazí pouze tehdy, když existuje další záznam se skutečným datem publikace.
 
 Ověření: `python3 -m unittest discover -s tests -p test_blog.py`. Testy porovnávají text před a po přidání komponent, ověřují existenci citací, generování dalších článků, datum, sitemap a obrázky. Zdrojový Markdown prvního článku zůstává beze změny.
+
+Pro české a anglické verze vždy spouštěj kompletní `build_site.py`, který navazuje generováním EN stránek a jazykových vazeb. Samostatný `build_blog.py` je pouze dílčí generátor české šablony. Viz [I18N_GUIDE.md](../../I18N_GUIDE.md).

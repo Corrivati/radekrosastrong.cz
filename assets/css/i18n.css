@@ -1,0 +1,19 @@
+/* Language controls use the existing palette; equal header columns keep the logo centred. */
+.language-switch{display:flex;align-items:center;justify-content:flex-end;gap:4px;flex:0 0 auto;white-space:nowrap;font:500 12px/1.4 var(--body)}
+.language-switch a,.language-unavailable{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:44px;padding:8px 3px;color:#d8d3d1;border-radius:4px;transition:color 200ms ease,background-color 200ms ease}
+.language-switch a[aria-current]{color:#fff;text-decoration:underline;text-underline-offset:5px}
+.language-switch a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.language-switch a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.language-divider{color:#a49d9d}
+.language-unavailable{opacity:.65}
+.offcanvas .language-switch{justify-content:flex-end;margin-top:24px;gap:8px}
+.offcanvas .language-switch a,.offcanvas .language-unavailable{color:var(--text);font-size:14px;padding:10px 8px}
+.offcanvas .language-switch a[aria-current]{color:var(--red)}
+.translation-note{display:block;font-size:11px;line-height:1.5;color:var(--text);margin-top:12px;margin-bottom:14px}
+#sk-page .translation-note{color:var(--sk-mut)}
+#sk-page.it-page .translation-note{color:var(--text)}
+@media(min-width:1280px){.site-header .header-right{gap:10px}.site-header .menu>li>a,.site-header .menu-services summary{padding-left:.4em;padding-right:.4em}.site-header .social{gap:16px;margin-left:4px}.site-header .menu{flex-wrap:nowrap}.site-header .menu>li>a{white-space:nowrap}}
+@media(max-width:1279px){.header-bar{height:80px;padding-left:20px;padding-right:20px}.site-header .header-left .menu,.site-header .header-right .menu,.site-header .social,.site-header .header-right>.language-switch{display:none}.site-header .logo{margin:0}.site-header .logo img{width:74px}.site-header .menu-toggle{display:flex}}
+@media(prefers-reduced-motion:reduce){.language-switch a{transition:none}}
+/* Longer English event dates stay within the existing programme cards on narrow screens. */
+@media(max-width:767px){html[lang="en"] #sk-page .sk-level-top{flex-direction:column;align-items:flex-start;gap:8px}}

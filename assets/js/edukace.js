@@ -5,7 +5,7 @@
     if (event.dataset.eventEnd >= today) return;
     event.classList.add('is-past');
     var badge = event.querySelector('[data-event-status]');
-    badge.textContent = '✓ Již proběhlo';
+    badge.textContent = window.RosaI18n ? window.RosaI18n.t('pastEvent', '✓ Již proběhlo') : '✓ Již proběhlo';
     badge.className = 'edu-badge edu-badge-past';
     var cta = event.querySelector('[data-event-cta]');
     if (cta) cta.remove();

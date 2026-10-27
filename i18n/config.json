@@ -1,0 +1,122 @@
+{
+  "defaultLanguage": "cs",
+  "languages": {
+    "cs": {
+      "htmlLang": "cs",
+      "hreflang": "cs-CZ",
+      "label": "CZ"
+    },
+    "en": {
+      "htmlLang": "en",
+      "hreflang": "en",
+      "label": "EN"
+    }
+  },
+  "pages": [
+    {
+      "id": "home",
+      "source": "index.html",
+      "cs": "/",
+      "en": "/en/",
+      "indexable": true
+    },
+    {
+      "id": "blog",
+      "source": "blog/index.html",
+      "cs": "/blog/",
+      "en": "/en/blog/",
+      "indexable": true
+    },
+    {
+      "id": "edukace",
+      "source": "edukace/index.html",
+      "cs": "/edukace/",
+      "en": "/en/edukace/",
+      "indexable": true
+    },
+    {
+      "id": "gdpr",
+      "source": "gdpr/index.html",
+      "cs": "/gdpr/",
+      "en": "/en/gdpr/",
+      "indexable": true
+    },
+    {
+      "id": "individualni-trenink",
+      "source": "individualni-trenink/index.html",
+      "cs": "/individualni-trenink/",
+      "en": "/en/individualni-trenink/",
+      "indexable": true
+    },
+    {
+      "id": "kontrakce2",
+      "source": "kontrakce2/index.html",
+      "cs": "/kontrakce2/",
+      "en": "/en/kontrakce2/",
+      "indexable": true
+    },
+    {
+      "id": "obchod",
+      "source": "obchod/index.html",
+      "cs": "/obchod/",
+      "en": "/en/obchod/",
+      "indexable": false
+    },
+    {
+      "id": "obchodni-podminky",
+      "source": "obchodni-podminky/index.html",
+      "cs": "/obchodni-podminky/",
+      "en": "/en/obchodni-podminky/",
+      "indexable": true
+    },
+    {
+      "id": "onlinecoaching",
+      "source": "onlinecoaching/index.html",
+      "cs": "/onlinecoaching/",
+      "en": "/en/onlinecoaching/",
+      "indexable": true
+    },
+    {
+      "id": "strangetraining",
+      "source": "strangetraining/index.html",
+      "cs": "/strangetraining/",
+      "en": "/en/strangetraining/",
+      "indexable": true
+    },
+    {
+      "id": "strangetraining-old",
+      "source": "strangetraining-old/index.html",
+      "cs": "/strangetraining-old/",
+      "en": "/en/strangetraining-old/",
+      "indexable": true
+    },
+    {
+      "id": "svalove-kontrakce",
+      "source": "svalove-kontrakce/index.html",
+      "cs": "/svalove-kontrakce/",
+      "en": "/en/svalove-kontrakce/",
+      "indexable": false
+    },
+    {
+      "id": "webinar-zdarma",
+      "source": "webinar-zdarma/index.html",
+      "cs": "/webinar-zdarma/",
+      "en": "/en/webinar-zdarma/",
+      "indexable": true
+    },
+    {
+      "id": "workshop-slachy",
+      "source": "workshop-slachy/index.html",
+      "cs": "/workshop-slachy/",
+      "en": "/en/workshop-slachy/",
+      "indexable": true
+    },
+    {
+      "id": "404",
+      "source": "404.html",
+      "cs": "/404.html",
+      "en": "/en/404.html",
+      "indexable": false
+    }
+  ]
+}

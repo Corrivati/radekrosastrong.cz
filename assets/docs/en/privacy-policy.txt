@@ -1,0 +1,164 @@
+Privacy Policy
+Data controller: Radek Rosa
+Business identification number: 05898986
+Registered office: Arnošta Valenty 668/35, 198 00 Praha – Černý Most
+Contact email: info@radekrosastrong.cz
+Website: www.radekrosastrong.cz
+Effective date: 1 January 2026
+1. Introductory provisions
+Protecting the personal data and privacy of website visitors, clients and participants in educational events is important to me.
+This policy explains which personal data I process, the purposes for which I use it, who it may be disclosed to, how long I retain it and the rights of the people whose data is processed.
+Personal data is processed in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR) and the related legislation of the Czech Republic.
+This policy applies in particular to:
+website visitors,
+people enquiring about personal training and online coaching,
+participants in specialist courses and workshops,
+people communicating with me by email or through other contact channels,
+people appearing in photographs and video recordings from educational events I organise,
+recipients of marketing communications.
+2. Personal data I process
+The scope of the data depends on how you use my services.
+2.1 Course and workshop registration
+When you place an order or register, I may process:
+your first name and surname,
+your email address,
+your telephone number, if provided,
+billing details,
+the name and date of the course ordered,
+order and payment status information,
+information needed to organise your attendance,
+any details needed to issue confirmation of attendance or a certificate of completion.
+2.2 Payments and invoicing
+When you pay through the Stripe payment gateway, information needed to complete and verify the transaction may be processed.
+As the organiser, I may receive information about the payment, including its amount, status, transaction identifier and relevant billing details.
+Full payment card details are not normally disclosed to me as the organiser; they are processed by the payment service provider within the scope of the service used.
+2.3 Enquiries and communication
+If you contact me about training, online coaching, a workshop or another form of collaboration, I may process:
+your name and contact details,
+the content of your message,
+information about the collaboration you are seeking,
+related communication needed to deal with your enquiry.
+If subsequent coaching involves additional personal data, such as detailed training records or health information, the processing must be assessed against the actual scope of the collaboration. Health data requires compliance with the special conditions under Article 9 GDPR.
+2.4 Photographs and video recordings
+During educational events, the following may be created:
+photographs of participants and the instructor,
+short video recordings,
+recordings of practical demonstrations,
+group photographs,
+materials documenting the educational event.
+Where an individual can be identified in a recording and their personal data is processed, the relevant data protection rules apply.
+2.5 Data collected when using the website
+When you visit the website, technical information may also be processed, such as your IP address, browser and device information, technical server logs and information relating to cookies or similar technologies.
+The specific scope depends on the services actually used and the website settings.
+3. Purposes and legal bases for processing
+I process personal data only where an appropriate legal basis exists.
+| Purpose of processing | Legal basis
+| Workshop registration and organisation | Performance of a contract or steps prior to entering into a contract – Article 6(1)(b) GDPR
+| Processing payments and orders | Performance of a contract – Article 6(1)(b) GDPR
+| Invoicing and compliance with tax obligations | Compliance with a legal obligation – Article 6(1)(c) GDPR
+| Handling enquiries | Steps prior to entering into a contract or legitimate interests, depending on the nature of the communication
+| Recording and handling legitimate claims | Legitimate interests – Article 6(1)(f) GDPR
+| Sending marketing communications | Consent or another permitted basis within the limits of the law
+| Marketing use of identifiable photographs and videos | In particular, prior consent where this is the appropriate legal basis for the processing
+| Website analytics and marketing technologies | Consent where required by law
+| Website security and essential operation | Legitimate interests or another appropriate legal basis
+Where processing is based on legitimate interests, these include ensuring secure website operation, handling communication, protecting rights and legitimate claims, and preventing misuse of services.
+Where processing is based on consent, providing it is voluntary and you may withdraw it at any time.
+4. Photography and filming at educational events
+4.1 Purpose of recordings
+Photographs and video recordings may be taken at specialist courses and workshops to document the educational event, present the organiser's work and promote further educational events.
+Selected materials may be published on www.radekrosastrong.cz and on social media, particularly Instagram and Facebook.
+Photographs and videos may also be used to promote future educational events through paid online advertising.
+4.2 Protecting participants' privacy
+Participants are informed about planned photography and filming in advance or on arrival at the event.
+If a participant does not wish to be photographed, filmed or shown in publicly published materials, they may inform me in advance by email at info@radekrosastrong.cz or in person at the venue.
+Giving notice in good time helps ensure the participant is not included in planned shots. However, they may also express their wishes later.
+Reasonable organisational or technical measures will be taken, such as changing the composition of a photograph, selecting a different shot or anonymising the person's appearance.
+4.3 Marketing use of an identifiable likeness
+For targeted promotional use of identifiable people, particularly close-up photographs, interviews, testimonial videos or footage used in paid advertising, I will obtain the necessary permission from the people concerned and, where applicable, separate consent under the GDPR in advance.
+Such permission or consent is not a condition of attending a workshop.
+Registration, workshop attendance or failure to object does not automatically grant permission for unrestricted marketing use of a participant's likeness.
+4.4 Withdrawing consent and requesting removal
+Where publication is based on consent, you may withdraw it at any time by sending a request to info@radekrosastrong.cz.
+I will assess and handle requests to remove or amend published materials in accordance with the law.
+Where a request is justified, I will take appropriate measures in relation to materials and communication channels under my control.
+Where content has already been copied or shared further by third parties, it may not always be possible to remove it completely from every online service.
+4.5 Social media
+Once content is published on social media, personal data may be further processed by the platform operators under their own rules.
+Details are available in the privacy policies of the relevant services.
+5. Who may receive personal data
+I do not sell personal data or disclose it to third parties for their own marketing purposes without an appropriate legal basis.
+However, where necessary to provide services, it may be disclosed to the following categories of recipients:
+Stripe – processing payments and related transactions.
+Web hosting and technical administration providers – website operation, security and maintenance.
+Email and communication service providers – communication with participants and customers.
+Accountants or tax advisers – where involved in processing accounting and tax documents.
+Marketing and analytics service providers – only where actually used and subject to the relevant legal conditions.
+Social media operators – in connection with publishing content on their platforms.
+Services used and information still being verified: Webglobe (web hosting), Ecomail (email marketing), Google Analytics (analytics), Meta Pixel (marketing measurement), TrueCoach (online coaching), FormSubmit (registration form) and YouTube (video previews and playback). Email services are provided by Seznam.cz and Webglobe. The use of Zapier is being verified.
+Depending on the specific contractual and technical arrangements, service providers may act as processors, independent controllers or joint controllers of personal data.
+6. Transfers of personal data outside the European Economic Area
+Some providers of technical, payment, communication or marketing services may also process personal data outside the European Economic Area.
+Where personal data is transferred to third countries, the appropriate conditions under Chapter V GDPR must be met, for example through a European Commission adequacy decision or appropriate contractual safeguards.
+The specific details of any international transfers and safeguards used are being verified against the providers actually involved and will be added.
+Information about the relevant safeguards may be requested using the controller's contact email.
+7. How long I retain personal data
+I retain personal data only for as long as necessary to fulfil the purpose of processing or for the period required by law.
+Indicative retention rules:
+| Data category | Retention period
+| Non-binding enquiries and related communication | 12 months from the last communication, unless a collaboration follows
+| Participant records and organisational communication | 3 years from the course date, unless a longer period is justified
+| Payment, accounting and tax documents | For the period required by the applicable legislation
+| Marketing contacts | Until you unsubscribe or the relevant permission to send communications ends; records of consent or objections may be retained for a reasonably longer period
+| Identifiable photographs and videos | For as long as necessary for the specific purpose for which they were taken and used. The need for retention is reviewed regularly; when the purpose or another legal basis no longer applies, recordings will be deleted or anonymised. Withdrawal of consent and requests for removal are assessed under section 4.4.
+| Records of permissions and consents granted | For as long as necessary to demonstrate lawful processing and protect rights
+| Technical and analytics data | Specific retention periods based on the website and individual service settings are being verified and will be added.
+After the relevant period, personal data will be deleted or anonymised unless there is another legal basis for retaining it.
+8. Cookies and analytics tools
+The website may use cookies and similar technologies.
+These technologies can be divided according to their purpose into:
+Essential technical cookies – support basic website functionality, security and proper use. Consent is generally not required where they genuinely meet the legal conditions of necessity.
+Analytics cookies – enable analysis of website traffic and use.
+Marketing cookies – may be used, for example, to measure advertising campaigns or display more relevant advertisements.
+Analytics and marketing cookies or similar technologies for which consent is legally required may only be activated after consent has been given. The actual configuration of these services on the website is currently being verified.
+It must be possible to refuse and subsequently withdraw consent to optional cookies. A working system for managing these choices has not yet been confirmed on this website.
+The list of cookies actually used, their providers, purposes and lifetimes is being verified and will be added.
+Cookie settings are not yet available here. This section of the policy does not confirm that consent management has already been implemented technically.
+9. Sending marketing communications
+I may send information about new courses, workshops and other educational activities electronically only under the conditions laid down by applicable law.
+Marketing communications may be based on the recipient's prior consent or, where the legal conditions are met, on permission to contact existing customers with offers of similar services.
+Every marketing communication will provide a simple, free way to stop further messages, for example through an unsubscribe link.
+Consent to marketing communications is not a condition of purchasing a course or attending a workshop.
+10. Your rights
+Under the GDPR, and subject to the relevant legal conditions, you have in particular the right to:
+information about the processing of your personal data,
+request access to your personal data,
+request correction of inaccurate data or completion of incomplete data,
+request erasure of personal data,
+request restriction of processing,
+object to processing based on legitimate interests,
+receive and transfer personal data where permitted by the GDPR,
+withdraw consent at any time without affecting the lawfulness of earlier processing,
+not be subject, under the conditions laid down by law, to solely automated individual decision-making with legal or similarly significant effects.
+You have the right to object at any time to the processing of your personal data for direct marketing.
+You may exercise your rights by emailing info@radekrosastrong.cz.
+I respond to requests without undue delay, normally no later than one month after receipt. This period may be extended in the circumstances specified in the GDPR.
+You also have the right to lodge a complaint with the supervisory authority:
+Office for Personal Data Protection
+Pplk. Sochora 27
+170 00 Praha 7
+Website: https://uoou.gov.cz
+11. Providing data and automated decision-making
+Providing the data needed to register for and organise a workshop, pay the price or issue legally required documents is necessary to enter into or perform a contract or comply with legal obligations.
+If this necessary data is not provided, it may not be possible to complete registration or provide the service.
+Consent to marketing, marketing use of your likeness or optional cookies is voluntary.
+Automated individual decision-making: Any decision-making under Article 22 GDPR within the ordering system and other services is being verified; the outcome will be added.
+12. Personal data security
+I implement appropriate technical and organisational measures to protect personal data against unauthorised access, loss, misuse or unauthorised disclosure.
+Access to personal data is limited to people and service providers who need it for the relevant purpose and are subject to appropriate obligations.
+13. Updates to this policy
+This policy may be updated, particularly if the services used, the way personal data is processed or legislation changes.
+The current version is always available at:
+https://radekrosastrong.cz/en/gdpr/
+Where substantial changes occur, the people concerned will be informed appropriately if required by law.
+Effective from: 1 January 2026

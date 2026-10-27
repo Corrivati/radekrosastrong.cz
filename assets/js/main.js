@@ -23,6 +23,8 @@
     });
   });
 
+  function ui(key, fallback) { return window.RosaI18n ? window.RosaI18n.t(key, fallback) : fallback; }
+
   // Mobilní menu
   var panel = document.getElementById("offcanvas");
   var toggle = document.querySelector(".menu-toggle");
@@ -120,23 +122,34 @@
   // Registrační formulář: odesílá se přes FormSubmit (viz README)
   document.querySelectorAll("form[data-formsubmit]").forEach(function (form) {
     var msg = form.querySelector(".form-msg");
+    if (document.documentElement.lang === "en") {
+      form.addEventListener("invalid", function (event) {
+        var input = event.target;
+        if (input.validity.valueMissing) input.setCustomValidity(ui("required", "Please complete this field."));
+        else if (input.validity.typeMismatch) input.setCustomValidity(ui("email", "Please enter a valid email address."));
+      }, true);
+      form.addEventListener("input", function (event) { if (event.target.setCustomValidity) event.target.setCustomValidity(""); });
+    }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var btn = form.querySelector("button");
       btn.disabled = true;
-      btn.textContent = "Odesílání...";
+      btn.textContent = ui("sending", "Odesílání...");
       fetch("https://formsubmit.co/ajax/" + form.dataset.formsubmit, {
         method: "POST",
         headers: { "Accept": "application/json" },
         body: new FormData(form)
       }).then(function (r) {
         if (!r.ok) throw new Error(r.status);
+        return r.json();
+      }).then(function (result) {
+        if (result.success !== true && result.success !== "true") throw new Error("Registration rejected");
         form.querySelectorAll("input, label, button").forEach(function (el) { el.hidden = true; });
         msg.textContent = form.dataset.success;
       }).catch(function () {
         btn.disabled = false;
-        btn.textContent = "Odeslat";
-        msg.textContent = "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo napište na info@radekrosastrong.cz.";
+        btn.textContent = ui("send", "Odeslat");
+        msg.textContent = ui("formError", "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo napište na info@radekrosastrong.cz.");
       });
     });
   });

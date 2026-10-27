@@ -1,0 +1,22 @@
+{
+  "cs": {
+    "sending": "Odesílání...",
+    "send": "Odeslat",
+    "formError": "Odeslání se nepovedlo. Zkuste to prosím znovu, nebo napište na info@radekrosastrong.cz.",
+    "pastEvent": "✓ Již proběhlo",
+    "copied": "Odkaz byl zkopírován.",
+    "manualCopy": "Odkaz je označený. Zkopíruj ho pomocí nabídky zařízení nebo Ctrl+C.",
+    "shareError": "Sdílení se nepodařilo. Můžeš zkopírovat odkaz."
+  },
+  "en": {
+    "sending": "Sending...",
+    "send": "Send",
+    "formError": "Your registration could not be sent. Please try again or email info@radekrosastrong.cz.",
+    "pastEvent": "✓ Event completed",
+    "copied": "Link copied.",
+    "manualCopy": "The link is selected. Copy it using your device menu or Ctrl+C.",
+    "shareError": "Sharing was not available. You can copy the link instead.",
+    "required": "Please complete this field.",
+    "email": "Please enter a valid email address."
+  }
+}

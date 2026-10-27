@@ -1,6 +1,7 @@
 /* Optional article interactions. The complete article and question list work without JS. */
 (function () {
   'use strict';
+  function ui(key, fallback) { return window.RosaI18n ? window.RosaI18n.t(key, fallback) : fallback; }
   var article = document.querySelector('[data-article]');
   if (!article) return;
   article.querySelectorAll('[data-checklist]').forEach(function (checklist) {
@@ -77,19 +78,19 @@
       fallback.hidden = false;
       fallback.querySelector('input').focus();
       fallback.querySelector('input').select();
-      status.textContent = 'Odkaz je označený. Zkopíruj ho pomocí nabídky zařízení nebo Ctrl+C.';
+      status.textContent = ui('manualCopy', 'Odkaz je označený. Zkopíruj ho pomocí nabídky zařízení nebo Ctrl+C.');
     };
     if (!navigator.clipboard || !navigator.clipboard.writeText) { manualCopy(); return; }
     navigator.clipboard.writeText(canonical).then(function () {
       fallback.hidden = true;
-      status.textContent = 'Odkaz byl zkopírován.';
+      status.textContent = ui('copied', 'Odkaz byl zkopírován.');
     }).catch(manualCopy);
   });
   var share = article.querySelector('[data-article-share]');
   if (navigator.share) share.addEventListener('click', function (event) {
     event.preventDefault();
     navigator.share({ title: article.querySelector('h1').textContent, url: canonical }).catch(function (error) {
-      if (error.name !== 'AbortError') status.textContent = 'Sdílení se nepodařilo. Můžeš zkopírovat odkaz.';
+      if (error.name !== 'AbortError') status.textContent = ui('shareError', 'Sdílení se nepodařilo. Můžeš zkopírovat odkaz.');
     });
   });
 })();

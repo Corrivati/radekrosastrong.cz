@@ -73,15 +73,16 @@ def comparison_markup(config):
         icon = icons.get(card.get('icon'), '')
         cards += '<section class="blog-comparison-card"><svg viewBox="0 0 24 24" aria-hidden="true">' + icon + '</svg><h3>' + escape(card['title']) + '</h3><ul>'
         cards += ''.join('<li>' + escape(item) + '</li>' for item in card['items']) + '</ul></section>'
-    return '<aside class="blog-comparison" data-editorial aria-label="Odbornost a osobní kompatibilita"><div class="blog-comparison-grid">' + cards + '</div><p>' + escape(config['message']) + '</p></aside>'
+    return '<aside class="blog-comparison" data-editorial aria-label="' + escape(config.get('label', 'Odbornost a osobní kompatibilita')) + '"><div class="blog-comparison-grid">' + cards + '</div><p>' + escape(config['message']) + '</p></aside>'
 
 def checklist_markup(items, config, identifier):
+    labels = config.get('labels', {})
     questions = ''.join(f'<li><label><input type="checkbox" aria-labelledby="{identifier}-{i}"><span id="{identifier}-{i}">{item}</span></label></li>' for i,item in enumerate(items, 1))
     return f'''<div class="blog-checklist" data-checklist>
 <h3 data-editorial>{escape(config['title'])}</h3>
-<div class="blog-checklist-progress" data-editorial hidden><p id="{identifier}-count" aria-live="polite" aria-atomic="true"><span data-checklist-count>0</span> / {len(items)} označeno</p><progress value="0" max="{len(items)}" aria-labelledby="{identifier}-count"></progress></div>
-<ul>{questions}</ul><button class="blog-tool" type="button" data-checklist-reset data-editorial hidden>Vymazat výběr</button>
-<p class="blog-checklist-note" data-editorial>Otázky slouží k zamyšlení, nikoli jako odborně ověřený hodnoticí nástroj. Výběr se nikam neodesílá ani neukládá.</p></div>'''
+<div class="blog-checklist-progress" data-editorial hidden><p id="{identifier}-count" aria-live="polite" aria-atomic="true"><span data-checklist-count>0</span> / {len(items)} {escape(labels.get('selected', 'označeno'))}</p><progress value="0" max="{len(items)}" aria-labelledby="{identifier}-count"></progress></div>
+<ul>{questions}</ul><button class="blog-tool" type="button" data-checklist-reset data-editorial hidden>{escape(labels.get('reset', 'Vymazat výběr'))}</button>
+<p class="blog-checklist-note" data-editorial>{escape(labels.get('note', 'Otázky slouží k zamyšlení, nikoli jako odborně ověřený hodnoticí nástroj. Výběr se nikam neodesílá ani neukládá.'))}</p></div>'''
 
 def editorial_body(rendered, features):
     """Enhance existing paragraphs/lists in place; do not duplicate or rewrite them."""

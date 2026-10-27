@@ -56,6 +56,61 @@
         "afterHeading": "7. Podle čeho bych si tedy trenéra vybíral?",
         "title": "Jak si stojí tvůj trenér?"
       }
+    },
+    "id": "choosing-a-coach",
+    "locales": {
+      "en": {
+        "status": "published",
+        "slug": "how-to-choose-a-good-personal-trainer",
+        "source": "en/how-to-choose-a-good-personal-trainer.md",
+        "category": "Coaching",
+        "seoTitle": "How to Choose a Good Personal Trainer: 7 Key Criteria | Radek Rosa",
+        "description": "How do you choose a good personal trainer? Expertise, experience, communication, client results and personal compatibility. A strength and conditioning coach's perspective.",
+        "features": {
+          "eyebrow": "TRAINING & EDUCATION",
+          "pullQuotes": [
+            "What matters is not just what a coach knows, but above all how they use that knowledge.",
+            "A good coach should therefore do more than plan training well. They should also recognise the person in front of them and adapt the way they coach that individual.",
+            "A good coach is not the person who knows the most exercises or promotes their methods the loudest. It is someone who can assess a situation accurately, choose an appropriate approach and explain the reasoning behind their decision."
+          ],
+          "comparison": {
+            "afterHeading": "6. The personal dimension: when a coach and client simply click",
+            "label": "Expertise and personal compatibility",
+            "cards": [
+              {
+                "title": "Coaching expertise",
+                "icon": "education",
+                "items": [
+                  "Professional knowledge.",
+                  "Practical experience.",
+                  "Planning skills.",
+                  "Evaluating and adapting training."
+                ]
+              },
+              {
+                "title": "Personal compatibility",
+                "icon": "communication",
+                "items": [
+                  "Mutual trust.",
+                  "Communication style.",
+                  "Motivation.",
+                  "Long-term collaboration."
+                ]
+              }
+            ],
+            "message": "The right coach should be a good fit both professionally and personally."
+          },
+          "checklist": {
+            "afterHeading": "7. What would I look for when choosing a coach?",
+            "title": "How does your coach measure up?",
+            "labels": {
+              "selected": "selected",
+              "reset": "Clear selection",
+              "note": "These questions are for reflection, not a scientifically validated assessment. Your choices are neither sent nor saved."
+            }
+          }
+        }
+      }
     }
   }
 ]
