@@ -10,10 +10,10 @@
     "description": "Vědecká studie porovnala ChatGPT a osobní trenéry. AI dosáhla lepšího hodnocení v 6 z 9 otázek. Co výsledky skutečně znamenají?",
     "studyData": "studies/chatgpt-personal-trainers.json",
     "thumbnail": {
-      "src": "/assets/images/blog-chatgpt-vs-osobni-trener.svg",
-      "alt": "ChatGPT 3.5: lepší celkové hodnocení písemných odpovědí v 6 z 9 otázek, nikoliv hodnocení vedení klientů.",
-      "width": 1200,
-      "height": 675
+      "src": "/assets/images/blog-chatgpt-vs-osobni-trener.webp",
+      "alt": "Ilustrace porovnání umělé inteligence a osobních trenérů ve fitness prostředí.",
+      "width": 1536,
+      "height": 1024
     },
     "features": {
       "eyebrow": "VĚDA & TRENÉRSKÁ PRAXE",

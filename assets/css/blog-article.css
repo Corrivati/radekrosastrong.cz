@@ -10,7 +10,7 @@
 .blog-hero-perex em{font-style:normal}
 .blog-article .blog-hero .blog-back{margin-bottom:28px}
 .blog-hero-illustration{margin:0;overflow:hidden;border-radius:8px}
-.blog-hero-illustration img{width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
+.blog-hero-illustration img{width:100%;height:auto;object-fit:contain}
 .blog-article-layout{display:grid;grid-template-columns:240px minmax(0,780px);justify-content:center;gap:56px;max-width:1188px;margin:0 auto;padding:56px 24px 80px}
 .blog-article-column{min-width:0}
 .blog-contents{align-self:start;position:sticky;top:28px;max-height:calc(100dvh - 56px);overflow-y:auto;scrollbar-width:thin}

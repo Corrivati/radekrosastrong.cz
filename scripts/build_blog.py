@@ -34,7 +34,7 @@ def article_source(entry, locale=None):
     return blog_study.source(path.read_text(), blog_study.load(ROOT, entry))
 
 def article_assets(entry):
-    css = '<link rel="stylesheet" href="/assets/css/blog-article.css?v=1">'
+    css = '<link rel="stylesheet" href="/assets/css/blog-article.css?v=2">'
     if entry.get('studyData'):
         css += '\n<link rel="stylesheet" href="/assets/css/blog-study.css?v=1">'
     return css + '\n<script src="/assets/js/blog-article.js?v=3" defer></script>'
