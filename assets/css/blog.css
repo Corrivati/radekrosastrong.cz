@@ -5,12 +5,11 @@
 .blog-eyebrow,.blog-category{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#e77d84}
 .blog-list{padding:72px 32px 88px;background:var(--light)}
 .blog-list h2{font-size:clamp(36px,4vw,52px);margin:0 0 32px}
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
-.blog-card{max-width:780px;padding:32px;background:var(--white);border:1px solid #e3e0e0;border-radius:8px;display:flex;flex-direction:column;align-items:flex-start;transition:border-color 200ms ease,box-shadow 200ms ease}
+.blog-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.blog-card{padding:32px;background:var(--white);border:1px solid #e3e0e0;border-radius:8px;display:flex;flex-direction:column;align-items:flex-start;transition:border-color 200ms ease,box-shadow 200ms ease}
 .blog-card-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
 .blog-card-media{display:block;width:100%;order:-1;overflow:hidden;border-radius:6px;margin-bottom:24px}
-.blog-card-media img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
-.blog-card:only-child:has(.blog-card-media){max-width:none}
+.blog-card-media img{width:100%;height:auto;object-fit:contain}
 .blog-category{color:var(--red);margin:0 0 16px}
 .blog-card h3{font-size:36px;line-height:1.15;margin:0 0 18px}
 .blog-card h3 a{color:var(--dark)}
@@ -46,4 +45,4 @@
 @media(max-width:767px){.blog-hero{padding:120px 24px 44px}.blog-hero h1{font-size:52px}.blog-article-hero{padding-left:0;padding-right:0}.blog-article-hero h1{font-size:42px}.blog-list{padding:48px 24px 56px}.blog-card{padding:24px}.blog-card h3{font-size:32px}.blog-perex{font-size:18px}.blog-prose{font-size:17px;line-height:1.75}.blog-article-body{padding-top:32px}.blog-toc{padding:16px 20px}.blog-meta{gap:6px 16px}}
 @media(prefers-reduced-motion:reduce){.blog-card,.blog-read span{transition:none}.blog-card:hover .blog-read span{transform:none}}
 
-@media(min-width:922px){.blog-card:only-child:has(.blog-card-media){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center}.blog-card:only-child .blog-card-media{order:0;margin:0}}
+@media(min-width:922px){.blog-card:has(.blog-card-media){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center}.blog-card .blog-card-media{order:0;margin:0}}
