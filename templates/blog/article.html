@@ -1,4 +1,12 @@
-<article>
-<header class="blog-hero blog-article-hero"><div class="blog-reading"><a class="blog-back" href="/blog/">← Blog</a><p class="blog-eyebrow">{{category}}</p><h1>{{heading}}</h1><div class="blog-meta"><span>{{author}}</span>{{date}}<span>{{reading_time}} min čtení</span></div></div></header>
-<div class="blog-reading blog-article-body"><div class="blog-perex">{{perex}}</div><details class="blog-toc"><summary>Obsah článku</summary><ol>{{toc}}</ol></details><div class="blog-prose">{{body}}</div><a class="blog-back blog-bottom-back" href="/blog/">← Zpět na všechny články</a></div>
+<article class="blog-article" data-article>
+<div class="blog-reading-progress" data-reading-progress aria-hidden="true" hidden><span></span></div>
+<header class="blog-hero blog-article-hero"><div class="wrap"><a class="blog-back" href="/blog/">← Blog</a><div class="blog-hero-grid"><div class="blog-hero-copy"><p class="blog-eyebrow">{{eyebrow}}</p><h1>{{heading}}</h1><div class="blog-hero-perex">{{perex}}</div><div class="blog-meta"><span>{{author}}</span>{{date}}<span>{{reading_time}} min čtení</span></div></div>{{hero_image}}</div></div></header>
+<div class="blog-article-layout">
+<aside class="blog-contents"><details class="blog-toc" data-article-contents><summary>Obsah článku</summary><nav aria-label="Kapitoly článku"><ol>{{toc}}</ol></nav></details></aside>
+<div class="blog-article-column"><div class="blog-prose" data-article-body>{{body}}</div>
+<section class="blog-author" aria-labelledby="blog-author-name"><img src="/assets/images/sk-lektor-radek.webp" width="720" height="900" alt="Radek Rosa při vedení odborného workshopu" loading="lazy" decoding="async"><div><p class="blog-author-label">O autorovi</p><h2 id="blog-author-name">{{author}}</h2><p>Silový a kondiční trenér a edukátor. Věnuje se přípravě sportovců i běžné populace a vzdělávání trenérů a fyzioterapeutů.</p><a href="/#about">Více o Radkovi →</a></div></section>
+<section class="blog-article-cta" aria-labelledby="blog-cta-title"><h2 id="blog-cta-title">Hledáš trenéra, se kterým si budeš rozumět?</h2><p>Podívej se na možnosti individuálního tréninku nebo online coachingu a zjisti, jak může naše spolupráce vypadat.</p><div class="blog-cta-links"><a class="hero-cta" href="/individualni-trenink/">Individuální trénink</a><a class="hero-cta blog-cta-secondary" href="/onlinecoaching/">Online coaching</a></div></section>
+<div class="blog-article-tools"><a class="blog-tool" href="{{share_email}}" data-article-share>Sdílet článek</a><button class="blog-tool" type="button" data-copy-link hidden>Zkopírovat odkaz</button><p class="blog-tool-status" role="status" aria-live="polite"></p><label class="blog-copy-fallback" hidden>Odkaz ke zkopírování<input type="text" value="{{canonical}}" readonly></label></div>
+{{related}}
+<a class="blog-back blog-bottom-back" href="/blog/">← Zpět na všechny články</a></div></div>
 </article>

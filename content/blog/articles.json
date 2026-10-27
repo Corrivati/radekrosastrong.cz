@@ -12,6 +12,50 @@
       "alt": "Ilustrace výběru osobního trenéra: člověk zvažuje různé trenéry a jejich přístupy.",
       "width": 1200,
       "height": 675
+    },
+    "heroImage": {
+      "src": "/assets/images/blog-vyber-trenera-hero.webp",
+      "alt": "Ilustrace výběru trenéra: přemýšlející člověk, silueta s otazníkem a různé trenérské přístupy.",
+      "width": 1400,
+      "height": 788
+    },
+    "features": {
+      "eyebrow": "TRÉNINK & VZDĚLÁVÁNÍ",
+      "pullQuotes": [
+        "Není rozhodující pouze to, co trenér ví, ale především to, jak se svými znalostmi pracuje.",
+        "Kvalitní trenér by proto neměl umět jen správně naplánovat trénink. Měl by také dokázat vnímat člověka, kterého má před sebou, a přizpůsobit mu svůj způsob vedení.",
+        "Dobrý trenér není ten, kdo zná nejvíce cviků nebo nejhlasitěji prezentuje své metody. Je to člověk, který dokáže správně vyhodnotit situaci, zvolit odpovídající postup a své rozhodnutí obhájit."
+      ],
+      "comparison": {
+        "afterHeading": "6. Osobní rovina: Když si trenér a klient jednoduše sednou",
+        "cards": [
+          {
+            "title": "Odbornost trenéra",
+            "icon": "education",
+            "items": [
+              "Odborné znalosti.",
+              "Praktické zkušenosti.",
+              "Schopnost plánování.",
+              "Vyhodnocování a adaptace tréninku."
+            ]
+          },
+          {
+            "title": "Osobní kompatibilita",
+            "icon": "communication",
+            "items": [
+              "Vzájemná důvěra.",
+              "Styl komunikace.",
+              "Motivace.",
+              "Dlouhodobá spolupráce."
+            ]
+          }
+        ],
+        "message": "Ideální trenér musí dávat smysl nejen odborně, ale i lidsky."
+      },
+      "checklist": {
+        "afterHeading": "7. Podle čeho bych si tedy trenéra vybíral?",
+        "title": "Jak si stojí tvůj trenér?"
+      }
     }
   }
 ]

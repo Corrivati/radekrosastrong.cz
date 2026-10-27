@@ -14,3 +14,20 @@ Společný obal je v `templates/blog/base.html`, rozložení v `article.html` a 
 Nový článek zatím nemá úvodní ani sdílecí obrázek. Po dodání autentického vhodného obrázku lze doplnit OG/Twitter metadata. Nevkládá se náhradní nebo vymyšlený vizuál.
 
 Volitelný náhled obrázku v přehledu: k záznamu článku přidej `"thumbnail": {"src": "/assets/images/nazev.webp", "alt": "Popis obrázku", "width": 1200, "height": 675}`. Použij skutečné rozměry a nejdřív nahraj soubor do assets/images. Generátor ověřuje jeho existenci. U jediného článku je obrázek na desktopu napravo vedle textu a na menších obrazovkách nad textem. Bez dodaného obrázku se nevykresluje prázdná výplň ani nefunkční obrázek.
+
+## Rozšířená šablona článku
+
+Článek má samostatný styl `assets/css/blog-article.css` a lehký skript `assets/js/blog-article.js`; přehled blogu ani ostatní stránky tyto soubory nenačítají. Šablona nabízí dvousloupcový hero, postranní obsah na desktopu, rozbalovací obsah na mobilu, indikátor průběhu čtení, autorský blok, CTA a sdílení. Bez JavaScriptu zůstává celý text, nativní obsah a otázky přístupné. Tlačítko sdílení používá nativní nabídku zařízení, pokud je dostupná, jinak odkaz pro sdílení e-mailem. Kopírování má při zamítnutí schránky ruční alternativu. Checklist nic neodesílá a neukládá.
+
+Volitelný `heroImage` má stejná pole jako `thumbnail`. Lze tak mít jinou ilustraci v úvodu než v přehledu; hodnota `null` vytvoří čistě typografický hero. Hero obrázek se načítá přednostně, autorská fotografie až podle potřeby. Metadata obrázku pro sdílení i `BlogPosting.image` se doplňují automaticky.
+
+Volitelné pole `features` u článku:
+
+- `eyebrow`: krátký popisek nad nadpisem.
+- `pullQuotes`: přesná znění samostatných tučných odstavců ze zdrojového Markdownu, bez značek `**`. Generátor je zvýrazní na původním místě, neduplikuje je a nedovolí vložit neexistující citaci.
+- `comparison`: `afterHeading` musí přesně odpovídat názvu kapitoly včetně čísla. `cards` obsahuje položky `title`, `icon` (`education` nebo `communication`) a seznam `items`; `message` je shrnutí pod kartami. Tento doplněk se vloží na konec zvolené kapitoly.
+- `checklist`: `afterHeading` je přesný název kapitoly a `title` nadpis komponenty. Kapitola musí obsahovat právě jeden odrážkový seznam. Jeho původní položky se převedou na zaškrtávací otázky bez změn textu; počet i indikátor se odvozují automaticky.
+
+Všechny tyto možnosti lze vynechat. Nepřebírej celý záznam prvního článku pro nový článek bez úpravy `features`, protože citace i názvy kapitol se ověřují. Číslování, kotvy a obsah se generují z nadpisů. Související články se zobrazí pouze tehdy, když existuje další záznam se skutečným datem publikace.
+
+Ověření: `python3 -m unittest discover -s tests -p test_blog.py`. Testy porovnávají text před a po přidání komponent, ověřují existenci citací, generování dalších článků, datum, sitemap a obrázky. Zdrojový Markdown prvního článku zůstává beze změny.

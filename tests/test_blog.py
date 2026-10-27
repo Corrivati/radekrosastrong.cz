@@ -5,6 +5,8 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
+import re
+from html.parser import HTMLParser
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('build_blog', ROOT / 'scripts/build_blog.py')
@@ -12,6 +14,37 @@ build = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(build)
 
 class BlogGenerationTests(unittest.TestCase):
+    def test_editorial_components_preserve_original_text(self):
+        entry = json.loads((ROOT/'content/blog/articles.json').read_text())[0]
+        source = (ROOT/'content/blog'/entry['source']).read_text()
+        body = re.split(r'\n\s*\n', source.strip(), maxsplit=2)[2]
+        original, _ = build.render_markdown(body)
+        enhanced = build.editorial_body(original, entry['features'])
+        class Text(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.stack, self.text = [], []
+            def handle_starttag(self, tag, attrs):
+                excluded = (self.stack and self.stack[-1][1]) or 'data-editorial' in dict(attrs)
+                if tag not in ('input', 'br', 'hr', 'img'):
+                    self.stack.append((tag, excluded))
+            def handle_endtag(self, tag):
+                if self.stack and self.stack[-1][0] == tag:
+                    self.stack.pop()
+            def handle_data(self, text):
+                if not self.stack or not self.stack[-1][1]:
+                    self.text.append(text)
+        def text(html):
+            parser = Text()
+            parser.feed(html)
+            return ' '.join(' '.join(parser.text).split())
+        self.assertEqual(text(original), text(enhanced))
+        self.assertEqual(enhanced.count('class="blog-pullquote"'), 3)
+        self.assertEqual(enhanced.count('type="checkbox"'), 8)
+        self.assertEqual(enhanced.count('class="blog-comparison-card"'), 2)
+        with self.assertRaisesRegex(ValueError, 'existing bold paragraph'):
+            build.editorial_body(original, {'pullQuotes': ['This sentence is not in the article.']})
+
     def test_preview_publication_and_new_article(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -24,6 +57,7 @@ class BlogGenerationTests(unittest.TestCase):
             for entry in preview:
                 entry["published"] = None
                 entry.pop("thumbnail", None)
+                entry.pop("heroImage", None)
             metadata.write_text(json.dumps(preview))
             previous = build.ROOT
             build.ROOT = root
@@ -42,7 +76,7 @@ class BlogGenerationTests(unittest.TestCase):
                 entries[0]['published'] = '2026-01-01'
                 # A synthetic fixture proves cards and routes are generated, not hardcoded.
                 (root/'content/blog/test.md').write_text('# Test\n\n*Úvod.*\n\n## Kapitola\n\n**Obsah.**')
-                entries.append(dict(entries[0], slug='test', source='test.md', seoTitle='Test'))
+                entries.append(dict(entries[0], slug='test', source='test.md', seoTitle='Test', features={}))
                 data_path.write_text(json.dumps(entries))
                 build.main()
                 self.assertIn('"datePublished": "2026-01-01"', article.read_text())
