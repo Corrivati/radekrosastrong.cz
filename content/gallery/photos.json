@@ -1,0 +1,290 @@
+[
+  {
+    "id": "novywebfoto-01",
+    "source": "strangetraining-old/AS_08674novywebfoto.webp",
+    "wide": false,
+    "position": "48% 45%",
+    "mobilePosition": "48% 45%",
+    "alt": "Rychlostní trénink sportovce na venkovním hřišti.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-01.webp",
+      "width": 667,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-01-full.webp",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-02",
+    "source": "strangetraining-old/DSC06500novywebfoto.webp",
+    "wide": false,
+    "position": "50% 45%",
+    "mobilePosition": "50% 45%",
+    "alt": "Výskok sportovce při sledování techniky trenérem.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-02.webp",
+      "width": 667,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-02-full.webp",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-03",
+    "source": "strangetraining-old/DSC06515 (1)novywebfoto.webp",
+    "wide": false,
+    "position": "56% 36%",
+    "mobilePosition": "56% 36%",
+    "alt": "Trenér při korekci techniky pohybu sportovce.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-03.webp",
+      "width": 667,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-03-full.webp",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-04",
+    "source": "strangetraining-old/DSC06528novywebfoto.webp",
+    "wide": false,
+    "position": "48% 44%",
+    "mobilePosition": "48% 44%",
+    "alt": "Sportovec při dynamickém výpadu pod dohledem trenéra.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-04.webp",
+      "width": 667,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-04-full.webp",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-05",
+    "source": "strangetraining-old/DSC06776novywebfoto.webp",
+    "wide": false,
+    "position": "52% 38%",
+    "mobilePosition": "52% 38%",
+    "alt": "Individuální vysvětlení při praktické části workshopu.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-05.webp",
+      "width": 667,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-05-full.webp",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-06",
+    "source": "strangetraining-old/DSC06914novywebfoto.webp",
+    "wide": true,
+    "position": "43% 48%",
+    "mobilePosition": "43% 48%",
+    "alt": "Lektor vysvětluje účastníkům workshopu tréninkové principy.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-06.webp",
+      "width": 1200,
+      "height": 800
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-06-full.webp",
+      "width": 1800,
+      "height": 1200
+    }
+  },
+  {
+    "id": "novywebfoto-07",
+    "source": "strangetraining-old/P2543185novywebfoto.webp",
+    "wide": false,
+    "position": "50% 53%",
+    "mobilePosition": "50% 53%",
+    "alt": "Lektor při přednášce před účastníky v posluchárně.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-07.webp",
+      "width": 667,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-07-full.webp",
+      "width": 1200,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-08",
+    "source": "strangetraining-old/P2543321novywebfoto.webp",
+    "wide": true,
+    "position": "68% 50%",
+    "mobilePosition": "72% 50%",
+    "alt": "Odborná přednáška v posluchárně s prezentací.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-08.webp",
+      "width": 1200,
+      "height": 675
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-08-full.webp",
+      "width": 1800,
+      "height": 1013
+    }
+  },
+  {
+    "id": "novywebfoto-09",
+    "source": "strangetraining-old/PIC09597novywebfoto.webp",
+    "wide": true,
+    "position": "52% 44%",
+    "mobilePosition": "52% 44%",
+    "alt": "Společná fotografie z pohybového workshopu.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-09.webp",
+      "width": 1200,
+      "height": 800
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-09-full.webp",
+      "width": 1800,
+      "height": 1200
+    }
+  },
+  {
+    "id": "novywebfoto-10",
+    "source": "strangetraining-old/PIC09702novywebfoto.webp",
+    "wide": true,
+    "position": "45% 52%",
+    "mobilePosition": "48% 52%",
+    "alt": "Praktická ukázka pohybového cvičení před účastníky workshopu.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-10.webp",
+      "width": 1200,
+      "height": 800
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-10-full.webp",
+      "width": 1800,
+      "height": 1200
+    }
+  },
+  {
+    "id": "novywebfoto-11",
+    "source": "strangetraining-old/PIC09713novywebfoto.webp",
+    "wide": true,
+    "position": "51% 56%",
+    "mobilePosition": "53% 56%",
+    "alt": "Detail praktického nácviku pohybu na podložce.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-11.webp",
+      "width": 1200,
+      "height": 800
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-11-full.webp",
+      "width": 1800,
+      "height": 1200
+    }
+  },
+  {
+    "id": "novywebfoto-12",
+    "source": "strangetraining-old/ROSA KURZ 2024-002novywebfoto.webp",
+    "wide": true,
+    "position": "50% 32%",
+    "mobilePosition": "50% 32%",
+    "alt": "Společná fotografie účastníků trenérského kurzu v posilovně.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-12.webp",
+      "width": 1200,
+      "height": 900
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-12-full.webp",
+      "width": 1800,
+      "height": 1350
+    }
+  },
+  {
+    "id": "novywebfoto-13",
+    "source": "strangetraining-old/ROSA KURZ 2024-017novywebfoto.webp",
+    "wide": true,
+    "position": "48% 44%",
+    "mobilePosition": "48% 44%",
+    "alt": "Ukázka tlaku s osou na lavici během odborného workshopu.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-13.webp",
+      "width": 1200,
+      "height": 900
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-13-full.webp",
+      "width": 1800,
+      "height": 1350
+    }
+  },
+  {
+    "id": "novywebfoto-14",
+    "source": "strangetraining-old/ŠLACHY - WORKSHOP 2026-49novywebfoto.webp",
+    "wide": false,
+    "position": "58% 55%",
+    "mobilePosition": "58% 55%",
+    "alt": "Praktická část workshopu sledovaná mezi stojany v posilovně.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-14.webp",
+      "width": 668,
+      "height": 1000
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-14-full.webp",
+      "width": 1202,
+      "height": 1800
+    }
+  },
+  {
+    "id": "novywebfoto-15",
+    "source": "strangetraining-old/ŠLACHY - WORKSHOP 2026-76novywebfoto.webp",
+    "wide": true,
+    "position": "61% 45%",
+    "mobilePosition": "64% 45%",
+    "alt": "Účastníci workshopu při skupinovém pohybovém cvičení.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-15.webp",
+      "width": 1200,
+      "height": 801
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-15-full.webp",
+      "width": 1800,
+      "height": 1202
+    }
+  },
+  {
+    "id": "novywebfoto-16",
+    "source": "strangetraining-old/ŠLACHY - WORKSHOP 2026-81novywebfoto.webp",
+    "wide": true,
+    "position": "65% 43%",
+    "mobilePosition": "68% 43%",
+    "alt": "Lektor při vysvětlování tématu účastníkům workshopu.",
+    "thumbnail": {
+      "src": "/assets/images/gallery/gallery-16.webp",
+      "width": 1200,
+      "height": 801
+    },
+    "full": {
+      "src": "/assets/images/gallery/gallery-16-full.webp",
+      "width": 1800,
+      "height": 1202
+    }
+  }
+]

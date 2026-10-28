@@ -168,7 +168,7 @@ def decorate(source, route, language):
         start=source.index('<nav class="offcanvas-panel"');end=source.index('</nav>',start)
         source=source[:end]+control+source[end:]
     else:source=source.replace('</main>',control+'</main>',1)
-    for script,version in [('main.js',8),('edukace.js',2),('blog-article.js',3)]:
+    for script,version in [('main.js',9),('edukace.js',2),('blog-article.js',3)]:
         source=re.sub(re.escape(script)+r'\?v=\d+',script+'?v='+str(version),source)
     return source
 

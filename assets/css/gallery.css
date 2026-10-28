@@ -1,0 +1,8 @@
+/* Same gallery height and spacing; a landscape photo occupies two portrait slots. */
+#gallery .carousel-track{display:grid;grid-auto-flow:column;grid-template-rows:auto;grid-auto-columns:calc((100% - 33px)/4);align-items:stretch}
+#gallery .gallery-photo{display:block;position:relative;aspect-ratio:2/3;min-width:0;overflow:hidden}
+#gallery .gallery-photo-wide{grid-column:span 2;aspect-ratio:auto}
+#gallery .gallery-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--gallery-position,50% 50%)}
+#gallery .gallery-photo:focus-visible{outline:2px solid var(--red);outline-offset:-3px}
+@media(max-width:1024px){#gallery .carousel-track{grid-auto-columns:calc((100% - 22px)/3)}}
+@media(max-width:767px){#gallery .carousel-track{grid-auto-columns:calc((100% - 11px)/2)}#gallery .gallery-photo img{object-position:var(--gallery-mobile-position,var(--gallery-position,50% 50%))}}

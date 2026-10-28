@@ -71,40 +71,96 @@
     }, { once: true });
   });
 
-  // Galerie: posuvník se šipkami, automatický posun a zvětšení po kliknutí
+  // Galerie: původní posun po 5 s, různé šířky fotek a necropovaný lightbox.
   document.querySelectorAll(".carousel").forEach(function (c) {
     var track = c.querySelector(".carousel-track");
     var links = Array.prototype.slice.call(track.querySelectorAll("a"));
-    var step = function (dir) {
-      var w = links[0].getBoundingClientRect().width + 11;
-      var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
-      if (dir > 0 && atEnd) track.scrollLeft = 0;
-      else if (dir < 0 && track.scrollLeft <= 5) track.scrollLeft = track.scrollWidth;
-      else track.scrollBy({ left: dir * w });
-    };
-    c.querySelector(".carousel-prev").addEventListener("click", function () { step(-1); });
-    c.querySelector(".carousel-next").addEventListener("click", function () { step(1); });
-
-    var timer, paused = false;
-    var reduce = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
-    if (!reduce) timer = setInterval(function () { if (!paused) step(1); }, 5000);
-    c.addEventListener("mouseenter", function () { paused = true; });
-    c.addEventListener("mouseleave", function () { paused = false; });
-    c.addEventListener("focusin", function () { paused = true; });
+    if (!links.length) return;
+    var motion = window.matchMedia("(prefers-reduced-motion:reduce)");
+    var hovered = false, focused = false, modal = false, pending = false;
+    var inView = !("IntersectionObserver" in window), timer;
+    function position(link) {
+      return link.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
+    }
+    function prepare(left) {
+      // Decode the next viewport before scrolling; full-resolution photos load only in the dialog.
+      var first = links[0].getBoundingClientRect().width;
+      var longMove = Math.abs(left - track.scrollLeft) > track.clientWidth;
+      var start = longMove ? Math.min(left, track.scrollLeft) : left;
+      var end = (longMove ? Math.max(left, track.scrollLeft) : left) + track.clientWidth + first + 11;
+      return Promise.all(links.filter(function (link) {
+        var x = position(link);
+        return x + link.getBoundingClientRect().width > start - 1 && x < end;
+      }).map(function (link) {
+        var image = link.querySelector("img");
+        image.loading = "eager";
+        if (image.complete && image.naturalWidth) return Promise.resolve();
+        if (image.decode) return image.decode().catch(function () {});
+        return new Promise(function (resolve) {
+          image.addEventListener("load", resolve, {once:true});
+          image.addEventListener("error", resolve, {once:true});
+        });
+      }));
+    }
+    function canAutoplay() {
+      return !motion.matches && inView && !document.hidden && !hovered && !focused && !modal;
+    }
+    function step(dir, automatic) {
+      if (pending || (automatic && !canAutoplay())) return;
+      var left = track.scrollLeft, max = track.scrollWidth - track.clientWidth;
+      var target;
+      if (dir > 0 && left >= max - 5) target = 0;
+      else if (dir < 0 && left <= 5) target = max;
+      else {
+        var candidates = links.map(position).filter(function (x) { return dir > 0 ? x > left + 5 : x < left - 5; });
+        target = candidates.length ? (dir > 0 ? candidates[0] : candidates[candidates.length - 1]) : (dir > 0 ? max : 0);
+        target = Math.max(0, Math.min(max, target));
+      }
+      pending = true;
+      prepare(target).then(function () {
+        if (!automatic || canAutoplay()) track.scrollTo({left:target, behavior:motion.matches ? "auto" : "smooth"});
+      }).finally(function () { pending = false; });
+    }
+    c.querySelector(".carousel-prev").addEventListener("click", function () { step(-1, false); });
+    c.querySelector(".carousel-next").addEventListener("click", function () { step(1, false); });
+    function startTimer() {
+      clearInterval(timer);
+      if (!motion.matches) timer = setInterval(function () { step(1, true); }, 5000);
+    }
+    startTimer();
+    motion.addEventListener("change", startTimer);
+    c.addEventListener("mouseenter", function () { hovered = window.matchMedia("(hover:hover)").matches; });
+    c.addEventListener("mouseleave", function () { hovered = false; });
+    c.addEventListener("focusin", function (event) { focused = event.target.matches(":focus-visible"); });
+    c.addEventListener("focusout", function (event) { focused = c.contains(event.relatedTarget) && event.relatedTarget.matches(":focus-visible"); });
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView) prepare(track.scrollLeft);
+    }, {threshold:0.02}).observe(c);
 
     var box = document.getElementById("lightbox");
     if (!box || !box.showModal) return;
-    var img = box.querySelector("img"), cur = 0;
+    var img = box.querySelector("img"), cur = 0, request = 0;
     var show = function (i) {
       cur = (i + links.length) % links.length;
-      img.src = links[cur].href;
-      img.alt = links[cur].querySelector("img").alt;
+      var chosen = cur, token = ++request;
+      var photo = new Image();
+      photo.src = links[chosen].href;
+      function display() {
+        if (token !== request || !photo.naturalWidth) return;
+        img.src = photo.src;
+        img.alt = links[chosen].querySelector("img").alt;
+        var next = new Image();
+        next.src = links[(chosen + 1) % links.length].href;
+      }
+      if (photo.decode) photo.decode().then(display).catch(function () {});
+      else photo.addEventListener("load", display, {once:true});
     };
     links.forEach(function (a, i) {
       a.addEventListener("click", function (e) {
         e.preventDefault();
         show(i);
-        paused = true;
+        modal = true;
         box.showModal();
       });
     });
@@ -112,7 +168,7 @@
     box.querySelector(".lb-next").addEventListener("click", function () { show(cur + 1); });
     box.querySelector(".lb-close").addEventListener("click", function () { box.close(); });
     box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
-    box.addEventListener("close", function () { paused = false; });
+    box.addEventListener("close", function () { modal = false; });
     box.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft") show(cur - 1);
       if (e.key === "ArrowRight") show(cur + 1);
