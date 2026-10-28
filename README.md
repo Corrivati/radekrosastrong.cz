@@ -74,7 +74,7 @@ Na GitHub Pages: **Settings → Pages → Deploy from branch**, pak přidat soub
 
 ## Individuální trénink
 
-Stránka `/individualni-trenink/` používá společné styly workshopů a `assets/css/individualni-trenink.css`. Konzultační tlačítka otevírají e-mailového klienta přes `mailto:rosa.radek@email.cz` s předvyplněným předmětem a zprávou. Stránka neobsahuje dotazník ani serverové odesílání; nevyžaduje PHP, Node.js nebo další službu. Navigace sdružuje individuální trénink a online coaching pod „Spolupráce“ a používá `assets/css/navigation-services.css`.
+Stránka `/individualni-trenink/` používá společné styly workshopů a `assets/css/individualni-trenink.css`. Konzultační tlačítka otevírají e-mailového klienta přes `mailto:info@radekrosastrong.cz` s předvyplněným předmětem a zprávou. Stránka neobsahuje dotazník ani serverové odesílání; nevyžaduje PHP, Node.js nebo další službu. Navigace sdružuje individuální trénink a online coaching pod „Spolupráce“ a používá `assets/css/navigation-services.css`.
 
 ## Blog
 
