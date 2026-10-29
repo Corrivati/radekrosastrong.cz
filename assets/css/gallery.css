@@ -1,3 +1,4 @@
+#gallery .gallery-intro{max-width:760px;margin:0 0 24px;color:var(--light);font-size:clamp(16px,1.2vw,18px);line-height:1.7}
 /* Same gallery height and spacing; a landscape photo occupies two portrait slots. */
 #gallery .carousel-track{display:grid;grid-auto-flow:column;grid-template-rows:auto;grid-auto-columns:calc((100% - 33px)/4);align-items:stretch}
 #gallery .gallery-photo{display:block;position:relative;aspect-ratio:2/3;min-width:0;overflow:hidden}

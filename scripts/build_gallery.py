@@ -45,8 +45,8 @@ def main():
     if count != 1:
         raise ValueError('Expected exactly one existing homepage gallery track')
     html = html[:start]+section+html[end:]
-    if 'href="/assets/css/gallery.css?v=1"' not in html:
-        html = html.replace('</head>', '<link rel="stylesheet" href="/assets/css/gallery.css?v=1">\n</head>')
+    if 'href="/assets/css/gallery.css?v=2"' not in html:
+        html = html.replace('</head>', '<link rel="stylesheet" href="/assets/css/gallery.css?v=2">\n</head>')
     path.write_text(html)
     print(f'Built gallery with all {len(photos)} novywebfoto originals; no other sections changed.')
 

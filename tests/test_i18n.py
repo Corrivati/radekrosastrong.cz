@@ -86,9 +86,10 @@ class I18nTests(unittest.TestCase):
             original=subprocess.check_output(['git','show','HEAD:'+source],cwd=ROOT,text=True)
             current=build.clean((ROOT/source).read_text())
             if source=='index.html':
-                # Only these approved qualification corrections may change home copy.
+                # Only approved qualification corrections and gallery copy may change home copy.
                 for old,new in [('Daru Phil','Phil Daru'),('Alex Natura','Alex Natera'),('Fast twich fibers','Fast twitch fibers')]:
                     original=original.replace(old,new)
+                original=original.replace('<h2>galerie fotek</h2>', '<h2>Ze zákulisí mé práce</h2>\n      <p class="gallery-intro">Nahlédni do zákulisí mých tréninků, odborných workshopů a přednášek. Míst, kde se zkušenosti, vzdělávání a teorie propojují s každodenní praxí.</p>')
             self.assertEqual(build.normal(' '.join(Page(build.clean(original)).text)),build.normal(' '.join(Page(current).text)),source)
         source='content/blog/jak-poznat-kvalitniho-trenera.md'
         self.assertEqual(subprocess.check_output(['git','show','HEAD:'+source],cwd=ROOT),(ROOT/source).read_bytes())
