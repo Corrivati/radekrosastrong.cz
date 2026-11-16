@@ -7,6 +7,13 @@
     var badge = event.querySelector('[data-event-status]');
     badge.textContent = window.RosaI18n ? window.RosaI18n.t('pastEvent', '✓ Již proběhlo') : '✓ Již proběhlo';
     badge.className = 'edu-badge edu-badge-past';
+    var image = event.querySelector('.edu-event-image');
+    if (image && !image.querySelector('.edu-image-status')) {
+      var label = document.createElement('span');
+      label.className = 'edu-image-status';
+      label.textContent = badge.textContent;
+      image.appendChild(label);
+    }
     var cta = event.querySelector('[data-event-cta]');
     if (cta) cta.remove();
     var price = event.querySelector('.edu-price');
