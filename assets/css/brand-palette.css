@@ -1,0 +1,13 @@
+/* Colours follow /individualni-trenink/: navy introduction, light content, red accents. */
+#sk-page.brand-palette{--sk-bg:#18232d;background:var(--sk-bg)}
+#sk-page.brand-palette .brand-light{--sk-bg:#fff;--sk-bg2:#fafafa;--sk-text:#1a1a1a;--sk-mut:#5a5a5a;--sk-mut2:#5a5a5a;--sk-mut3:#635e5e;--sk-card:#fff;--sk-line:#e3e0e0;--sk-ph:#f2f0f0;--sk-red-l:#bf2932;--merch-border:#e3e0e0;background:#fff;color:#5a5a5a}
+#sk-page.brand-palette .brand-alt{background:#fafafa}
+#sk-page.brand-palette .brand-light .sk-review blockquote{color:var(--sk-text)}
+#sk-page.brand-palette .brand-light a:not(.sk-btn):not(.edu-badge){color:var(--sk-red)}
+#sk-page.brand-palette .brand-light a:focus-visible,#sk-page.brand-palette .brand-light button:focus-visible,#sk-page.brand-palette .brand-light summary:focus-visible{outline-color:var(--sk-red)}
+#sk-page.brand-palette .brand-light .merch-faq summary,#sk-page.brand-palette .brand-light.merch-faq summary,#sk-page.brand-palette .brand-light .merch-demo strong{color:var(--sk-text)}
+#sk-page.brand-palette .brand-light .merch-detail-grid article{border-color:var(--sk-line)}
+#sk-page.brand-palette .merch-final{background:#18232d}
+#sk-page.brand-palette .merch-statement{background:#2e2d2d}
+#sk-page.brand-palette .brand-light .edu-event.is-past .edu-date{color:var(--sk-mut3)}
+#sk-page.brand-palette .brand-light .edu-event.is-past .edu-image-status{color:#fff}
