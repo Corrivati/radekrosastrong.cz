@@ -54,3 +54,14 @@
 #sk-page [id]{scroll-margin-top:110px}
 @media(max-width:900px){#sk-page .merch-hero-grid,#sk-page .merch-product-grid,#sk-page .merch-sizing-grid{gap:32px}#sk-page .merch-hero h1{font-size:64px}}
 @media(max-width:700px){#sk-page section{padding:56px 0}#sk-page .merch-hero-grid,#sk-page .merch-product-grid,#sk-page .merch-sizing-grid,#sk-page .merch-detail-grid{grid-template-columns:1fr;gap:32px}#sk-page .merch-hero h1{font-size:clamp(57px,13vw,80px)}#sk-page .merch-hero-photo{margin-top:4px}#sk-page .merch-product-photo{position:static}#sk-page .merch-order{padding:20px}#sk-page .merch-faq{padding-top:0}#sk-page .merch-specs>div{font-size:13px}#sk-page .merch-detail-grid{margin-top:28px}}
+
+/* Zoom stays inside each photograph; captions and page layout stay in place. */
+#sk-page .merch-photo-frame{display:block;overflow:hidden}
+#sk-page .merch-photo-frame img{transform:scale(1);transform-origin:center;transition:transform .45s ease}
+@media(hover:hover) and (pointer:fine){
+ #sk-page .merch-photo-frame:hover img{transform:scale(1.12)}
+}
+@media(prefers-reduced-motion:reduce){
+ #sk-page .merch-photo-frame img{transition:none}
+ #sk-page .merch-photo-frame:hover img{transform:none}
+}
