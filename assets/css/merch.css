@@ -1,9 +1,8 @@
 /* Product-first draft. Palette matches the personal training page. */
 #sk-page .merch-draft{background:#242323;color:#c9c4c2;text-align:center;padding:10px 20px;font-size:12px;letter-spacing:.06em;border-bottom:1px solid var(--sk-line)}
 #sk-page .merch-product{padding:48px 0 64px}
-#sk-page .merch-heading{margin-bottom:28px}
-#sk-page .merch-heading h1{font-size:clamp(48px,5vw,68px);line-height:1.05;margin:6px 0 8px}
-#sk-page .merch-heading>p:last-child{color:var(--sk-mut);font-size:17px}
+#sk-page .merch-heading{margin-bottom:12px}
+#sk-page .merch-heading h1{font-size:clamp(48px,5vw,68px);line-height:1.05;margin:6px 0 0}
 #sk-page .merch-product-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:start}
 #sk-page .merch-gallery,#sk-page .merch-product-copy{min-width:0}
 #sk-page .merch-photo-frame{display:block;overflow:hidden;background:#ddd}
@@ -19,8 +18,14 @@
 #sk-page .merch-price span{font-size:14px;color:var(--sk-mut)}
 #sk-page .merch-delivery{font-size:14px;line-height:1.6;color:var(--sk-mut);margin:10px 0 20px}
 #sk-page .merch-model-section{padding:40px 0}
-#sk-page .merch-model-section h2{font-size:clamp(32px,4vw,46px);line-height:1.1;text-align:center;margin-bottom:24px}
-#sk-page .merch-model-photo{max-width:560px;margin:0 auto}
+#sk-page .merch-model-section h2{font-size:clamp(32px,4vw,46px);line-height:1.1;margin-bottom:12px}
+#sk-page .merch-story-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+#sk-page .merch-story{min-width:0}
+#sk-page .merch-story p{font-size:16px;line-height:1.8;color:var(--sk-mut);margin-bottom:18px}
+#sk-page .merch-story p:last-child{margin-bottom:0}
+#sk-page .merch-story strong{color:var(--sk-text)}
+#sk-page .merch-model-photo{max-width:460px;width:100%;margin:0 auto}
+#sk-page .merch-model-photo figcaption{font-size:13px;line-height:1.6;color:var(--sk-mut3);margin-top:10px}
 #sk-page .merch-buy{display:flex;width:100%;justify-content:center;white-space:normal;text-align:center}
 #sk-page .merch-buy:disabled{background:#575352;color:#e0dcda;cursor:not-allowed;box-shadow:none;transform:none}
 #sk-page .merch-caption{font-size:13px;color:var(--sk-mut3);line-height:1.6;margin-top:8px}
@@ -39,6 +44,6 @@
 #sk-page thead{background:var(--sk-bg2)}
 #sk-page a:focus-visible,#sk-page button:focus-visible,#sk-page summary:focus-visible{outline:3px solid #fff;outline-offset:5px}
 #sk-page [id]{scroll-margin-top:110px}
-@media(max-width:700px){#sk-page .merch-product{padding:28px 0 40px}#sk-page .merch-heading{margin-bottom:20px}#sk-page .merch-product-grid,#sk-page .merch-sizing-grid{grid-template-columns:minmax(0,1fr);gap:28px}#sk-page .merch-info{padding:36px 0 48px}}
+@media(max-width:700px){#sk-page .merch-product{padding:28px 0 40px}#sk-page .merch-heading{margin-bottom:12px}#sk-page .merch-product-grid,#sk-page .merch-sizing-grid,#sk-page .merch-story-grid{grid-template-columns:minmax(0,1fr);gap:28px}#sk-page .merch-info{padding:36px 0 48px}}
 @media(hover:hover) and (pointer:fine){#sk-page .merch-photo-frame:hover img{transform:scale(1.12)}}
 @media(prefers-reduced-motion:reduce){#sk-page .merch-photo-frame img{transition:none}#sk-page .merch-photo-frame:hover img{transform:none}}
