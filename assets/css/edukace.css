@@ -75,3 +75,9 @@
 /* Completed workshops retain the full card layout with a clear image label. */
 #sk-page .edu-event.is-past .edu-event-image img{filter:grayscale(1) brightness(.5)}
 #sk-page .edu-image-status{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;color:#fff;font-family:Teko,sans-serif;font-size:clamp(40px,5vw,64px);line-height:1;text-transform:uppercase;text-align:center;letter-spacing:.04em;text-shadow:0 2px 12px #000}
+
+/* Upcoming seminars with month-only dates; registration is not open yet. */
+#sk-page .edu-teaser{border-top:3px solid var(--sk-red-l);background:var(--sk-bg2)}
+#sk-page .edu-teaser h3{font-size:42px}
+#sk-page .edu-teaser .edu-teaser-reveal{border-top:1px solid var(--sk-line);padding-top:20px;margin-top:auto;color:var(--sk-red-l);font-weight:500;font-size:14px;letter-spacing:.025em}
+@media(max-width:767px){#sk-page .edu-teaser h3{font-size:38px}}
